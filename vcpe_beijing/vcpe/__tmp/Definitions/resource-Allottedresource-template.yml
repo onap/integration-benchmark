@@ -1,0 +1,59 @@
+tosca_definitions_version: tosca_simple_yaml_1_1
+metadata:
+  invariantUUID: 300f1682-74ae-4ab2-81dd-03d0141cb594
+  UUID: 9333c1aa-4746-4c26-b547-d4cdd5012d8a
+  name: AllottedResource
+  description: Allotted Resource base type all other allotted resources node types derive from
+  type: VFC
+  category: Allotted Resource
+  subcategory: Allotted Resource
+  resourceVendor: ATT (Tosca)
+  resourceVendorRelease: 1.0.0.wd03
+  resourceVendorModelNumber: ''
+imports:
+- nodes:
+    file: nodes.yml
+- datatypes:
+    file: data.yml
+- capabilities:
+    file: capabilities.yml
+- relationships:
+    file: relationships.yml
+- groups:
+    file: groups.yml
+- policies:
+    file: policies.yml
+node_types:
+  org.openecomp.resource.vfc.AllottedResource:
+    derived_from: tosca.nodes.Root
+    description: Allotted Resource base type all other allotted resources node types derive from
+    properties:
+      target_network_role:
+        type: string
+        description: Target network role
+      providing_service_invariant_uuid:
+        type: string
+        description: The depending service invariant uuid in order to map the allotted resource to the specific service version
+      role:
+        type: string
+        description: Unique label that defines the role that this allotted resource performs
+      providing_service_uuid:
+        type: string
+        description: The depending service uuid in order to map the allotted resource to the specific service version
+      providing_service_name:
+        type: string
+        description: The depending service name in order to map the allotted resource to the specific service version
+      min_instances:
+        default: 1
+        type: integer
+      max_instances:
+        default: 1
+        type: integer
+    requirements:
+    - service_dependency:
+        occurrences:
+        - 1
+        - UNBOUNDED
+        capability: org.openecomp.capabilities.AllottedResource
+        node: tosca.services.Root
+        relationship: tosca.relationships.DependsOn

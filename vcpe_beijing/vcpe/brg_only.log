@@ -1,0 +1,2910 @@
+2018-10-31 08:14:56,416 : Initializing configuration
+2018-10-31 08:14:56,424 : Initializing configuration
+2018-10-31 08:14:56,556 : Initializing configuration
+2018-10-31 08:14:56,744 : Initializing configuration
+2018-10-31 08:14:56,760 : Initializing configuration
+2018-10-31 08:14:56,776 : Initializing configuration
+2018-10-31 08:14:56,856 : Initializing configuration
+2018-10-31 08:14:56,886 : Initializing configuration
+2018-10-31 08:14:56,894 : Initializing configuration
+2018-10-31 08:14:57,000 : Initializing configuration
+2018-10-31 08:14:57,036 : Initializing configuration
+2018-10-31 08:14:57,036 : Initializing configuration
+2018-10-31 08:14:57,096 : Initializing configuration
+2018-10-31 08:14:57,120 : Initializing configuration
+2018-10-31 08:14:57,168 : Initializing configuration
+2018-10-31 08:15:02,289 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:15:02,289 : Start to create entire service defined in csar: /home/ubuntu/autotest-wlm/csar/service-VcpesvcVbrg20180927a-csar.csar
+2018-10-31 08:15:02,289 : Parsing csar ...
+2018-10-31 08:15:02,304 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:15:02,304 : Start to create entire service defined in csar: /home/ubuntu/autotest-wlm/csar/service-VcpesvcVbrg20180927a-csar.csar
+2018-10-31 08:15:02,305 : Parsing csar ...
+2018-10-31 08:15:02,377 : Parser found a VNF: vcpevsp_vbrg_20180927a 0
+2018-10-31 08:15:02,377 : Parser found a VF module: VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0
+2018-10-31 08:15:02,377 : Creating service instance: vcpe_svc_vcpesvc_vbrg_20180927a_201810310815025616.
+2018-10-31 08:15:02,377 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4
+2018-10-31 08:15:02,377 :  =>> submit_create_req request body:
+2018-10-31 08:15:02,377 : {
+    "requestDetails": {
+        "modelInfo": {
+            "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+            "modelName": "vcpesvc_vbrg_20180927a", 
+            "modelType": "service", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+        }, 
+        "owningEntity": {
+            "owningEntityId": "520cc603-a3c4-4ec2-9ef4-ca70facd79c0", 
+            "owningEntityName": "OE-Demonstration"
+        }, 
+        "project": {
+            "projectName": "Project-Demonstration"
+        }, 
+        "requestInfo": {
+            "instanceName": "vcpe_svc_vcpesvc_vbrg_20180927a_201810310815025616", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "aLaCarte": "true", 
+            "subscriptionServiceType": "vCPE", 
+            "userParams": []
+        }, 
+        "subscriberInfo": {
+            "globalSubscriberId": "SDN-ETHERNET-INTERNET"
+        }
+    }
+}
+2018-10-31 08:15:02,400 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:15:02,400 : Start to create entire service defined in csar: /home/ubuntu/autotest-wlm/csar/service-VcpesvcVbrg20180927a-csar.csar
+2018-10-31 08:15:02,400 : Parsing csar ...
+2018-10-31 08:15:02,426 :  =>> response from requests.post() in submit_create_req() for service is: 
+2018-10-31 08:15:02,426 : {
+    "requestReferences": {
+        "instanceId": "11f366ea-922c-4c6e-a2fe-9f71a2a9a753", 
+        "requestId": "ad2378d9-c4bb-411b-ab50-a03df9096023"
+    }
+}
+2018-10-31 08:15:02,426 : req_id of service is: ad2378d9-c4bb-411b-ab50-a03df9096023
+2018-10-31 08:15:02,426 : instance_id of service is: 11f366ea-922c-4c6e-a2fe-9f71a2a9a753
+2018-10-31 08:15:02,473 : Parser found a VNF: vcpevsp_vbrg_20180927a 0
+2018-10-31 08:15:02,473 : Parser found a VF module: VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0
+2018-10-31 08:15:02,473 : Creating service instance: vcpe_svc_vcpesvc_vbrg_20180927a_201810310815024087.
+2018-10-31 08:15:02,473 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4
+2018-10-31 08:15:02,473 :  =>> submit_create_req request body:
+2018-10-31 08:15:02,474 : {
+    "requestDetails": {
+        "modelInfo": {
+            "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+            "modelName": "vcpesvc_vbrg_20180927a", 
+            "modelType": "service", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+        }, 
+        "owningEntity": {
+            "owningEntityId": "520cc603-a3c4-4ec2-9ef4-ca70facd79c0", 
+            "owningEntityName": "OE-Demonstration"
+        }, 
+        "project": {
+            "projectName": "Project-Demonstration"
+        }, 
+        "requestInfo": {
+            "instanceName": "vcpe_svc_vcpesvc_vbrg_20180927a_201810310815024087", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "aLaCarte": "true", 
+            "subscriptionServiceType": "vCPE", 
+            "userParams": []
+        }, 
+        "subscriberInfo": {
+            "globalSubscriberId": "SDN-ETHERNET-INTERNET"
+        }
+    }
+}
+2018-10-31 08:15:02,486 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:15:02,486 : Start to create entire service defined in csar: /home/ubuntu/autotest-wlm/csar/service-VcpesvcVbrg20180927a-csar.csar
+2018-10-31 08:15:02,486 : Parsing csar ...
+2018-10-31 08:15:02,488 : Parser found a VNF: vcpevsp_vbrg_20180927a 0
+2018-10-31 08:15:02,488 : Parser found a VF module: VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0
+2018-10-31 08:15:02,488 : Creating service instance: vcpe_svc_vcpesvc_vbrg_20180927a_201810310815021939.
+2018-10-31 08:15:02,488 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4
+2018-10-31 08:15:02,488 :  =>> submit_create_req request body:
+2018-10-31 08:15:02,489 : {
+    "requestDetails": {
+        "modelInfo": {
+            "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+            "modelName": "vcpesvc_vbrg_20180927a", 
+            "modelType": "service", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+        }, 
+        "owningEntity": {
+            "owningEntityId": "520cc603-a3c4-4ec2-9ef4-ca70facd79c0", 
+            "owningEntityName": "OE-Demonstration"
+        }, 
+        "project": {
+            "projectName": "Project-Demonstration"
+        }, 
+        "requestInfo": {
+            "instanceName": "vcpe_svc_vcpesvc_vbrg_20180927a_201810310815021939", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "aLaCarte": "true", 
+            "subscriptionServiceType": "vCPE", 
+            "userParams": []
+        }, 
+        "subscriberInfo": {
+            "globalSubscriberId": "SDN-ETHERNET-INTERNET"
+        }
+    }
+}
+2018-10-31 08:15:02,525 :  =>> response from requests.post() in submit_create_req() for service is: 
+2018-10-31 08:15:02,525 : {
+    "requestReferences": {
+        "instanceId": "3bd182b8-3739-4686-ae75-ab1052c520fa", 
+        "requestId": "85efdf28-0dfe-48bd-983f-e2a512552985"
+    }
+}
+2018-10-31 08:15:02,525 : req_id of service is: 85efdf28-0dfe-48bd-983f-e2a512552985
+2018-10-31 08:15:02,525 : instance_id of service is: 3bd182b8-3739-4686-ae75-ab1052c520fa
+2018-10-31 08:15:02,553 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:15:02,553 : Start to create entire service defined in csar: /home/ubuntu/autotest-wlm/csar/service-VcpesvcVbrg20180927a-csar.csar
+2018-10-31 08:15:02,553 : Parsing csar ...
+2018-10-31 08:15:02,556 :  =>> response from requests.post() in submit_create_req() for service is: 
+2018-10-31 08:15:02,556 : {
+    "requestReferences": {
+        "instanceId": "ddb9cc21-a04a-4e9c-bfc0-a47fc9a71b9d", 
+        "requestId": "06d44778-2518-4791-9ad8-9c1b3da1250f"
+    }
+}
+2018-10-31 08:15:02,557 : req_id of service is: 06d44778-2518-4791-9ad8-9c1b3da1250f
+2018-10-31 08:15:02,557 : instance_id of service is: ddb9cc21-a04a-4e9c-bfc0-a47fc9a71b9d
+2018-10-31 08:15:02,637 : Parser found a VNF: vcpevsp_vbrg_20180927a 0
+2018-10-31 08:15:02,637 : Parser found a VF module: VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0
+2018-10-31 08:15:02,637 : Creating service instance: vcpe_svc_vcpesvc_vbrg_20180927a_201810310815029178.
+2018-10-31 08:15:02,638 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4
+2018-10-31 08:15:02,638 :  =>> submit_create_req request body:
+2018-10-31 08:15:02,638 : {
+    "requestDetails": {
+        "modelInfo": {
+            "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+            "modelName": "vcpesvc_vbrg_20180927a", 
+            "modelType": "service", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+        }, 
+        "owningEntity": {
+            "owningEntityId": "520cc603-a3c4-4ec2-9ef4-ca70facd79c0", 
+            "owningEntityName": "OE-Demonstration"
+        }, 
+        "project": {
+            "projectName": "Project-Demonstration"
+        }, 
+        "requestInfo": {
+            "instanceName": "vcpe_svc_vcpesvc_vbrg_20180927a_201810310815029178", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "aLaCarte": "true", 
+            "subscriptionServiceType": "vCPE", 
+            "userParams": []
+        }, 
+        "subscriberInfo": {
+            "globalSubscriberId": "SDN-ETHERNET-INTERNET"
+        }
+    }
+}
+2018-10-31 08:15:02,651 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:15:02,651 : Start to create entire service defined in csar: /home/ubuntu/autotest-wlm/csar/service-VcpesvcVbrg20180927a-csar.csar
+2018-10-31 08:15:02,651 : Parsing csar ...
+2018-10-31 08:15:02,661 : Parser found a VNF: vcpevsp_vbrg_20180927a 0
+2018-10-31 08:15:02,662 : Parser found a VF module: VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0
+2018-10-31 08:15:02,662 : Creating service instance: vcpe_svc_vcpesvc_vbrg_20180927a_201810310815024266.
+2018-10-31 08:15:02,662 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4
+2018-10-31 08:15:02,662 :  =>> submit_create_req request body:
+2018-10-31 08:15:02,662 : {
+    "requestDetails": {
+        "modelInfo": {
+            "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+            "modelName": "vcpesvc_vbrg_20180927a", 
+            "modelType": "service", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+        }, 
+        "owningEntity": {
+            "owningEntityId": "520cc603-a3c4-4ec2-9ef4-ca70facd79c0", 
+            "owningEntityName": "OE-Demonstration"
+        }, 
+        "project": {
+            "projectName": "Project-Demonstration"
+        }, 
+        "requestInfo": {
+            "instanceName": "vcpe_svc_vcpesvc_vbrg_20180927a_201810310815024266", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "aLaCarte": "true", 
+            "subscriptionServiceType": "vCPE", 
+            "userParams": []
+        }, 
+        "subscriberInfo": {
+            "globalSubscriberId": "SDN-ETHERNET-INTERNET"
+        }
+    }
+}
+2018-10-31 08:15:02,688 :  =>> response from requests.post() in submit_create_req() for service is: 
+2018-10-31 08:15:02,688 : {
+    "requestReferences": {
+        "instanceId": "05fa1536-9fb9-4a8c-8266-045e32b72bdc", 
+        "requestId": "21e4c33e-12c9-48b0-a89e-7bf078f1b0c7"
+    }
+}
+2018-10-31 08:15:02,688 : req_id of service is: 21e4c33e-12c9-48b0-a89e-7bf078f1b0c7
+2018-10-31 08:15:02,689 : instance_id of service is: 05fa1536-9fb9-4a8c-8266-045e32b72bdc
+2018-10-31 08:15:02,689 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:15:02,690 : Start to create entire service defined in csar: /home/ubuntu/autotest-wlm/csar/service-VcpesvcVbrg20180927a-csar.csar
+2018-10-31 08:15:02,690 : Parsing csar ...
+2018-10-31 08:15:02,716 :  =>> response from requests.post() in submit_create_req() for service is: 
+2018-10-31 08:15:02,716 : {
+    "requestReferences": {
+        "instanceId": "7613cb95-4d54-4df9-ae6a-2f50d5cb0fe3", 
+        "requestId": "649fc765-76c6-4cab-b08b-99de86e7964d"
+    }
+}
+2018-10-31 08:15:02,716 : req_id of service is: 649fc765-76c6-4cab-b08b-99de86e7964d
+2018-10-31 08:15:02,717 : instance_id of service is: 7613cb95-4d54-4df9-ae6a-2f50d5cb0fe3
+2018-10-31 08:15:02,756 : Parser found a VNF: vcpevsp_vbrg_20180927a 0
+2018-10-31 08:15:02,756 : Parser found a VF module: VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0
+2018-10-31 08:15:02,756 : Creating service instance: vcpe_svc_vcpesvc_vbrg_20180927a_201810310815028075.
+2018-10-31 08:15:02,756 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4
+2018-10-31 08:15:02,757 :  =>> submit_create_req request body:
+2018-10-31 08:15:02,757 : {
+    "requestDetails": {
+        "modelInfo": {
+            "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+            "modelName": "vcpesvc_vbrg_20180927a", 
+            "modelType": "service", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+        }, 
+        "owningEntity": {
+            "owningEntityId": "520cc603-a3c4-4ec2-9ef4-ca70facd79c0", 
+            "owningEntityName": "OE-Demonstration"
+        }, 
+        "project": {
+            "projectName": "Project-Demonstration"
+        }, 
+        "requestInfo": {
+            "instanceName": "vcpe_svc_vcpesvc_vbrg_20180927a_201810310815028075", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "aLaCarte": "true", 
+            "subscriptionServiceType": "vCPE", 
+            "userParams": []
+        }, 
+        "subscriberInfo": {
+            "globalSubscriberId": "SDN-ETHERNET-INTERNET"
+        }
+    }
+}
+2018-10-31 08:15:02,774 : Parser found a VNF: vcpevsp_vbrg_20180927a 0
+2018-10-31 08:15:02,774 : Parser found a VF module: VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0
+2018-10-31 08:15:02,774 : Creating service instance: vcpe_svc_vcpesvc_vbrg_20180927a_201810310815021176.
+2018-10-31 08:15:02,774 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4
+2018-10-31 08:15:02,774 :  =>> submit_create_req request body:
+2018-10-31 08:15:02,774 : {
+    "requestDetails": {
+        "modelInfo": {
+            "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+            "modelName": "vcpesvc_vbrg_20180927a", 
+            "modelType": "service", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+        }, 
+        "owningEntity": {
+            "owningEntityId": "520cc603-a3c4-4ec2-9ef4-ca70facd79c0", 
+            "owningEntityName": "OE-Demonstration"
+        }, 
+        "project": {
+            "projectName": "Project-Demonstration"
+        }, 
+        "requestInfo": {
+            "instanceName": "vcpe_svc_vcpesvc_vbrg_20180927a_201810310815021176", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "aLaCarte": "true", 
+            "subscriptionServiceType": "vCPE", 
+            "userParams": []
+        }, 
+        "subscriberInfo": {
+            "globalSubscriberId": "SDN-ETHERNET-INTERNET"
+        }
+    }
+}
+2018-10-31 08:15:02,816 :  =>> response from requests.post() in submit_create_req() for service is: 
+2018-10-31 08:15:02,816 : {
+    "requestReferences": {
+        "instanceId": "dfb2518e-1711-4afb-a1b5-cebfa695cbc5", 
+        "requestId": "8808cab1-8803-42cc-a2f3-a653c2c17fd3"
+    }
+}
+2018-10-31 08:15:02,817 : req_id of service is: 8808cab1-8803-42cc-a2f3-a653c2c17fd3
+2018-10-31 08:15:02,817 : instance_id of service is: dfb2518e-1711-4afb-a1b5-cebfa695cbc5
+2018-10-31 08:15:02,871 :  =>> response from requests.post() in submit_create_req() for service is: 
+2018-10-31 08:15:02,871 : {
+    "requestReferences": {
+        "instanceId": "6b94c5b0-bf44-4e45-b3b1-d3a86c590613", 
+        "requestId": "c8839832-e966-4f24-a797-1dbae19413b0"
+    }
+}
+2018-10-31 08:15:02,872 : req_id of service is: c8839832-e966-4f24-a797-1dbae19413b0
+2018-10-31 08:15:02,872 : instance_id of service is: 6b94c5b0-bf44-4e45-b3b1-d3a86c590613
+2018-10-31 08:15:02,889 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:15:02,889 : Start to create entire service defined in csar: /home/ubuntu/autotest-wlm/csar/service-VcpesvcVbrg20180927a-csar.csar
+2018-10-31 08:15:02,889 : Parsing csar ...
+2018-10-31 08:15:02,954 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:15:02,954 : Start to create entire service defined in csar: /home/ubuntu/autotest-wlm/csar/service-VcpesvcVbrg20180927a-csar.csar
+2018-10-31 08:15:02,954 : Parsing csar ...
+2018-10-31 08:15:03,006 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:15:03,006 : Start to create entire service defined in csar: /home/ubuntu/autotest-wlm/csar/service-VcpesvcVbrg20180927a-csar.csar
+2018-10-31 08:15:03,006 : Parsing csar ...
+2018-10-31 08:15:03,015 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:15:03,015 : Start to create entire service defined in csar: /home/ubuntu/autotest-wlm/csar/service-VcpesvcVbrg20180927a-csar.csar
+2018-10-31 08:15:03,015 : Parsing csar ...
+2018-10-31 08:15:03,029 : Parser found a VNF: vcpevsp_vbrg_20180927a 0
+2018-10-31 08:15:03,029 : Parser found a VF module: VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0
+2018-10-31 08:15:03,029 : Creating service instance: vcpe_svc_vcpesvc_vbrg_20180927a_201810310815022371.
+2018-10-31 08:15:03,029 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4
+2018-10-31 08:15:03,030 :  =>> submit_create_req request body:
+2018-10-31 08:15:03,030 : {
+    "requestDetails": {
+        "modelInfo": {
+            "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+            "modelName": "vcpesvc_vbrg_20180927a", 
+            "modelType": "service", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+        }, 
+        "owningEntity": {
+            "owningEntityId": "520cc603-a3c4-4ec2-9ef4-ca70facd79c0", 
+            "owningEntityName": "OE-Demonstration"
+        }, 
+        "project": {
+            "projectName": "Project-Demonstration"
+        }, 
+        "requestInfo": {
+            "instanceName": "vcpe_svc_vcpesvc_vbrg_20180927a_201810310815022371", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "aLaCarte": "true", 
+            "subscriptionServiceType": "vCPE", 
+            "userParams": []
+        }, 
+        "subscriberInfo": {
+            "globalSubscriberId": "SDN-ETHERNET-INTERNET"
+        }
+    }
+}
+2018-10-31 08:15:03,096 :  =>> response from requests.post() in submit_create_req() for service is: 
+2018-10-31 08:15:03,096 : {
+    "requestReferences": {
+        "instanceId": "d6ef6313-18b5-42a5-a24a-b31ec1fa7c0c", 
+        "requestId": "c582aa90-158d-4823-86fe-d16844cd689b"
+    }
+}
+2018-10-31 08:15:03,096 : req_id of service is: c582aa90-158d-4823-86fe-d16844cd689b
+2018-10-31 08:15:03,097 : instance_id of service is: d6ef6313-18b5-42a5-a24a-b31ec1fa7c0c
+2018-10-31 08:15:03,148 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:15:03,148 : Start to create entire service defined in csar: /home/ubuntu/autotest-wlm/csar/service-VcpesvcVbrg20180927a-csar.csar
+2018-10-31 08:15:03,148 : Parsing csar ...
+2018-10-31 08:15:03,156 : Parser found a VNF: vcpevsp_vbrg_20180927a 0
+2018-10-31 08:15:03,156 : Parser found a VF module: VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0
+2018-10-31 08:15:03,156 : Creating service instance: vcpe_svc_vcpesvc_vbrg_20180927a_201810310815026370.
+2018-10-31 08:15:03,156 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4
+2018-10-31 08:15:03,157 :  =>> submit_create_req request body:
+2018-10-31 08:15:03,157 : {
+    "requestDetails": {
+        "modelInfo": {
+            "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+            "modelName": "vcpesvc_vbrg_20180927a", 
+            "modelType": "service", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+        }, 
+        "owningEntity": {
+            "owningEntityId": "520cc603-a3c4-4ec2-9ef4-ca70facd79c0", 
+            "owningEntityName": "OE-Demonstration"
+        }, 
+        "project": {
+            "projectName": "Project-Demonstration"
+        }, 
+        "requestInfo": {
+            "instanceName": "vcpe_svc_vcpesvc_vbrg_20180927a_201810310815026370", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "aLaCarte": "true", 
+            "subscriptionServiceType": "vCPE", 
+            "userParams": []
+        }, 
+        "subscriberInfo": {
+            "globalSubscriberId": "SDN-ETHERNET-INTERNET"
+        }
+    }
+}
+2018-10-31 08:15:03,182 : Parser found a VNF: vcpevsp_vbrg_20180927a 0
+2018-10-31 08:15:03,182 : Parser found a VF module: VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0
+2018-10-31 08:15:03,182 : Creating service instance: vcpe_svc_vcpesvc_vbrg_20180927a_201810310815033493.
+2018-10-31 08:15:03,182 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4
+2018-10-31 08:15:03,190 : Parser found a VNF: vcpevsp_vbrg_20180927a 0
+2018-10-31 08:15:03,190 : Parser found a VF module: VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0
+2018-10-31 08:15:03,190 : Creating service instance: vcpe_svc_vcpesvc_vbrg_20180927a_20181031081503172.
+2018-10-31 08:15:03,191 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4
+2018-10-31 08:15:03,191 :  =>> submit_create_req request body:
+2018-10-31 08:15:03,191 : {
+    "requestDetails": {
+        "modelInfo": {
+            "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+            "modelName": "vcpesvc_vbrg_20180927a", 
+            "modelType": "service", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+        }, 
+        "owningEntity": {
+            "owningEntityId": "520cc603-a3c4-4ec2-9ef4-ca70facd79c0", 
+            "owningEntityName": "OE-Demonstration"
+        }, 
+        "project": {
+            "projectName": "Project-Demonstration"
+        }, 
+        "requestInfo": {
+            "instanceName": "vcpe_svc_vcpesvc_vbrg_20180927a_20181031081503172", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "aLaCarte": "true", 
+            "subscriptionServiceType": "vCPE", 
+            "userParams": []
+        }, 
+        "subscriberInfo": {
+            "globalSubscriberId": "SDN-ETHERNET-INTERNET"
+        }
+    }
+}
+2018-10-31 08:15:03,182 :  =>> submit_create_req request body:
+2018-10-31 08:15:03,192 : {
+    "requestDetails": {
+        "modelInfo": {
+            "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+            "modelName": "vcpesvc_vbrg_20180927a", 
+            "modelType": "service", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+        }, 
+        "owningEntity": {
+            "owningEntityId": "520cc603-a3c4-4ec2-9ef4-ca70facd79c0", 
+            "owningEntityName": "OE-Demonstration"
+        }, 
+        "project": {
+            "projectName": "Project-Demonstration"
+        }, 
+        "requestInfo": {
+            "instanceName": "vcpe_svc_vcpesvc_vbrg_20180927a_201810310815033493", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "aLaCarte": "true", 
+            "subscriptionServiceType": "vCPE", 
+            "userParams": []
+        }, 
+        "subscriberInfo": {
+            "globalSubscriberId": "SDN-ETHERNET-INTERNET"
+        }
+    }
+}
+2018-10-31 08:15:03,235 :  =>> response from requests.post() in submit_create_req() for service is: 
+2018-10-31 08:15:03,236 : {
+    "requestReferences": {
+        "instanceId": "24687f7f-1ece-4143-b625-08030d52c10c", 
+        "requestId": "6b9bac50-eb9b-44c0-8124-6f3f17c47bbf"
+    }
+}
+2018-10-31 08:15:03,236 : req_id of service is: 6b9bac50-eb9b-44c0-8124-6f3f17c47bbf
+2018-10-31 08:15:03,236 : instance_id of service is: 24687f7f-1ece-4143-b625-08030d52c10c
+2018-10-31 08:15:03,242 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:15:03,242 : Start to create entire service defined in csar: /home/ubuntu/autotest-wlm/csar/service-VcpesvcVbrg20180927a-csar.csar
+2018-10-31 08:15:03,242 : Parsing csar ...
+2018-10-31 08:15:03,248 :  =>> response from requests.post() in submit_create_req() for service is: 
+2018-10-31 08:15:03,248 : {
+    "requestReferences": {
+        "instanceId": "83975045-4a35-4139-9f89-d7e2281d56e3", 
+        "requestId": "9b0c7475-339b-4f96-973d-84717bfa037a"
+    }
+}
+2018-10-31 08:15:03,248 : req_id of service is: 9b0c7475-339b-4f96-973d-84717bfa037a
+2018-10-31 08:15:03,249 : instance_id of service is: 83975045-4a35-4139-9f89-d7e2281d56e3
+2018-10-31 08:15:03,263 :  =>> response from requests.post() in submit_create_req() for service is: 
+2018-10-31 08:15:03,263 : {
+    "requestReferences": {
+        "instanceId": "bd133c81-81d7-42a5-ba51-5a9e1e4ec024", 
+        "requestId": "0966de25-fc48-4a01-8bac-097abcad5ea8"
+    }
+}
+2018-10-31 08:15:03,263 : req_id of service is: 0966de25-fc48-4a01-8bac-097abcad5ea8
+2018-10-31 08:15:03,263 : instance_id of service is: bd133c81-81d7-42a5-ba51-5a9e1e4ec024
+2018-10-31 08:15:03,269 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:15:03,269 : Start to create entire service defined in csar: /home/ubuntu/autotest-wlm/csar/service-VcpesvcVbrg20180927a-csar.csar
+2018-10-31 08:15:03,269 : Parsing csar ...
+2018-10-31 08:15:03,300 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:15:03,300 : Start to create entire service defined in csar: /home/ubuntu/autotest-wlm/csar/service-VcpesvcVbrg20180927a-csar.csar
+2018-10-31 08:15:03,300 : Parsing csar ...
+2018-10-31 08:15:03,366 : Parser found a VNF: vcpevsp_vbrg_20180927a 0
+2018-10-31 08:15:03,366 : Parser found a VF module: VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0
+2018-10-31 08:15:03,366 : Creating service instance: vcpe_svc_vcpesvc_vbrg_20180927a_201810310815036426.
+2018-10-31 08:15:03,366 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4
+2018-10-31 08:15:03,366 :  =>> submit_create_req request body:
+2018-10-31 08:15:03,366 : {
+    "requestDetails": {
+        "modelInfo": {
+            "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+            "modelName": "vcpesvc_vbrg_20180927a", 
+            "modelType": "service", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+        }, 
+        "owningEntity": {
+            "owningEntityId": "520cc603-a3c4-4ec2-9ef4-ca70facd79c0", 
+            "owningEntityName": "OE-Demonstration"
+        }, 
+        "project": {
+            "projectName": "Project-Demonstration"
+        }, 
+        "requestInfo": {
+            "instanceName": "vcpe_svc_vcpesvc_vbrg_20180927a_201810310815036426", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "aLaCarte": "true", 
+            "subscriptionServiceType": "vCPE", 
+            "userParams": []
+        }, 
+        "subscriberInfo": {
+            "globalSubscriberId": "SDN-ETHERNET-INTERNET"
+        }
+    }
+}
+2018-10-31 08:15:03,394 : Parser found a VNF: vcpevsp_vbrg_20180927a 0
+2018-10-31 08:15:03,394 : Parser found a VF module: VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0
+2018-10-31 08:15:03,394 : Creating service instance: vcpe_svc_vcpesvc_vbrg_20180927a_201810310815037664.
+2018-10-31 08:15:03,395 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4
+2018-10-31 08:15:03,395 :  =>> submit_create_req request body:
+2018-10-31 08:15:03,395 : {
+    "requestDetails": {
+        "modelInfo": {
+            "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+            "modelName": "vcpesvc_vbrg_20180927a", 
+            "modelType": "service", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+        }, 
+        "owningEntity": {
+            "owningEntityId": "520cc603-a3c4-4ec2-9ef4-ca70facd79c0", 
+            "owningEntityName": "OE-Demonstration"
+        }, 
+        "project": {
+            "projectName": "Project-Demonstration"
+        }, 
+        "requestInfo": {
+            "instanceName": "vcpe_svc_vcpesvc_vbrg_20180927a_201810310815037664", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "aLaCarte": "true", 
+            "subscriptionServiceType": "vCPE", 
+            "userParams": []
+        }, 
+        "subscriberInfo": {
+            "globalSubscriberId": "SDN-ETHERNET-INTERNET"
+        }
+    }
+}
+2018-10-31 08:15:03,404 : Parser found a VNF: vcpevsp_vbrg_20180927a 0
+2018-10-31 08:15:03,404 : Parser found a VF module: VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0
+2018-10-31 08:15:03,405 : Creating service instance: vcpe_svc_vcpesvc_vbrg_20180927a_201810310815034250.
+2018-10-31 08:15:03,405 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4
+2018-10-31 08:15:03,405 :  =>> submit_create_req request body:
+2018-10-31 08:15:03,405 : {
+    "requestDetails": {
+        "modelInfo": {
+            "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+            "modelName": "vcpesvc_vbrg_20180927a", 
+            "modelType": "service", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+        }, 
+        "owningEntity": {
+            "owningEntityId": "520cc603-a3c4-4ec2-9ef4-ca70facd79c0", 
+            "owningEntityName": "OE-Demonstration"
+        }, 
+        "project": {
+            "projectName": "Project-Demonstration"
+        }, 
+        "requestInfo": {
+            "instanceName": "vcpe_svc_vcpesvc_vbrg_20180927a_201810310815034250", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "aLaCarte": "true", 
+            "subscriptionServiceType": "vCPE", 
+            "userParams": []
+        }, 
+        "subscriberInfo": {
+            "globalSubscriberId": "SDN-ETHERNET-INTERNET"
+        }
+    }
+}
+2018-10-31 08:15:03,414 :  =>> response from requests.post() in submit_create_req() for service is: 
+2018-10-31 08:15:03,414 : {
+    "requestReferences": {
+        "instanceId": "839f8cfb-8fa7-439b-9ffc-bcee4912b36d", 
+        "requestId": "ab9a76b7-7e6c-48a3-905a-88b6cc6a2f0b"
+    }
+}
+2018-10-31 08:15:03,415 : req_id of service is: ab9a76b7-7e6c-48a3-905a-88b6cc6a2f0b
+2018-10-31 08:15:03,415 : instance_id of service is: 839f8cfb-8fa7-439b-9ffc-bcee4912b36d
+2018-10-31 08:15:03,440 : Parser found a VNF: vcpevsp_vbrg_20180927a 0
+2018-10-31 08:15:03,440 : Parser found a VF module: VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0
+2018-10-31 08:15:03,440 : Creating service instance: vcpe_svc_vcpesvc_vbrg_20180927a_20181031081503916.
+2018-10-31 08:15:03,440 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4
+2018-10-31 08:15:03,440 :  =>> submit_create_req request body:
+2018-10-31 08:15:03,440 : {
+    "requestDetails": {
+        "modelInfo": {
+            "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+            "modelName": "vcpesvc_vbrg_20180927a", 
+            "modelType": "service", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+        }, 
+        "owningEntity": {
+            "owningEntityId": "520cc603-a3c4-4ec2-9ef4-ca70facd79c0", 
+            "owningEntityName": "OE-Demonstration"
+        }, 
+        "project": {
+            "projectName": "Project-Demonstration"
+        }, 
+        "requestInfo": {
+            "instanceName": "vcpe_svc_vcpesvc_vbrg_20180927a_20181031081503916", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "aLaCarte": "true", 
+            "subscriptionServiceType": "vCPE", 
+            "userParams": []
+        }, 
+        "subscriberInfo": {
+            "globalSubscriberId": "SDN-ETHERNET-INTERNET"
+        }
+    }
+}
+2018-10-31 08:15:03,467 :  =>> response from requests.post() in submit_create_req() for service is: 
+2018-10-31 08:15:03,467 : {
+    "requestReferences": {
+        "instanceId": "97b538a5-7f1a-4776-975d-d4bcf95ea2ff", 
+        "requestId": "93347fc2-4dd0-4db1-bdf9-2ea375875041"
+    }
+}
+2018-10-31 08:15:03,467 : req_id of service is: 93347fc2-4dd0-4db1-bdf9-2ea375875041
+2018-10-31 08:15:03,467 : instance_id of service is: 97b538a5-7f1a-4776-975d-d4bcf95ea2ff
+2018-10-31 08:15:03,505 :  =>> response from requests.post() in submit_create_req() for service is: 
+2018-10-31 08:15:03,505 :  =>> response from requests.post() in submit_create_req() for service is: 
+2018-10-31 08:15:03,505 : {
+    "requestReferences": {
+        "instanceId": "b4031a7c-5aca-43bb-b618-0f756e1ab5bf", 
+        "requestId": "4067425d-eaf7-426c-a964-be12a38b5dcb"
+    }
+}
+2018-10-31 08:15:03,505 : {
+    "requestReferences": {
+        "instanceId": "c7d6c760-8f6e-4756-98f2-71adb6074b35", 
+        "requestId": "984a1e22-aaee-4148-8e70-4c806c4d195d"
+    }
+}
+2018-10-31 08:15:03,505 : req_id of service is: 4067425d-eaf7-426c-a964-be12a38b5dcb
+2018-10-31 08:15:03,505 : instance_id of service is: b4031a7c-5aca-43bb-b618-0f756e1ab5bf
+2018-10-31 08:15:03,505 : req_id of service is: 984a1e22-aaee-4148-8e70-4c806c4d195d
+2018-10-31 08:15:03,506 : instance_id of service is: c7d6c760-8f6e-4756-98f2-71adb6074b35
+2018-10-31 08:15:05,467 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:05,568 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:05,618 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:05,728 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:05,755 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:06,299 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:06,454 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:06,544 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:06,544 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:06,876 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:06,921 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:07,146 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:07,296 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:07,299 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:07,522 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:12,596 : Creating VNF: vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815025616
+2018-10-31 08:15:12,596 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/11f366ea-922c-4c6e-a2fe-9f71a2a9a753/vnfs
+2018-10-31 08:15:12,596 :  =>> submit_create_req request body:
+2018-10-31 08:15:12,596 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+            "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+            "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+            "modelName": "vcpevsp_vbrg_20180927a", 
+            "modelType": "vnf", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+        }, 
+        "platform": {
+            "platformName": "Platform-Demonstration"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "11f366ea-922c-4c6e-a2fe-9f71a2a9a753", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815025616", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "userParams": []
+        }
+    }
+}
+2018-10-31 08:15:12,620 : Creating VNF: vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815037664
+2018-10-31 08:15:12,621 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/97b538a5-7f1a-4776-975d-d4bcf95ea2ff/vnfs
+2018-10-31 08:15:12,621 :  =>> submit_create_req request body:
+2018-10-31 08:15:12,621 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+            "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+            "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+            "modelName": "vcpevsp_vbrg_20180927a", 
+            "modelType": "vnf", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+        }, 
+        "platform": {
+            "platformName": "Platform-Demonstration"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "97b538a5-7f1a-4776-975d-d4bcf95ea2ff", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815037664", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "userParams": []
+        }
+    }
+}
+2018-10-31 08:15:12,652 : Creating VNF: vcpe_vnf_vcpevsp_vbrg_20180927a_20181031081503916
+2018-10-31 08:15:12,653 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/b4031a7c-5aca-43bb-b618-0f756e1ab5bf/vnfs
+2018-10-31 08:15:12,653 :  =>> submit_create_req request body:
+2018-10-31 08:15:12,653 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+            "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+            "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+            "modelName": "vcpevsp_vbrg_20180927a", 
+            "modelType": "vnf", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+        }, 
+        "platform": {
+            "platformName": "Platform-Demonstration"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "b4031a7c-5aca-43bb-b618-0f756e1ab5bf", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vnf_vcpevsp_vbrg_20180927a_20181031081503916", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "userParams": []
+        }
+    }
+}
+2018-10-31 08:15:12,654 : Creating VNF: vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815034250
+2018-10-31 08:15:12,655 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/c7d6c760-8f6e-4756-98f2-71adb6074b35/vnfs
+2018-10-31 08:15:12,655 :  =>> submit_create_req request body:
+2018-10-31 08:15:12,655 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+            "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+            "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+            "modelName": "vcpevsp_vbrg_20180927a", 
+            "modelType": "vnf", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+        }, 
+        "platform": {
+            "platformName": "Platform-Demonstration"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "c7d6c760-8f6e-4756-98f2-71adb6074b35", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815034250", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "userParams": []
+        }
+    }
+}
+2018-10-31 08:15:12,662 :  =>> response from requests.post() in submit_create_req() for vnf is: 
+2018-10-31 08:15:12,662 : {
+    "requestReferences": {
+        "instanceId": "287656c8-85e7-4505-aa79-39e193659d88", 
+        "requestId": "57b2a1ff-140a-43f1-b1a1-ba2cdbe24c47"
+    }
+}
+2018-10-31 08:15:12,662 : req_id of vnf is: 57b2a1ff-140a-43f1-b1a1-ba2cdbe24c47
+2018-10-31 08:15:12,662 : instance_id of vnf is: 287656c8-85e7-4505-aa79-39e193659d88
+2018-10-31 08:15:12,687 : Creating VNF: vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815024087
+2018-10-31 08:15:12,688 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/3bd182b8-3739-4686-ae75-ab1052c520fa/vnfs
+2018-10-31 08:15:12,688 :  =>> submit_create_req request body:
+2018-10-31 08:15:12,688 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+            "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+            "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+            "modelName": "vcpevsp_vbrg_20180927a", 
+            "modelType": "vnf", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+        }, 
+        "platform": {
+            "platformName": "Platform-Demonstration"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "3bd182b8-3739-4686-ae75-ab1052c520fa", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815024087", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "userParams": []
+        }
+    }
+}
+2018-10-31 08:15:12,695 :  =>> response from requests.post() in submit_create_req() for vnf is: 
+2018-10-31 08:15:12,695 : {
+    "requestReferences": {
+        "instanceId": "a27fbb8a-394f-4f46-a145-4aec5ff62d8d", 
+        "requestId": "2bdf10fe-9856-4737-8f0b-ca53c7ae38e5"
+    }
+}
+2018-10-31 08:15:12,695 : req_id of vnf is: 2bdf10fe-9856-4737-8f0b-ca53c7ae38e5
+2018-10-31 08:15:12,695 : instance_id of vnf is: a27fbb8a-394f-4f46-a145-4aec5ff62d8d
+2018-10-31 08:15:12,704 :  =>> response from requests.post() in submit_create_req() for vnf is: 
+2018-10-31 08:15:12,704 : {
+    "requestReferences": {
+        "instanceId": "6caa5270-a4d2-4fb6-8569-de1d96831c24", 
+        "requestId": "b9129ba8-aedd-4a2a-8c39-536eed91c77a"
+    }
+}
+2018-10-31 08:15:12,704 : req_id of vnf is: b9129ba8-aedd-4a2a-8c39-536eed91c77a
+2018-10-31 08:15:12,704 : instance_id of vnf is: 6caa5270-a4d2-4fb6-8569-de1d96831c24
+2018-10-31 08:15:12,742 : Creating VNF: vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815021939
+2018-10-31 08:15:12,743 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/ddb9cc21-a04a-4e9c-bfc0-a47fc9a71b9d/vnfs
+2018-10-31 08:15:12,743 :  =>> submit_create_req request body:
+2018-10-31 08:15:12,743 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+            "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+            "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+            "modelName": "vcpevsp_vbrg_20180927a", 
+            "modelType": "vnf", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+        }, 
+        "platform": {
+            "platformName": "Platform-Demonstration"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "ddb9cc21-a04a-4e9c-bfc0-a47fc9a71b9d", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815021939", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "userParams": []
+        }
+    }
+}
+2018-10-31 08:15:12,788 :  =>> response from requests.post() in submit_create_req() for vnf is: 
+2018-10-31 08:15:12,788 : {
+    "requestReferences": {
+        "instanceId": "9fcefbdd-2212-4761-8d48-6da2c5ed54fc", 
+        "requestId": "500efedd-b304-4557-9d41-79528965e052"
+    }
+}
+2018-10-31 08:15:12,789 : req_id of vnf is: 500efedd-b304-4557-9d41-79528965e052
+2018-10-31 08:15:12,789 : instance_id of vnf is: 9fcefbdd-2212-4761-8d48-6da2c5ed54fc
+2018-10-31 08:15:12,798 :  =>> response from requests.post() in submit_create_req() for vnf is: 
+2018-10-31 08:15:12,798 : {
+    "requestReferences": {
+        "instanceId": "89258dee-7c84-498c-9627-3158f48d859b", 
+        "requestId": "46af3ebd-dc40-48de-af14-a79c10b55eac"
+    }
+}
+2018-10-31 08:15:12,798 : req_id of vnf is: 46af3ebd-dc40-48de-af14-a79c10b55eac
+2018-10-31 08:15:12,798 : instance_id of vnf is: 89258dee-7c84-498c-9627-3158f48d859b
+2018-10-31 08:15:12,837 :  =>> response from requests.post() in submit_create_req() for vnf is: 
+2018-10-31 08:15:12,837 : {
+    "requestReferences": {
+        "instanceId": "e6a52699-4177-4390-b530-4ecc5f164f20", 
+        "requestId": "79a9ddcd-fcbf-4bee-aec5-a4bd492acfa4"
+    }
+}
+2018-10-31 08:15:12,838 : req_id of vnf is: 79a9ddcd-fcbf-4bee-aec5-a4bd492acfa4
+2018-10-31 08:15:12,838 : instance_id of vnf is: e6a52699-4177-4390-b530-4ecc5f164f20
+2018-10-31 08:15:12,852 : Creating VNF: vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815029178
+2018-10-31 08:15:12,853 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/05fa1536-9fb9-4a8c-8266-045e32b72bdc/vnfs
+2018-10-31 08:15:12,853 :  =>> submit_create_req request body:
+2018-10-31 08:15:12,853 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+            "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+            "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+            "modelName": "vcpevsp_vbrg_20180927a", 
+            "modelType": "vnf", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+        }, 
+        "platform": {
+            "platformName": "Platform-Demonstration"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "05fa1536-9fb9-4a8c-8266-045e32b72bdc", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815029178", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "userParams": []
+        }
+    }
+}
+2018-10-31 08:15:12,881 : Creating VNF: vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815024266
+2018-10-31 08:15:12,882 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/7613cb95-4d54-4df9-ae6a-2f50d5cb0fe3/vnfs
+2018-10-31 08:15:12,882 :  =>> submit_create_req request body:
+2018-10-31 08:15:12,882 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+            "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+            "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+            "modelName": "vcpevsp_vbrg_20180927a", 
+            "modelType": "vnf", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+        }, 
+        "platform": {
+            "platformName": "Platform-Demonstration"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "7613cb95-4d54-4df9-ae6a-2f50d5cb0fe3", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815024266", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "userParams": []
+        }
+    }
+}
+2018-10-31 08:15:12,908 :  =>> response from requests.post() in submit_create_req() for vnf is: 
+2018-10-31 08:15:12,908 : {
+    "requestReferences": {
+        "instanceId": "c48ca215-a0e1-45f2-a76e-7db39c1bc182", 
+        "requestId": "9ec17e04-ed81-475b-991a-1dcc036d15b5"
+    }
+}
+2018-10-31 08:15:12,908 : req_id of vnf is: 9ec17e04-ed81-475b-991a-1dcc036d15b5
+2018-10-31 08:15:12,908 : instance_id of vnf is: c48ca215-a0e1-45f2-a76e-7db39c1bc182
+2018-10-31 08:15:12,938 :  =>> response from requests.post() in submit_create_req() for vnf is: 
+2018-10-31 08:15:12,938 : {
+    "requestReferences": {
+        "instanceId": "42a0f4ee-9bc2-4ce0-8f4d-7f12ebda4671", 
+        "requestId": "078e7009-f300-4eaf-bfd5-811b6b4adadf"
+    }
+}
+2018-10-31 08:15:12,938 : req_id of vnf is: 078e7009-f300-4eaf-bfd5-811b6b4adadf
+2018-10-31 08:15:12,938 : instance_id of vnf is: 42a0f4ee-9bc2-4ce0-8f4d-7f12ebda4671
+2018-10-31 08:15:12,987 : Creating VNF: vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815028075
+2018-10-31 08:15:12,988 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/dfb2518e-1711-4afb-a1b5-cebfa695cbc5/vnfs
+2018-10-31 08:15:12,988 :  =>> submit_create_req request body:
+2018-10-31 08:15:12,988 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+            "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+            "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+            "modelName": "vcpevsp_vbrg_20180927a", 
+            "modelType": "vnf", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+        }, 
+        "platform": {
+            "platformName": "Platform-Demonstration"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "dfb2518e-1711-4afb-a1b5-cebfa695cbc5", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815028075", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "userParams": []
+        }
+    }
+}
+2018-10-31 08:15:13,035 : Creating VNF: vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815021176
+2018-10-31 08:15:13,036 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/6b94c5b0-bf44-4e45-b3b1-d3a86c590613/vnfs
+2018-10-31 08:15:13,036 :  =>> submit_create_req request body:
+2018-10-31 08:15:13,036 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+            "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+            "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+            "modelName": "vcpevsp_vbrg_20180927a", 
+            "modelType": "vnf", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+        }, 
+        "platform": {
+            "platformName": "Platform-Demonstration"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "6b94c5b0-bf44-4e45-b3b1-d3a86c590613", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815021176", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "userParams": []
+        }
+    }
+}
+2018-10-31 08:15:13,044 :  =>> response from requests.post() in submit_create_req() for vnf is: 
+2018-10-31 08:15:13,044 : {
+    "requestReferences": {
+        "instanceId": "818ef0c1-2fb1-4da6-9365-e296562fac67", 
+        "requestId": "d164005e-6221-45c4-a982-ff0caf0f8b73"
+    }
+}
+2018-10-31 08:15:13,044 : req_id of vnf is: d164005e-6221-45c4-a982-ff0caf0f8b73
+2018-10-31 08:15:13,044 : instance_id of vnf is: 818ef0c1-2fb1-4da6-9365-e296562fac67
+2018-10-31 08:15:13,096 :  =>> response from requests.post() in submit_create_req() for vnf is: 
+2018-10-31 08:15:13,096 : {
+    "requestReferences": {
+        "instanceId": "176b16cf-1ee1-47aa-82bd-a599cadff8ca", 
+        "requestId": "80007f74-ea95-43bc-9db9-ab11eaac0eb1"
+    }
+}
+2018-10-31 08:15:13,096 : req_id of vnf is: 80007f74-ea95-43bc-9db9-ab11eaac0eb1
+2018-10-31 08:15:13,096 : instance_id of vnf is: 176b16cf-1ee1-47aa-82bd-a599cadff8ca
+2018-10-31 08:15:13,256 : Creating VNF: vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815022371
+2018-10-31 08:15:13,256 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/d6ef6313-18b5-42a5-a24a-b31ec1fa7c0c/vnfs
+2018-10-31 08:15:13,256 :  =>> submit_create_req request body:
+2018-10-31 08:15:13,257 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+            "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+            "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+            "modelName": "vcpevsp_vbrg_20180927a", 
+            "modelType": "vnf", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+        }, 
+        "platform": {
+            "platformName": "Platform-Demonstration"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "d6ef6313-18b5-42a5-a24a-b31ec1fa7c0c", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815022371", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "userParams": []
+        }
+    }
+}
+2018-10-31 08:15:13,357 :  =>> response from requests.post() in submit_create_req() for vnf is: 
+2018-10-31 08:15:13,357 : {
+    "requestReferences": {
+        "instanceId": "fea9be16-085d-4233-ac3a-f4923cc5f09e", 
+        "requestId": "e38cb284-ccb9-4ec7-9f12-7c202a03f717"
+    }
+}
+2018-10-31 08:15:13,357 : req_id of vnf is: e38cb284-ccb9-4ec7-9f12-7c202a03f717
+2018-10-31 08:15:13,357 : instance_id of vnf is: fea9be16-085d-4233-ac3a-f4923cc5f09e
+2018-10-31 08:15:13,419 : Creating VNF: vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815033493
+2018-10-31 08:15:13,420 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/83975045-4a35-4139-9f89-d7e2281d56e3/vnfs
+2018-10-31 08:15:13,420 :  =>> submit_create_req request body:
+2018-10-31 08:15:13,420 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+            "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+            "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+            "modelName": "vcpevsp_vbrg_20180927a", 
+            "modelType": "vnf", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+        }, 
+        "platform": {
+            "platformName": "Platform-Demonstration"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "83975045-4a35-4139-9f89-d7e2281d56e3", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815033493", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "userParams": []
+        }
+    }
+}
+2018-10-31 08:15:13,422 : Creating VNF: vcpe_vnf_vcpevsp_vbrg_20180927a_20181031081503172
+2018-10-31 08:15:13,422 : Creating VNF: vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815026370
+2018-10-31 08:15:13,423 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/bd133c81-81d7-42a5-ba51-5a9e1e4ec024/vnfs
+2018-10-31 08:15:13,423 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/24687f7f-1ece-4143-b625-08030d52c10c/vnfs
+2018-10-31 08:15:13,423 :  =>> submit_create_req request body:
+2018-10-31 08:15:13,423 :  =>> submit_create_req request body:
+2018-10-31 08:15:13,423 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+            "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+            "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+            "modelName": "vcpevsp_vbrg_20180927a", 
+            "modelType": "vnf", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+        }, 
+        "platform": {
+            "platformName": "Platform-Demonstration"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "bd133c81-81d7-42a5-ba51-5a9e1e4ec024", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vnf_vcpevsp_vbrg_20180927a_20181031081503172", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "userParams": []
+        }
+    }
+}
+2018-10-31 08:15:13,423 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+            "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+            "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+            "modelName": "vcpevsp_vbrg_20180927a", 
+            "modelType": "vnf", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+        }, 
+        "platform": {
+            "platformName": "Platform-Demonstration"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "24687f7f-1ece-4143-b625-08030d52c10c", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815026370", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "userParams": []
+        }
+    }
+}
+2018-10-31 08:15:13,483 :  =>> response from requests.post() in submit_create_req() for vnf is: 
+2018-10-31 08:15:13,483 : {
+    "requestReferences": {
+        "instanceId": "8bdc24cb-439e-4bc6-8a10-f2cfc97eb223", 
+        "requestId": "f2400c45-6bb9-45e4-9ee1-bd8e366eba56"
+    }
+}
+2018-10-31 08:15:13,483 : req_id of vnf is: f2400c45-6bb9-45e4-9ee1-bd8e366eba56
+2018-10-31 08:15:13,483 : instance_id of vnf is: 8bdc24cb-439e-4bc6-8a10-f2cfc97eb223
+2018-10-31 08:15:13,491 :  =>> response from requests.post() in submit_create_req() for vnf is: 
+2018-10-31 08:15:13,491 : {
+    "requestReferences": {
+        "instanceId": "33e76f07-785c-4e4d-b4bd-a85bc67cca88", 
+        "requestId": "82ef40ee-1bde-436e-8c05-ffc05463d914"
+    }
+}
+2018-10-31 08:15:13,491 : req_id of vnf is: 82ef40ee-1bde-436e-8c05-ffc05463d914
+2018-10-31 08:15:13,491 : instance_id of vnf is: 33e76f07-785c-4e4d-b4bd-a85bc67cca88
+2018-10-31 08:15:13,492 :  =>> response from requests.post() in submit_create_req() for vnf is: 
+2018-10-31 08:15:13,492 : {
+    "requestReferences": {
+        "instanceId": "0fc338bf-aac4-4107-94b9-6d07a405c38f", 
+        "requestId": "759fb880-2462-453e-8ee7-3090c535031d"
+    }
+}
+2018-10-31 08:15:13,492 : req_id of vnf is: 759fb880-2462-453e-8ee7-3090c535031d
+2018-10-31 08:15:13,492 : instance_id of vnf is: 0fc338bf-aac4-4107-94b9-6d07a405c38f
+2018-10-31 08:15:13,594 : Creating VNF: vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815036426
+2018-10-31 08:15:13,594 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/839f8cfb-8fa7-439b-9ffc-bcee4912b36d/vnfs
+2018-10-31 08:15:13,594 :  =>> submit_create_req request body:
+2018-10-31 08:15:13,595 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+            "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+            "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+            "modelName": "vcpevsp_vbrg_20180927a", 
+            "modelType": "vnf", 
+            "modelVersion": "1.0", 
+            "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+        }, 
+        "platform": {
+            "platformName": "Platform-Demonstration"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "839f8cfb-8fa7-439b-9ffc-bcee4912b36d", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vnf_vcpevsp_vbrg_20180927a_201810310815036426", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "userParams": []
+        }
+    }
+}
+2018-10-31 08:15:13,651 :  =>> response from requests.post() in submit_create_req() for vnf is: 
+2018-10-31 08:15:13,651 : {
+    "requestReferences": {
+        "instanceId": "063022a4-ad6a-4791-8663-56698bdde537", 
+        "requestId": "2ecba881-63e6-4747-aa96-f1e1868632d1"
+    }
+}
+2018-10-31 08:15:13,651 : req_id of vnf is: 2ecba881-63e6-4747-aa96-f1e1868632d1
+2018-10-31 08:15:13,651 : instance_id of vnf is: 063022a4-ad6a-4791-8663-56698bdde537
+2018-10-31 08:15:15,700 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:15,740 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:15,747 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:15,839 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:15,840 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:15,875 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:16,010 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:16,015 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:16,080 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:16,140 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:16,400 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:16,522 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:16,529 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:16,530 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:16,687 : Waiting for AAI traversal to complete...
+2018-10-31 08:15:16,721 : Preloading VF Module vcpe_vfmodule_vcpevspvbrg20180927a_201810310815025616
+2018-10-31 08:15:16,744 : response from requests.post() in preload() is: 
+2018-10-31 08:15:16,744 : {
+    "output": {
+        "ack-final-indicator": "Y", 
+        "response-code": "200", 
+        "svc-request-id": "robot12"
+    }
+}
+2018-10-31 08:15:16,745 : Creating VF Module: vcpe_vfmodule_vcpevspvbrg20180927a_201810310815025616
+2018-10-31 08:15:16,745 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/11f366ea-922c-4c6e-a2fe-9f71a2a9a753/vnfs/287656c8-85e7-4505-aa79-39e193659d88/vfModules
+2018-10-31 08:15:16,745 :  =>> submit_create_req request body:
+2018-10-31 08:15:16,745 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "278ae612-2235-43cd-b0f4-97a237d024a3", 
+            "modelCustomizationName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelInvariantId": "e7be3381-9a49-4216-a8aa-7e8422e7c493", 
+            "modelName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelType": "vfModule", 
+            "modelVersion": "1", 
+            "modelVersionId": "3aa4670d-fdde-4df4-a29f-9da06c31dbd8"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "11f366ea-922c-4c6e-a2fe-9f71a2a9a753", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }, 
+            {
+                "relatedInstance": {
+                    "instanceId": "287656c8-85e7-4505-aa79-39e193659d88", 
+                    "modelInfo": {
+                        "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+                        "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+                        "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+                        "modelName": "vcpevsp_vbrg_20180927a", 
+                        "modelType": "vnf", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vfmodule_vcpevspvbrg20180927a_201810310815025616", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "usePreload": "true"
+        }
+    }
+}
+2018-10-31 08:15:16,760 : Preloading VF Module vcpe_vfmodule_vcpevspvbrg20180927a_201810310815037664
+2018-10-31 08:15:16,764 : Preloading VF Module vcpe_vfmodule_vcpevspvbrg20180927a_20181031081503916
+2018-10-31 08:15:16,783 : response from requests.post() in preload() is: 
+2018-10-31 08:15:16,784 : {
+    "output": {
+        "ack-final-indicator": "Y", 
+        "response-code": "200", 
+        "svc-request-id": "robot12"
+    }
+}
+2018-10-31 08:15:16,784 : Creating VF Module: vcpe_vfmodule_vcpevspvbrg20180927a_201810310815037664
+2018-10-31 08:15:16,784 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/97b538a5-7f1a-4776-975d-d4bcf95ea2ff/vnfs/a27fbb8a-394f-4f46-a145-4aec5ff62d8d/vfModules
+2018-10-31 08:15:16,784 :  =>> submit_create_req request body:
+2018-10-31 08:15:16,784 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "278ae612-2235-43cd-b0f4-97a237d024a3", 
+            "modelCustomizationName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelInvariantId": "e7be3381-9a49-4216-a8aa-7e8422e7c493", 
+            "modelName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelType": "vfModule", 
+            "modelVersion": "1", 
+            "modelVersionId": "3aa4670d-fdde-4df4-a29f-9da06c31dbd8"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "97b538a5-7f1a-4776-975d-d4bcf95ea2ff", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }, 
+            {
+                "relatedInstance": {
+                    "instanceId": "a27fbb8a-394f-4f46-a145-4aec5ff62d8d", 
+                    "modelInfo": {
+                        "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+                        "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+                        "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+                        "modelName": "vcpevsp_vbrg_20180927a", 
+                        "modelType": "vnf", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vfmodule_vcpevspvbrg20180927a_201810310815037664", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "usePreload": "true"
+        }
+    }
+}
+2018-10-31 08:15:16,785 : response from requests.post() in preload() is: 
+2018-10-31 08:15:16,785 : {
+    "output": {
+        "ack-final-indicator": "Y", 
+        "response-code": "200", 
+        "svc-request-id": "robot12"
+    }
+}
+2018-10-31 08:15:16,785 : Creating VF Module: vcpe_vfmodule_vcpevspvbrg20180927a_20181031081503916
+2018-10-31 08:15:16,786 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/b4031a7c-5aca-43bb-b618-0f756e1ab5bf/vnfs/6caa5270-a4d2-4fb6-8569-de1d96831c24/vfModules
+2018-10-31 08:15:16,786 :  =>> submit_create_req request body:
+2018-10-31 08:15:16,786 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "278ae612-2235-43cd-b0f4-97a237d024a3", 
+            "modelCustomizationName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelInvariantId": "e7be3381-9a49-4216-a8aa-7e8422e7c493", 
+            "modelName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelType": "vfModule", 
+            "modelVersion": "1", 
+            "modelVersionId": "3aa4670d-fdde-4df4-a29f-9da06c31dbd8"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "b4031a7c-5aca-43bb-b618-0f756e1ab5bf", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }, 
+            {
+                "relatedInstance": {
+                    "instanceId": "6caa5270-a4d2-4fb6-8569-de1d96831c24", 
+                    "modelInfo": {
+                        "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+                        "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+                        "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+                        "modelName": "vcpevsp_vbrg_20180927a", 
+                        "modelType": "vnf", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vfmodule_vcpevspvbrg20180927a_20181031081503916", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "usePreload": "true"
+        }
+    }
+}
+2018-10-31 08:15:16,827 :  =>> response from requests.post() in submit_create_req() for vfmodule is: 
+2018-10-31 08:15:16,827 : {
+    "requestReferences": {
+        "instanceId": "bffefb22-6a79-479f-bd6e-4ffc671086da", 
+        "requestId": "ce6243ef-3b20-4ccf-83de-88a63357b23b"
+    }
+}
+2018-10-31 08:15:16,828 : req_id of vfmodule is: ce6243ef-3b20-4ccf-83de-88a63357b23b
+2018-10-31 08:15:16,828 : instance_id of vfmodule is: bffefb22-6a79-479f-bd6e-4ffc671086da
+2018-10-31 08:15:16,868 :  =>> response from requests.post() in submit_create_req() for vfmodule is: 
+2018-10-31 08:15:16,868 : {
+    "requestReferences": {
+        "instanceId": "b8d72315-a26a-4387-8863-fe6c7b7e8510", 
+        "requestId": "6a1894f6-d938-4cd4-bcb9-8165e86e9ec2"
+    }
+}
+2018-10-31 08:15:16,869 : req_id of vfmodule is: 6a1894f6-d938-4cd4-bcb9-8165e86e9ec2
+2018-10-31 08:15:16,869 : Preloading VF Module vcpe_vfmodule_vcpevspvbrg20180927a_201810310815024087
+2018-10-31 08:15:16,869 : instance_id of vfmodule is: b8d72315-a26a-4387-8863-fe6c7b7e8510
+2018-10-31 08:15:16,870 : Preloading VF Module vcpe_vfmodule_vcpevspvbrg20180927a_201810310815034250
+2018-10-31 08:15:16,872 :  =>> response from requests.post() in submit_create_req() for vfmodule is: 
+2018-10-31 08:15:16,872 : {
+    "requestReferences": {
+        "instanceId": "fc6ed130-8ced-494b-9174-d3485e1a34e7", 
+        "requestId": "33871885-ef8b-4a85-a4fe-276607534398"
+    }
+}
+2018-10-31 08:15:16,872 : req_id of vfmodule is: 33871885-ef8b-4a85-a4fe-276607534398
+2018-10-31 08:15:16,872 : instance_id of vfmodule is: fc6ed130-8ced-494b-9174-d3485e1a34e7
+2018-10-31 08:15:16,896 : Preloading VF Module vcpe_vfmodule_vcpevspvbrg20180927a_201810310815021939
+2018-10-31 08:15:16,897 : response from requests.post() in preload() is: 
+2018-10-31 08:15:16,898 : {
+    "output": {
+        "ack-final-indicator": "Y", 
+        "response-code": "200", 
+        "svc-request-id": "robot12"
+    }
+}
+2018-10-31 08:15:16,898 : Creating VF Module: vcpe_vfmodule_vcpevspvbrg20180927a_201810310815034250
+2018-10-31 08:15:16,898 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/c7d6c760-8f6e-4756-98f2-71adb6074b35/vnfs/9fcefbdd-2212-4761-8d48-6da2c5ed54fc/vfModules
+2018-10-31 08:15:16,898 :  =>> submit_create_req request body:
+2018-10-31 08:15:16,900 : response from requests.post() in preload() is: 
+2018-10-31 08:15:16,900 : {
+    "output": {
+        "ack-final-indicator": "Y", 
+        "response-code": "200", 
+        "svc-request-id": "robot12"
+    }
+}
+2018-10-31 08:15:16,900 : Creating VF Module: vcpe_vfmodule_vcpevspvbrg20180927a_201810310815024087
+2018-10-31 08:15:16,900 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/3bd182b8-3739-4686-ae75-ab1052c520fa/vnfs/89258dee-7c84-498c-9627-3158f48d859b/vfModules
+2018-10-31 08:15:16,900 :  =>> submit_create_req request body:
+2018-10-31 08:15:16,900 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "278ae612-2235-43cd-b0f4-97a237d024a3", 
+            "modelCustomizationName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelInvariantId": "e7be3381-9a49-4216-a8aa-7e8422e7c493", 
+            "modelName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelType": "vfModule", 
+            "modelVersion": "1", 
+            "modelVersionId": "3aa4670d-fdde-4df4-a29f-9da06c31dbd8"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "3bd182b8-3739-4686-ae75-ab1052c520fa", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }, 
+            {
+                "relatedInstance": {
+                    "instanceId": "89258dee-7c84-498c-9627-3158f48d859b", 
+                    "modelInfo": {
+                        "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+                        "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+                        "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+                        "modelName": "vcpevsp_vbrg_20180927a", 
+                        "modelType": "vnf", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vfmodule_vcpevspvbrg20180927a_201810310815024087", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "usePreload": "true"
+        }
+    }
+}
+2018-10-31 08:15:16,902 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "278ae612-2235-43cd-b0f4-97a237d024a3", 
+            "modelCustomizationName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelInvariantId": "e7be3381-9a49-4216-a8aa-7e8422e7c493", 
+            "modelName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelType": "vfModule", 
+            "modelVersion": "1", 
+            "modelVersionId": "3aa4670d-fdde-4df4-a29f-9da06c31dbd8"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "c7d6c760-8f6e-4756-98f2-71adb6074b35", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }, 
+            {
+                "relatedInstance": {
+                    "instanceId": "9fcefbdd-2212-4761-8d48-6da2c5ed54fc", 
+                    "modelInfo": {
+                        "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+                        "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+                        "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+                        "modelName": "vcpevsp_vbrg_20180927a", 
+                        "modelType": "vnf", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vfmodule_vcpevspvbrg20180927a_201810310815034250", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "usePreload": "true"
+        }
+    }
+}
+2018-10-31 08:15:16,917 : response from requests.post() in preload() is: 
+2018-10-31 08:15:16,917 : {
+    "output": {
+        "ack-final-indicator": "Y", 
+        "response-code": "200", 
+        "svc-request-id": "robot12"
+    }
+}
+2018-10-31 08:15:16,917 : Creating VF Module: vcpe_vfmodule_vcpevspvbrg20180927a_201810310815021939
+2018-10-31 08:15:16,917 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/ddb9cc21-a04a-4e9c-bfc0-a47fc9a71b9d/vnfs/e6a52699-4177-4390-b530-4ecc5f164f20/vfModules
+2018-10-31 08:15:16,917 :  =>> submit_create_req request body:
+2018-10-31 08:15:16,917 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "278ae612-2235-43cd-b0f4-97a237d024a3", 
+            "modelCustomizationName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelInvariantId": "e7be3381-9a49-4216-a8aa-7e8422e7c493", 
+            "modelName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelType": "vfModule", 
+            "modelVersion": "1", 
+            "modelVersionId": "3aa4670d-fdde-4df4-a29f-9da06c31dbd8"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "ddb9cc21-a04a-4e9c-bfc0-a47fc9a71b9d", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }, 
+            {
+                "relatedInstance": {
+                    "instanceId": "e6a52699-4177-4390-b530-4ecc5f164f20", 
+                    "modelInfo": {
+                        "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+                        "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+                        "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+                        "modelName": "vcpevsp_vbrg_20180927a", 
+                        "modelType": "vnf", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vfmodule_vcpevspvbrg20180927a_201810310815021939", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "usePreload": "true"
+        }
+    }
+}
+2018-10-31 08:15:17,021 :  =>> response from requests.post() in submit_create_req() for vfmodule is: 
+2018-10-31 08:15:17,021 : {
+    "requestReferences": {
+        "instanceId": "6385d781-46f9-43eb-9f58-7a455cb6e108", 
+        "requestId": "6ec61506-daf5-40e4-b372-7f64e42dd51e"
+    }
+}
+2018-10-31 08:15:17,021 : req_id of vfmodule is: 6ec61506-daf5-40e4-b372-7f64e42dd51e
+2018-10-31 08:15:17,021 : instance_id of vfmodule is: 6385d781-46f9-43eb-9f58-7a455cb6e108
+2018-10-31 08:15:17,026 :  =>> response from requests.post() in submit_create_req() for vfmodule is: 
+2018-10-31 08:15:17,026 : {
+    "requestReferences": {
+        "instanceId": "50aad738-d69e-47ec-a255-40cc63a96696", 
+        "requestId": "dd2aa269-eb74-48f0-a51c-462a1cfc1311"
+    }
+}
+2018-10-31 08:15:17,026 : req_id of vfmodule is: dd2aa269-eb74-48f0-a51c-462a1cfc1311
+2018-10-31 08:15:17,026 : instance_id of vfmodule is: 50aad738-d69e-47ec-a255-40cc63a96696
+2018-10-31 08:15:17,037 : Preloading VF Module vcpe_vfmodule_vcpevspvbrg20180927a_201810310815029178
+2018-10-31 08:15:17,040 : Preloading VF Module vcpe_vfmodule_vcpevspvbrg20180927a_201810310815024266
+2018-10-31 08:15:17,046 :  =>> response from requests.post() in submit_create_req() for vfmodule is: 
+2018-10-31 08:15:17,046 : {
+    "requestReferences": {
+        "instanceId": "09fb38d2-9ffb-4481-a7c3-d682f4fffaf2", 
+        "requestId": "76b581f9-5101-4d7d-9bfb-4afafda71248"
+    }
+}
+2018-10-31 08:15:17,046 : req_id of vfmodule is: 76b581f9-5101-4d7d-9bfb-4afafda71248
+2018-10-31 08:15:17,046 : instance_id of vfmodule is: 09fb38d2-9ffb-4481-a7c3-d682f4fffaf2
+2018-10-31 08:15:17,060 : response from requests.post() in preload() is: 
+2018-10-31 08:15:17,060 : {
+    "output": {
+        "ack-final-indicator": "Y", 
+        "response-code": "200", 
+        "svc-request-id": "robot12"
+    }
+}
+2018-10-31 08:15:17,060 : Creating VF Module: vcpe_vfmodule_vcpevspvbrg20180927a_201810310815029178
+2018-10-31 08:15:17,060 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/05fa1536-9fb9-4a8c-8266-045e32b72bdc/vnfs/c48ca215-a0e1-45f2-a76e-7db39c1bc182/vfModules
+2018-10-31 08:15:17,060 :  =>> submit_create_req request body:
+2018-10-31 08:15:17,060 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "278ae612-2235-43cd-b0f4-97a237d024a3", 
+            "modelCustomizationName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelInvariantId": "e7be3381-9a49-4216-a8aa-7e8422e7c493", 
+            "modelName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelType": "vfModule", 
+            "modelVersion": "1", 
+            "modelVersionId": "3aa4670d-fdde-4df4-a29f-9da06c31dbd8"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "05fa1536-9fb9-4a8c-8266-045e32b72bdc", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }, 
+            {
+                "relatedInstance": {
+                    "instanceId": "c48ca215-a0e1-45f2-a76e-7db39c1bc182", 
+                    "modelInfo": {
+                        "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+                        "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+                        "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+                        "modelName": "vcpevsp_vbrg_20180927a", 
+                        "modelType": "vnf", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vfmodule_vcpevspvbrg20180927a_201810310815029178", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "usePreload": "true"
+        }
+    }
+}
+2018-10-31 08:15:17,066 : response from requests.post() in preload() is: 
+2018-10-31 08:15:17,067 : {
+    "output": {
+        "ack-final-indicator": "Y", 
+        "response-code": "200", 
+        "svc-request-id": "robot12"
+    }
+}
+2018-10-31 08:15:17,067 : Creating VF Module: vcpe_vfmodule_vcpevspvbrg20180927a_201810310815024266
+2018-10-31 08:15:17,067 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/7613cb95-4d54-4df9-ae6a-2f50d5cb0fe3/vnfs/42a0f4ee-9bc2-4ce0-8f4d-7f12ebda4671/vfModules
+2018-10-31 08:15:17,067 :  =>> submit_create_req request body:
+2018-10-31 08:15:17,067 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "278ae612-2235-43cd-b0f4-97a237d024a3", 
+            "modelCustomizationName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelInvariantId": "e7be3381-9a49-4216-a8aa-7e8422e7c493", 
+            "modelName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelType": "vfModule", 
+            "modelVersion": "1", 
+            "modelVersionId": "3aa4670d-fdde-4df4-a29f-9da06c31dbd8"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "7613cb95-4d54-4df9-ae6a-2f50d5cb0fe3", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }, 
+            {
+                "relatedInstance": {
+                    "instanceId": "42a0f4ee-9bc2-4ce0-8f4d-7f12ebda4671", 
+                    "modelInfo": {
+                        "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+                        "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+                        "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+                        "modelName": "vcpevsp_vbrg_20180927a", 
+                        "modelType": "vnf", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vfmodule_vcpevspvbrg20180927a_201810310815024266", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "usePreload": "true"
+        }
+    }
+}
+2018-10-31 08:15:17,103 : Preloading VF Module vcpe_vfmodule_vcpevspvbrg20180927a_201810310815028075
+2018-10-31 08:15:17,113 :  =>> response from requests.post() in submit_create_req() for vfmodule is: 
+2018-10-31 08:15:17,113 : {
+    "requestReferences": {
+        "instanceId": "4b080e10-fd9a-4575-9ffb-063e39bdddab", 
+        "requestId": "923ebaa9-4612-4ecc-924f-38007c6e247a"
+    }
+}
+2018-10-31 08:15:17,113 : req_id of vfmodule is: 923ebaa9-4612-4ecc-924f-38007c6e247a
+2018-10-31 08:15:17,113 : instance_id of vfmodule is: 4b080e10-fd9a-4575-9ffb-063e39bdddab
+2018-10-31 08:15:17,122 : response from requests.post() in preload() is: 
+2018-10-31 08:15:17,123 : {
+    "output": {
+        "ack-final-indicator": "Y", 
+        "response-code": "200", 
+        "svc-request-id": "robot12"
+    }
+}
+2018-10-31 08:15:17,123 : Creating VF Module: vcpe_vfmodule_vcpevspvbrg20180927a_201810310815028075
+2018-10-31 08:15:17,123 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/dfb2518e-1711-4afb-a1b5-cebfa695cbc5/vnfs/818ef0c1-2fb1-4da6-9365-e296562fac67/vfModules
+2018-10-31 08:15:17,123 :  =>> submit_create_req request body:
+2018-10-31 08:15:17,123 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "278ae612-2235-43cd-b0f4-97a237d024a3", 
+            "modelCustomizationName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelInvariantId": "e7be3381-9a49-4216-a8aa-7e8422e7c493", 
+            "modelName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelType": "vfModule", 
+            "modelVersion": "1", 
+            "modelVersionId": "3aa4670d-fdde-4df4-a29f-9da06c31dbd8"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "dfb2518e-1711-4afb-a1b5-cebfa695cbc5", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }, 
+            {
+                "relatedInstance": {
+                    "instanceId": "818ef0c1-2fb1-4da6-9365-e296562fac67", 
+                    "modelInfo": {
+                        "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+                        "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+                        "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+                        "modelName": "vcpevsp_vbrg_20180927a", 
+                        "modelType": "vnf", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vfmodule_vcpevspvbrg20180927a_201810310815028075", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "usePreload": "true"
+        }
+    }
+}
+2018-10-31 08:15:17,162 : Preloading VF Module vcpe_vfmodule_vcpevspvbrg20180927a_201810310815021176
+2018-10-31 08:15:17,178 :  =>> response from requests.post() in submit_create_req() for vfmodule is: 
+2018-10-31 08:15:17,178 : {
+    "requestReferences": {
+        "instanceId": "bcceb6d0-0d01-4cb3-a5c3-ecdf6efa58b7", 
+        "requestId": "6fc63d07-c942-40df-bcc4-4b0eaf749347"
+    }
+}
+2018-10-31 08:15:17,178 : req_id of vfmodule is: 6fc63d07-c942-40df-bcc4-4b0eaf749347
+2018-10-31 08:15:17,178 : instance_id of vfmodule is: bcceb6d0-0d01-4cb3-a5c3-ecdf6efa58b7
+2018-10-31 08:15:17,188 : response from requests.post() in preload() is: 
+2018-10-31 08:15:17,188 : {
+    "output": {
+        "ack-final-indicator": "Y", 
+        "response-code": "200", 
+        "svc-request-id": "robot12"
+    }
+}
+2018-10-31 08:15:17,188 : Creating VF Module: vcpe_vfmodule_vcpevspvbrg20180927a_201810310815021176
+2018-10-31 08:15:17,188 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/6b94c5b0-bf44-4e45-b3b1-d3a86c590613/vnfs/176b16cf-1ee1-47aa-82bd-a599cadff8ca/vfModules
+2018-10-31 08:15:17,188 :  =>> submit_create_req request body:
+2018-10-31 08:15:17,188 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "278ae612-2235-43cd-b0f4-97a237d024a3", 
+            "modelCustomizationName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelInvariantId": "e7be3381-9a49-4216-a8aa-7e8422e7c493", 
+            "modelName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelType": "vfModule", 
+            "modelVersion": "1", 
+            "modelVersionId": "3aa4670d-fdde-4df4-a29f-9da06c31dbd8"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "6b94c5b0-bf44-4e45-b3b1-d3a86c590613", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }, 
+            {
+                "relatedInstance": {
+                    "instanceId": "176b16cf-1ee1-47aa-82bd-a599cadff8ca", 
+                    "modelInfo": {
+                        "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+                        "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+                        "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+                        "modelName": "vcpevsp_vbrg_20180927a", 
+                        "modelType": "vnf", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vfmodule_vcpevspvbrg20180927a_201810310815021176", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "usePreload": "true"
+        }
+    }
+}
+2018-10-31 08:15:17,242 :  =>> response from requests.post() in submit_create_req() for vfmodule is: 
+2018-10-31 08:15:17,242 : {
+    "requestReferences": {
+        "instanceId": "94dcf529-4fec-40c1-94a4-079bd571f3bc", 
+        "requestId": "9939af29-75fa-4405-ae56-53828425ee02"
+    }
+}
+2018-10-31 08:15:17,242 : req_id of vfmodule is: 9939af29-75fa-4405-ae56-53828425ee02
+2018-10-31 08:15:17,242 : instance_id of vfmodule is: 94dcf529-4fec-40c1-94a4-079bd571f3bc
+2018-10-31 08:15:17,314 :  =>> response from requests.post() in submit_create_req() for vfmodule is: 
+2018-10-31 08:15:17,314 : {
+    "requestReferences": {
+        "instanceId": "dd0978ca-a664-4044-acb8-6f6124681e16", 
+        "requestId": "e80a7d79-4087-4cc7-a843-8311a1319064"
+    }
+}
+2018-10-31 08:15:17,314 : req_id of vfmodule is: e80a7d79-4087-4cc7-a843-8311a1319064
+2018-10-31 08:15:17,314 : instance_id of vfmodule is: dd0978ca-a664-4044-acb8-6f6124681e16
+2018-10-31 08:15:17,421 : Preloading VF Module vcpe_vfmodule_vcpevspvbrg20180927a_201810310815022371
+2018-10-31 08:15:17,450 : response from requests.post() in preload() is: 
+2018-10-31 08:15:17,451 : {
+    "output": {
+        "ack-final-indicator": "Y", 
+        "response-code": "200", 
+        "svc-request-id": "robot12"
+    }
+}
+2018-10-31 08:15:17,451 : Creating VF Module: vcpe_vfmodule_vcpevspvbrg20180927a_201810310815022371
+2018-10-31 08:15:17,451 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/d6ef6313-18b5-42a5-a24a-b31ec1fa7c0c/vnfs/fea9be16-085d-4233-ac3a-f4923cc5f09e/vfModules
+2018-10-31 08:15:17,451 :  =>> submit_create_req request body:
+2018-10-31 08:15:17,451 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "278ae612-2235-43cd-b0f4-97a237d024a3", 
+            "modelCustomizationName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelInvariantId": "e7be3381-9a49-4216-a8aa-7e8422e7c493", 
+            "modelName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelType": "vfModule", 
+            "modelVersion": "1", 
+            "modelVersionId": "3aa4670d-fdde-4df4-a29f-9da06c31dbd8"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "d6ef6313-18b5-42a5-a24a-b31ec1fa7c0c", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }, 
+            {
+                "relatedInstance": {
+                    "instanceId": "fea9be16-085d-4233-ac3a-f4923cc5f09e", 
+                    "modelInfo": {
+                        "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+                        "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+                        "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+                        "modelName": "vcpevsp_vbrg_20180927a", 
+                        "modelType": "vnf", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vfmodule_vcpevspvbrg20180927a_201810310815022371", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "usePreload": "true"
+        }
+    }
+}
+2018-10-31 08:15:17,504 :  =>> response from requests.post() in submit_create_req() for vfmodule is: 
+2018-10-31 08:15:17,504 : {
+    "requestReferences": {
+        "instanceId": "4f612a18-313d-479a-9120-1ca28a60f887", 
+        "requestId": "a90e7f7e-a9fd-4a1f-9696-fa01652f7f0a"
+    }
+}
+2018-10-31 08:15:17,504 : req_id of vfmodule is: a90e7f7e-a9fd-4a1f-9696-fa01652f7f0a
+2018-10-31 08:15:17,504 : instance_id of vfmodule is: 4f612a18-313d-479a-9120-1ca28a60f887
+2018-10-31 08:15:17,553 : Preloading VF Module vcpe_vfmodule_vcpevspvbrg20180927a_201810310815033493
+2018-10-31 08:15:17,554 : Preloading VF Module vcpe_vfmodule_vcpevspvbrg20180927a_20181031081503172
+2018-10-31 08:15:17,556 : Preloading VF Module vcpe_vfmodule_vcpevspvbrg20180927a_201810310815026370
+2018-10-31 08:15:17,600 : response from requests.post() in preload() is: 
+2018-10-31 08:15:17,600 : {
+    "output": {
+        "ack-final-indicator": "Y", 
+        "response-code": "200", 
+        "svc-request-id": "robot12"
+    }
+}
+2018-10-31 08:15:17,600 : Creating VF Module: vcpe_vfmodule_vcpevspvbrg20180927a_201810310815033493
+2018-10-31 08:15:17,601 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/83975045-4a35-4139-9f89-d7e2281d56e3/vnfs/33e76f07-785c-4e4d-b4bd-a85bc67cca88/vfModules
+2018-10-31 08:15:17,601 :  =>> submit_create_req request body:
+2018-10-31 08:15:17,601 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "278ae612-2235-43cd-b0f4-97a237d024a3", 
+            "modelCustomizationName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelInvariantId": "e7be3381-9a49-4216-a8aa-7e8422e7c493", 
+            "modelName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelType": "vfModule", 
+            "modelVersion": "1", 
+            "modelVersionId": "3aa4670d-fdde-4df4-a29f-9da06c31dbd8"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "83975045-4a35-4139-9f89-d7e2281d56e3", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }, 
+            {
+                "relatedInstance": {
+                    "instanceId": "33e76f07-785c-4e4d-b4bd-a85bc67cca88", 
+                    "modelInfo": {
+                        "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+                        "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+                        "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+                        "modelName": "vcpevsp_vbrg_20180927a", 
+                        "modelType": "vnf", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vfmodule_vcpevspvbrg20180927a_201810310815033493", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "usePreload": "true"
+        }
+    }
+}
+2018-10-31 08:15:17,636 : response from requests.post() in preload() is: 
+2018-10-31 08:15:17,636 : {
+    "output": {
+        "ack-final-indicator": "Y", 
+        "response-code": "200", 
+        "svc-request-id": "robot12"
+    }
+}
+2018-10-31 08:15:17,636 : Creating VF Module: vcpe_vfmodule_vcpevspvbrg20180927a_20181031081503172
+2018-10-31 08:15:17,636 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/bd133c81-81d7-42a5-ba51-5a9e1e4ec024/vnfs/0fc338bf-aac4-4107-94b9-6d07a405c38f/vfModules
+2018-10-31 08:15:17,636 :  =>> submit_create_req request body:
+2018-10-31 08:15:17,637 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "278ae612-2235-43cd-b0f4-97a237d024a3", 
+            "modelCustomizationName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelInvariantId": "e7be3381-9a49-4216-a8aa-7e8422e7c493", 
+            "modelName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelType": "vfModule", 
+            "modelVersion": "1", 
+            "modelVersionId": "3aa4670d-fdde-4df4-a29f-9da06c31dbd8"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "bd133c81-81d7-42a5-ba51-5a9e1e4ec024", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }, 
+            {
+                "relatedInstance": {
+                    "instanceId": "0fc338bf-aac4-4107-94b9-6d07a405c38f", 
+                    "modelInfo": {
+                        "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+                        "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+                        "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+                        "modelName": "vcpevsp_vbrg_20180927a", 
+                        "modelType": "vnf", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vfmodule_vcpevspvbrg20180927a_20181031081503172", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "usePreload": "true"
+        }
+    }
+}
+2018-10-31 08:15:17,651 : response from requests.post() in preload() is: 
+2018-10-31 08:15:17,651 : {
+    "output": {
+        "ack-final-indicator": "Y", 
+        "response-code": "200", 
+        "svc-request-id": "robot12"
+    }
+}
+2018-10-31 08:15:17,651 : Creating VF Module: vcpe_vfmodule_vcpevspvbrg20180927a_201810310815026370
+2018-10-31 08:15:17,651 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/24687f7f-1ece-4143-b625-08030d52c10c/vnfs/8bdc24cb-439e-4bc6-8a10-f2cfc97eb223/vfModules
+2018-10-31 08:15:17,651 :  =>> submit_create_req request body:
+2018-10-31 08:15:17,651 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "278ae612-2235-43cd-b0f4-97a237d024a3", 
+            "modelCustomizationName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelInvariantId": "e7be3381-9a49-4216-a8aa-7e8422e7c493", 
+            "modelName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelType": "vfModule", 
+            "modelVersion": "1", 
+            "modelVersionId": "3aa4670d-fdde-4df4-a29f-9da06c31dbd8"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "24687f7f-1ece-4143-b625-08030d52c10c", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }, 
+            {
+                "relatedInstance": {
+                    "instanceId": "8bdc24cb-439e-4bc6-8a10-f2cfc97eb223", 
+                    "modelInfo": {
+                        "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+                        "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+                        "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+                        "modelName": "vcpevsp_vbrg_20180927a", 
+                        "modelType": "vnf", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vfmodule_vcpevspvbrg20180927a_201810310815026370", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "usePreload": "true"
+        }
+    }
+}
+2018-10-31 08:15:17,708 : Preloading VF Module vcpe_vfmodule_vcpevspvbrg20180927a_201810310815036426
+2018-10-31 08:15:17,731 : response from requests.post() in preload() is: 
+2018-10-31 08:15:17,731 : {
+    "output": {
+        "ack-final-indicator": "Y", 
+        "response-code": "200", 
+        "svc-request-id": "robot12"
+    }
+}
+2018-10-31 08:15:17,731 : Creating VF Module: vcpe_vfmodule_vcpevspvbrg20180927a_201810310815036426
+2018-10-31 08:15:17,731 : http://172.30.22.18:8080/ecomp/mso/infra/serviceInstances/v4/839f8cfb-8fa7-439b-9ffc-bcee4912b36d/vnfs/063022a4-ad6a-4791-8663-56698bdde537/vfModules
+2018-10-31 08:15:17,731 :  =>> submit_create_req request body:
+2018-10-31 08:15:17,731 : {
+    "requestDetails": {
+        "cloudConfiguration": {
+            "lcpCloudRegionId": "RegionOne", 
+            "tenantId": "b45461e4b03547db8f2869d2c9f9e29e"
+        }, 
+        "modelInfo": {
+            "modelCustomizationId": "278ae612-2235-43cd-b0f4-97a237d024a3", 
+            "modelCustomizationName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelInvariantId": "e7be3381-9a49-4216-a8aa-7e8422e7c493", 
+            "modelName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0", 
+            "modelType": "vfModule", 
+            "modelVersion": "1", 
+            "modelVersionId": "3aa4670d-fdde-4df4-a29f-9da06c31dbd8"
+        }, 
+        "relatedInstanceList": [
+            {
+                "relatedInstance": {
+                    "instanceId": "839f8cfb-8fa7-439b-9ffc-bcee4912b36d", 
+                    "modelInfo": {
+                        "modelInvariantId": "cd3a46b5-2d09-4712-b3aa-0dabd6901638", 
+                        "modelName": "vcpesvc_vbrg_20180927a", 
+                        "modelType": "service", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "516d883a-4ae4-4e98-ae2c-264cda43915d"
+                    }
+                }
+            }, 
+            {
+                "relatedInstance": {
+                    "instanceId": "063022a4-ad6a-4791-8663-56698bdde537", 
+                    "modelInfo": {
+                        "modelCustomizationId": "b860356e-1b92-4d97-b61e-2bb164cac080", 
+                        "modelCustomizationName": "vcpevsp_vbrg_20180927a 0", 
+                        "modelInvariantId": "af9d0277-5cd6-4f88-95ec-f93a947ba664", 
+                        "modelName": "vcpevsp_vbrg_20180927a", 
+                        "modelType": "vnf", 
+                        "modelVersion": "1.0", 
+                        "modelVersionId": "456b7a3f-eb31-4a37-b4cb-29d6d9fd7dda"
+                    }
+                }
+            }
+        ], 
+        "requestInfo": {
+            "instanceName": "vcpe_vfmodule_vcpevspvbrg20180927a_201810310815036426", 
+            "productFamilyId": "f9457e8c-4afd-45da-9389-46acd9bf5116", 
+            "requestorId": "vCPE-Robot", 
+            "source": "VID", 
+            "suppressRollback": "true"
+        }, 
+        "requestParameters": {
+            "usePreload": "true"
+        }
+    }
+}
+2018-10-31 08:15:17,768 :  =>> response from requests.post() in submit_create_req() for vfmodule is: 
+2018-10-31 08:15:17,768 : {
+    "requestReferences": {
+        "instanceId": "7ff6a1e3-1313-46dd-afbd-ea612c040041", 
+        "requestId": "c1172864-2820-4fc3-91e9-02e0abb61724"
+    }
+}
+2018-10-31 08:15:17,768 : req_id of vfmodule is: c1172864-2820-4fc3-91e9-02e0abb61724
+2018-10-31 08:15:17,768 : instance_id of vfmodule is: 7ff6a1e3-1313-46dd-afbd-ea612c040041
+2018-10-31 08:15:17,777 :  =>> response from requests.post() in submit_create_req() for vfmodule is: 
+2018-10-31 08:15:17,777 : {
+    "requestReferences": {
+        "instanceId": "64c2f6b4-527c-42a8-95d5-8e3aa53aee58", 
+        "requestId": "54cd3abe-0d6c-4b9c-bf38-1c6c72520494"
+    }
+}
+2018-10-31 08:15:17,777 : req_id of vfmodule is: 54cd3abe-0d6c-4b9c-bf38-1c6c72520494
+2018-10-31 08:15:17,777 : instance_id of vfmodule is: 64c2f6b4-527c-42a8-95d5-8e3aa53aee58
+2018-10-31 08:15:17,782 :  =>> response from requests.post() in submit_create_req() for vfmodule is: 
+2018-10-31 08:15:17,782 : {
+    "requestReferences": {
+        "instanceId": "c4fc3461-b966-4b21-b192-4a0465186aef", 
+        "requestId": "4c852611-a56b-464d-8866-2d51a83b63a4"
+    }
+}
+2018-10-31 08:15:17,782 : req_id of vfmodule is: 4c852611-a56b-464d-8866-2d51a83b63a4
+2018-10-31 08:15:17,782 : instance_id of vfmodule is: c4fc3461-b966-4b21-b192-4a0465186aef
+2018-10-31 08:15:17,815 :  =>> response from requests.post() in submit_create_req() for vfmodule is: 
+2018-10-31 08:15:17,815 : {
+    "requestReferences": {
+        "instanceId": "e494b58d-d19b-4df8-ae06-6ddb59b05600", 
+        "requestId": "62f9dc3a-304a-410f-aa1e-d34b789d6d6a"
+    }
+}
+2018-10-31 08:15:17,815 : req_id of vfmodule is: 62f9dc3a-304a-410f-aa1e-d34b789d6d6a
+2018-10-31 08:15:17,815 : instance_id of vfmodule is: e494b58d-d19b-4df8-ae06-6ddb59b05600
+2018-10-31 08:16:28,000 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:16:28,000 : Start to config SNIRO homing emulator
+2018-10-31 08:16:28,022 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:16:28,022 : Start to config SNIRO homing emulator
+2018-10-31 08:16:28,138 : Parser found a VNF: vcpear_tunnelxconn_20180927a 0
+2018-10-31 08:16:28,138 : Parser found a VNF: vcpevsp_vgw_20180927a 0
+2018-10-31 08:16:28,138 : Parser found a VNF: vcpear_brg_20180927a 0
+2018-10-31 08:16:28,138 : Parser found a VF module: VcpevspVgw20180927a..base_vcpe_vgw..module-0
+2018-10-31 08:16:28,147 : Preloading SNIRO for homing service
+2018-10-31 08:16:28,157 : Parser found a VNF: vcpear_tunnelxconn_20180927a 0
+2018-10-31 08:16:28,157 : Parser found a VNF: vcpevsp_vgw_20180927a 0
+2018-10-31 08:16:28,157 : Parser found a VNF: vcpear_brg_20180927a 0
+2018-10-31 08:16:28,157 : Parser found a VF module: VcpevspVgw20180927a..base_vcpe_vgw..module-0
+2018-10-31 08:16:28,158 : vBRG instantiation success!
+2018-10-31 08:16:28,166 : Preloading SNIRO for homing service
+2018-10-31 08:16:28,176 : vBRG instantiation success!
+2018-10-31 08:16:38,037 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:16:38,038 : Start to config SNIRO homing emulator
+2018-10-31 08:16:38,038 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:16:38,038 : Start to config SNIRO homing emulator
+2018-10-31 08:16:38,043 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:16:38,043 : Start to config SNIRO homing emulator
+2018-10-31 08:16:38,048 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:16:38,048 : Start to config SNIRO homing emulator
+2018-10-31 08:16:38,292 : Parser found a VNF: vcpear_tunnelxconn_20180927a 0
+2018-10-31 08:16:38,292 : Parser found a VNF: vcpevsp_vgw_20180927a 0
+2018-10-31 08:16:38,292 : Parser found a VNF: vcpear_brg_20180927a 0
+2018-10-31 08:16:38,292 : Parser found a VF module: VcpevspVgw20180927a..base_vcpe_vgw..module-0
+2018-10-31 08:16:38,298 : Parser found a VNF: vcpear_tunnelxconn_20180927a 0
+2018-10-31 08:16:38,298 : Parser found a VNF: vcpevsp_vgw_20180927a 0
+2018-10-31 08:16:38,298 : Parser found a VNF: vcpear_brg_20180927a 0
+2018-10-31 08:16:38,298 : Parser found a VF module: VcpevspVgw20180927a..base_vcpe_vgw..module-0
+2018-10-31 08:16:38,305 : Preloading SNIRO for homing service
+2018-10-31 08:16:38,309 : Parser found a VNF: vcpear_tunnelxconn_20180927a 0
+2018-10-31 08:16:38,310 : Parser found a VNF: vcpevsp_vgw_20180927a 0
+2018-10-31 08:16:38,310 : Parser found a VNF: vcpear_brg_20180927a 0
+2018-10-31 08:16:38,310 : Parser found a VF module: VcpevspVgw20180927a..base_vcpe_vgw..module-0
+2018-10-31 08:16:38,316 : Preloading SNIRO for homing service
+2018-10-31 08:16:38,321 : Preloading SNIRO for homing service
+2018-10-31 08:16:38,332 : vBRG instantiation success!
+2018-10-31 08:16:38,353 : vBRG instantiation success!
+2018-10-31 08:16:38,356 : vBRG instantiation success!
+2018-10-31 08:16:38,372 : Parser found a VNF: vcpear_tunnelxconn_20180927a 0
+2018-10-31 08:16:38,372 : Parser found a VNF: vcpevsp_vgw_20180927a 0
+2018-10-31 08:16:38,372 : Parser found a VNF: vcpear_brg_20180927a 0
+2018-10-31 08:16:38,372 : Parser found a VF module: VcpevspVgw20180927a..base_vcpe_vgw..module-0
+2018-10-31 08:16:38,387 : Preloading SNIRO for homing service
+2018-10-31 08:16:38,398 : vBRG instantiation success!
+2018-10-31 08:16:43,051 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:16:43,051 : Start to config SNIRO homing emulator
+2018-10-31 08:16:43,175 : Parser found a VNF: vcpear_tunnelxconn_20180927a 0
+2018-10-31 08:16:43,175 : Parser found a VNF: vcpevsp_vgw_20180927a 0
+2018-10-31 08:16:43,175 : Parser found a VNF: vcpear_brg_20180927a 0
+2018-10-31 08:16:43,175 : Parser found a VF module: VcpevspVgw20180927a..base_vcpe_vgw..module-0
+2018-10-31 08:16:43,183 : Preloading SNIRO for homing service
+2018-10-31 08:16:43,192 : vBRG instantiation success!
+2018-10-31 08:16:48,080 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:16:48,080 : Start to config SNIRO homing emulator
+2018-10-31 08:16:48,206 : Parser found a VNF: vcpear_tunnelxconn_20180927a 0
+2018-10-31 08:16:48,206 : Parser found a VNF: vcpevsp_vgw_20180927a 0
+2018-10-31 08:16:48,206 : Parser found a VNF: vcpear_brg_20180927a 0
+2018-10-31 08:16:48,206 : Parser found a VF module: VcpevspVgw20180927a..base_vcpe_vgw..module-0
+2018-10-31 08:16:48,216 : Preloading SNIRO for homing service
+2018-10-31 08:16:48,233 : vBRG instantiation success!
+2018-10-31 08:16:53,091 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:16:53,091 : Start to config SNIRO homing emulator
+2018-10-31 08:16:53,221 : Parser found a VNF: vcpear_tunnelxconn_20180927a 0
+2018-10-31 08:16:53,221 : Parser found a VNF: vcpevsp_vgw_20180927a 0
+2018-10-31 08:16:53,221 : Parser found a VNF: vcpear_brg_20180927a 0
+2018-10-31 08:16:53,221 : Parser found a VF module: VcpevspVgw20180927a..base_vcpe_vgw..module-0
+2018-10-31 08:16:53,230 : Preloading SNIRO for homing service
+2018-10-31 08:16:53,241 : vBRG instantiation success!
+2018-10-31 08:17:03,338 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:17:03,338 : Start to config SNIRO homing emulator
+2018-10-31 08:17:03,338 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:17:03,338 : Start to config SNIRO homing emulator
+2018-10-31 08:17:03,339 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:17:03,340 : Start to config SNIRO homing emulator
+2018-10-31 08:17:03,340 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:17:03,340 : Start to config SNIRO homing emulator
+2018-10-31 08:17:03,344 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:17:03,344 : Start to config SNIRO homing emulator
+2018-10-31 08:17:03,585 : Parser found a VNF: vcpear_tunnelxconn_20180927a 0
+2018-10-31 08:17:03,585 : Parser found a VNF: vcpevsp_vgw_20180927a 0
+2018-10-31 08:17:03,585 : Parser found a VNF: vcpear_brg_20180927a 0
+2018-10-31 08:17:03,585 : Parser found a VF module: VcpevspVgw20180927a..base_vcpe_vgw..module-0
+2018-10-31 08:17:03,598 : Parser found a VNF: vcpear_tunnelxconn_20180927a 0
+2018-10-31 08:17:03,598 : Parser found a VNF: vcpevsp_vgw_20180927a 0
+2018-10-31 08:17:03,599 : Parser found a VNF: vcpear_brg_20180927a 0
+2018-10-31 08:17:03,599 : Parser found a VF module: VcpevspVgw20180927a..base_vcpe_vgw..module-0
+2018-10-31 08:17:03,609 : Preloading SNIRO for homing service
+2018-10-31 08:17:03,622 : Preloading SNIRO for homing service
+2018-10-31 08:17:03,625 : vBRG instantiation success!
+2018-10-31 08:17:03,638 : vBRG instantiation success!
+2018-10-31 08:17:03,687 : Parser found a VNF: vcpear_tunnelxconn_20180927a 0
+2018-10-31 08:17:03,687 : Parser found a VNF: vcpevsp_vgw_20180927a 0
+2018-10-31 08:17:03,687 : Parser found a VNF: vcpear_brg_20180927a 0
+2018-10-31 08:17:03,687 : Parser found a VF module: VcpevspVgw20180927a..base_vcpe_vgw..module-0
+2018-10-31 08:17:03,690 : Parser found a VNF: vcpear_tunnelxconn_20180927a 0
+2018-10-31 08:17:03,690 : Parser found a VNF: vcpevsp_vgw_20180927a 0
+2018-10-31 08:17:03,690 : Parser found a VNF: vcpear_brg_20180927a 0
+2018-10-31 08:17:03,690 : Parser found a VF module: VcpevspVgw20180927a..base_vcpe_vgw..module-0
+2018-10-31 08:17:03,702 : Preloading SNIRO for homing service
+2018-10-31 08:17:03,703 : Preloading SNIRO for homing service
+2018-10-31 08:17:03,718 : vBRG instantiation success!
+2018-10-31 08:17:03,719 : Parser found a VNF: vcpear_tunnelxconn_20180927a 0
+2018-10-31 08:17:03,719 : Parser found a VNF: vcpevsp_vgw_20180927a 0
+2018-10-31 08:17:03,719 : Parser found a VNF: vcpear_brg_20180927a 0
+2018-10-31 08:17:03,719 : Parser found a VF module: VcpevspVgw20180927a..base_vcpe_vgw..module-0
+2018-10-31 08:17:03,724 : vBRG instantiation success!
+2018-10-31 08:17:03,728 : Preloading SNIRO for homing service
+2018-10-31 08:17:03,737 : vBRG instantiation success!
+2018-10-31 08:17:08,351 : 
+----------------------------------------------------------------------------------
+2018-10-31 08:17:08,351 : Start to config SNIRO homing emulator
+2018-10-31 08:17:08,474 : Parser found a VNF: vcpear_tunnelxconn_20180927a 0
+2018-10-31 08:17:08,474 : Parser found a VNF: vcpevsp_vgw_20180927a 0
+2018-10-31 08:17:08,474 : Parser found a VNF: vcpear_brg_20180927a 0
+2018-10-31 08:17:08,474 : Parser found a VF module: VcpevspVgw20180927a..base_vcpe_vgw..module-0
+2018-10-31 08:17:08,485 : Preloading SNIRO for homing service
+2018-10-31 08:17:08,494 : vBRG instantiation success!

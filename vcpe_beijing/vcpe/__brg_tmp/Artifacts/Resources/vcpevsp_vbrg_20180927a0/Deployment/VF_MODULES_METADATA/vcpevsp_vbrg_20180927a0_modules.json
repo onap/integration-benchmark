@@ -1,0 +1,25 @@
+[
+  {
+    "vfModuleModelName": "VcpevspVbrg20180927a..base_vcpe_vbrgemu..module-0",
+    "vfModuleModelInvariantUUID": "e7be3381-9a49-4216-a8aa-7e8422e7c493",
+    "vfModuleModelVersion": "1",
+    "vfModuleModelUUID": "3aa4670d-fdde-4df4-a29f-9da06c31dbd8",
+    "vfModuleModelCustomizationUUID": "278ae612-2235-43cd-b0f4-97a237d024a3",
+    "isBase": true,
+    "artifacts": [
+      "89072277-717b-4d18-95d3-70173a411085",
+      "9a450602-4a81-49c8-86a6-95a350dff996"
+    ],
+    "properties": {
+      "min_vf_module_instances": "1",
+      "vf_module_label": "base_vcpe_vbrgemu",
+      "max_vf_module_instances": "1",
+      "vfc_list": "",
+      "vf_module_description": "",
+      "vf_module_type": "Base",
+      "availability_zone_count": "",
+      "volume_group": "false",
+      "initial_count": "1"
+    }
+  }
+]

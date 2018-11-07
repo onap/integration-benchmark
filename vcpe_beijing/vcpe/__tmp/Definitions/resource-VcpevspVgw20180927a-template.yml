@@ -1,0 +1,959 @@
+tosca_definitions_version: tosca_simple_yaml_1_1
+metadata:
+  invariantUUID: 0801524f-49f4-451b-ab2e-d67db13b4d0d
+  UUID: 5d723e2e-384b-48a5-8bdf-19b7b42fb956
+  name: vcpevsp_vgw_20180927a
+  description: vcpevsp_vgw_20180927a
+  type: VF
+  category: Network L2-3
+  subcategory: Infrastructure
+  resourceVendor: tutorial-license
+  resourceVendorRelease: '1.0'
+  resourceVendorModelNumber: ''
+imports:
+- nodes:
+    file: nodes.yml
+- datatypes:
+    file: data.yml
+- capabilities:
+    file: capabilities.yml
+- relationships:
+    file: relationships.yml
+- groups:
+    file: groups.yml
+- policies:
+    file: policies.yml
+- resource-vcpevsp_vgw_20180927a-interface:
+    file: resource-VcpevspVgw20180927a-template-interface.yml
+- resource-vcpevsp_vgw_20180927a-nodes.vgwCvfc:
+    file: resource-VcpevspVgw20180927aNodesVgwcvfc-template.yml
+- resource-vcpevsp_vgw_20180927a-nodes.vgwCvfc-interface:
+    file: resource-VcpevspVgw20180927aNodesVgwcvfc-template-interface.yml
+topology_template:
+  inputs:
+    vf_module_id:
+      default: vCPE_Customer_GW
+      type: string
+      description: The vCPE Module ID is provided by ONAP
+    vcpe_image_name:
+      default: vgw-base-ubuntu-16-04
+      type: string
+      description: Image to be used for compute instance
+    nf_function:
+      type: string
+    repo_url_blob:
+      default: https://nexus.onap.org/content/sites/raw
+      type: string
+      description: URL of the repository that hosts the demo packages
+    public_net_id:
+      default: 971040b2-7059-49dc-b220-4fab50cb2ad4
+      type: string
+      description: Public network that enables remote connection to VNF
+    vgw_name_0:
+      default: zdcpe1cpe01gw01
+      type: string
+      description: Name of the vGW
+    onap_private_subnet_id:
+      default: oam_onap_8zLM
+      type: string
+      description: Private sub-network that connects ONAP components and the VNF
+    nf_type:
+      type: string
+    onap_private_net_cidr:
+      default: 10.0.0.0/16
+      type: string
+      description: The CIDR of the protected private network
+    cpe_public_net_id:
+      default: zdfw1cpe01_public
+      type: string
+      description: Private network that connects vGW to emulated internet
+    mux_gw_private_net_id:
+      default: zdfw1muxgw01_private
+      type: string
+      description: Private network that connects vGMUX to vGWs
+    mux_ip_addr:
+      default: 10.5.0.20
+      type: string
+      description: IP address of vGMUX
+    vnf_id:
+      default: vCPE_Infrastructure_GW_demo_app
+      type: string
+      description: The VNF ID is provided by ONAP
+    dcae_collector_ip:
+      default: 10.0.4.102
+      type: string
+      description: IP address of the DCAE collector
+    cpe_public_net_cidr:
+      default: 10.2.0.0/24
+      type: string
+      description: The CIDR of the vCPE public
+    vpp_source_repo_branch:
+      default: stable/1704
+      type: string
+      description: Git Branch for the VPP source codes
+    dcae_collector_port:
+      default: '8080'
+      type: string
+      description: Port of the DCAE collector
+    vg_vgmux_tunnel_vni:
+      default: 100.0
+      type: float
+      description: vni value of vG-vGMUX vxlan tunnel
+    mux_gw_private_net_cidr:
+      default: 10.5.0.0/24
+      type: string
+      description: The CIDR of the vGMUX private network
+    hc2vpp_source_repo_branch:
+      default: stable/1704
+      type: string
+      description: Git Branch for the Honeycomb source codes
+    mux_gw_private_subnet_id:
+      default: zdfw1muxgw01_sub_private
+      type: string
+      description: vGMUX private sub-network name or ID
+    nf_naming:
+      default:
+        ecomp_generated_naming: true
+      type: org.openecomp.datatypes.Naming
+    multi_stage_design:
+      default: false
+      type: boolean
+    nf_naming_code:
+      type: string
+    onap_private_net_id:
+      default: oam_onap_8zLM
+      type: string
+      description: Private network that connects ONAP components and the VNF
+    availability_zone_max_count:
+      default: 1
+      type: integer
+    vpp_source_repo_url:
+      default: https://gerrit.fd.io/r/vpp
+      type: string
+      description: URL for VPP source codes
+    demo_artifacts_version:
+      default: 1.1.0
+      type: string
+      description: Artifacts (jar, tar.gz) version used in demo vnfs
+    max_instances:
+      type: integer
+    vgw_private_ip_0:
+      default: 10.5.0.22
+      type: string
+      description: Private IP address that is assigned to the vGW to communicate with vGMUX
+    vgw_private_ip_1:
+      default: 10.0.101.30
+      type: string
+      description: Private IP address that is assigned to the vGW to communicate with ONAP components
+    pub_key:
+      default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQXYJYYi3/OUZXUiCYWdtc7K0m5C0dJKVxPG0eI8EWZrEHYdfYe6WoTSDJCww+1qlBSpA5ac/Ba4Wn9vh+lR1vtUKkyIC/nrYb90ReUd385Glkgzrfh5HdR5y5S2cL/Frh86lAn9r6b3iWTJD8wBwXFyoe1S2nMTOIuG4RPNvfmyCTYVh8XTCCE8HPvh3xv2r4egawG1P4Q4UDwk+hDBXThY2KS8M5/8EMyxHV0ImpLbpYCTBA6KYDIRtqmgS6iKyy8v2D1aSY5mc9J0T5t9S2Gv+VZQNWQDDKNFnxqYaAo1uEoq/i1q63XC5AD3ckXb2VT6dp23BQMdDfbHyUWfJN
+      type: string
+      description: Public key to be installed on the compute instance
+    key_name:
+      default: vgw_key
+      type: string
+      description: Public/Private key pair name
+    repo_url_artifacts:
+      default: https://nexus.onap.org/content/groups/staging
+      type: string
+      description: URL of the repository that hosts the demo packages
+    vcpe_flavor_name:
+      default: m1.medium
+      type: string
+      description: Type of instance (flavor) to be used
+    nf_role:
+      type: string
+    install_script_version:
+      default: 1.1.0-SNAPSHOT
+      type: string
+      description: Version number of the scripts that install the vFW demo app
+    hc2vpp_source_repo_url:
+      default: https://gerrit.fd.io/r/hc2vpp
+      type: string
+      description: URL for Honeycomb source codes
+    min_instances:
+      type: integer
+    cpe_public_subnet_id:
+      default: zdfw1cpe01_sub_public
+      type: string
+      description: vCPE Public subnet
+    cloud_env:
+      default: openstack
+      type: string
+      description: Cloud environment (e.g., openstack, rackspace)
+  node_templates:
+    abstract_vgw:
+      type: org.openecomp.resource.vfc.VcpevspVgw20180927acvfc.abstract.nodes.vgw
+      metadata:
+        invariantUUID: 15a56c2b-9379-43d3-8e84-629b1e475454
+        UUID: 00c78a36-7714-423e-834c-7e5ce06b817a
+        customizationUUID: 727e4eda-ad0e-4cdf-9426-6f5cf86afc40
+        version: '1.0'
+        name: vcpevsp_vgw_20180927a-nodes.vgwCvfc
+        description: Complex node type that is used as nested type in VF
+        type: CVFC
+        category: Generic
+        subcategory: Abstract
+        resourceVendor: tutorial-license
+        resourceVendorRelease: '1.0'
+        resourceVendorModelNumber: ''
+      properties:
+        port_vgw_private_0_port_network:
+        - get_input: mux_gw_private_net_id
+        port_vgw_private_2_port_mac_requirements:
+          mac_count_required:
+            is_required: false
+        port_vgw_private_1_port_network:
+        - get_input: onap_private_net_id
+        compute_vgw_metadata:
+        - vf_module_id:
+            get_input: vf_module_id
+          vnf_id:
+            get_input: vnf_id
+        port_vgw_private_2_port_ip_requirements:
+        - ip_version: 4
+          ip_count_required:
+            is_required: false
+          floating_ip_count_required:
+            is_required: false
+        compute_vgw_key_name:
+        - UNSUPPORTED_RESOURCE_my_keypair
+        nfc_naming:
+          ecomp_generated_naming: true
+        port_vgw_private_1_port_network_role_tag: onap_private
+        vm_flavor_name:
+          get_input: vcpe_flavor_name
+        port_vgw_private_2_port_fixed_ips:
+        - subnet:
+            get_input: cpe_public_subnet_id
+        service_template_filter:
+          substitute_service_template: Nested_vgwServiceTemplate.yaml
+          index_value: 0
+          count: '1'
+          scaling_enabled: true
+          mandatory: true
+        compute_vgw_user_data_format:
+        - RAW
+        vm_image_name:
+          get_input: vcpe_image_name
+        vm_type_tag: vgw
+        port_vgw_private_1_port_ip_requirements:
+        - ip_version: 4
+          ip_count_required:
+            is_required: true
+          floating_ip_count_required:
+            is_required: false
+        port_vgw_private_2_port_exCP_naming:
+          ecomp_generated_naming: true
+        port_vgw_private_2_port_network:
+        - get_input: cpe_public_net_id
+        nfc_naming_code: vgw
+        port_vgw_private_1_port_fixed_ips:
+        - subnet:
+            get_input: onap_private_subnet_id
+          ip_address:
+            get_input: vgw_private_ip_1
+        port_vgw_private_2_port_network_role_tag: cpe_public
+        compute_vgw_name:
+        - get_input: vgw_name_0
+        index_value: 0
+        port_vgw_private_0_port_mac_requirements:
+          mac_count_required:
+            is_required: false
+        port_vgw_private_1_port_exCP_naming:
+          ecomp_generated_naming: true
+        port_vgw_private_1_port_mac_requirements:
+          mac_count_required:
+            is_required: false
+        port_vgw_private_0_port_fixed_ips:
+        - subnet:
+            get_input: mux_gw_private_subnet_id
+          ip_address:
+            get_input: vgw_private_ip_0
+        min_instances: 0
+        port_vgw_private_0_port_exCP_naming:
+          ecomp_generated_naming: true
+        port_vgw_private_0_port_ip_requirements:
+        - ip_version: 4
+          ip_count_required:
+            is_required: true
+          floating_ip_count_required:
+            is_required: false
+        port_vgw_private_0_port_network_role_tag: mux_gw_private
+      capabilities:
+        network.incoming.bytes.rate_vgw_vgw_private_0_port:
+          properties:
+            unit: B/s
+            description: Average rate of incoming bytes
+            type: Gauge
+            category: network
+        network.incoming.packets.rate_vgw_vgw_private_1_port:
+          properties:
+            unit: packet/s
+            description: Average rate of incoming packets
+            type: Gauge
+            category: network
+        network.outgoing.packets.rate_vgw_vgw_private_1_port:
+          properties:
+            unit: packet/s
+            description: Average rate of outgoing packets
+            type: Gauge
+            category: network
+        cpu_vgw:
+          properties:
+            unit: ns
+            description: CPU time used
+            type: Cumulative
+            category: compute
+        disk.allocation_vgw:
+          properties:
+            unit: B
+            description: The amount of disk occupied by the instance on the host machine
+            type: Gauge
+            category: disk
+        network.incoming.bytes_vgw_vgw_private_0_port:
+          properties:
+            unit: B
+            description: Number of incoming bytes
+            type: Cumulative
+            category: network
+        network.incoming.packets.rate_vgw_vgw_private_0_port:
+          properties:
+            unit: packet/s
+            description: Average rate of incoming packets
+            type: Gauge
+            category: network
+        network.outgoing.packets.rate_vgw_vgw_private_0_port:
+          properties:
+            unit: packet/s
+            description: Average rate of outgoing packets
+            type: Gauge
+            category: network
+        scalable_vgw:
+          properties:
+            min_instances: 1
+            max_instances: 1
+        disk.iops_vgw:
+          properties:
+            unit: count/s
+            description: Average disk iops
+            type: Gauge
+            category: disk
+        disk.device.usage_vgw:
+          properties:
+            unit: B
+            description: The physical size in bytes of the image container on the host per device
+            type: Gauge
+            category: disk
+        disk.usage_vgw:
+          properties:
+            unit: B
+            description: The physical size in bytes of the image container on the host
+            type: Gauge
+            category: disk
+        disk.read.bytes_vgw:
+          properties:
+            unit: B
+            description: Volume of reads
+            type: Cumulative
+            category: compute
+        disk.device.write.bytes_vgw:
+          properties:
+            unit: B
+            description: Volume of writes
+            type: Cumulative
+            category: disk
+        disk.device.write.bytes.rate_vgw:
+          properties:
+            unit: B/s
+            description: Average rate of writes
+            type: Gauge
+            category: disk
+        disk.capacity_vgw:
+          properties:
+            unit: B
+            description: The amount of disk that the instance can see
+            type: Gauge
+            category: disk
+        network.outgoing.packets.rate_vgw_vgw_private_2_port:
+          properties:
+            unit: packet/s
+            description: Average rate of outgoing packets
+            type: Gauge
+            category: network
+        disk.device.allocation_vgw:
+          properties:
+            unit: B
+            description: The amount of disk per device occupied by the instance on the host machine
+            type: Gauge
+            category: disk
+        network.incoming.packets_vgw_vgw_private_2_port:
+          properties:
+            unit: packet
+            description: Number of incoming packets
+            type: Cumulative
+            category: network
+        disk.device.read.bytes_vgw:
+          properties:
+            unit: B
+            description: Volume of reads
+            type: Cumulative
+            category: disk
+        network.incoming.bytes.rate_vgw_vgw_private_2_port:
+          properties:
+            unit: B/s
+            description: Average rate of incoming bytes
+            type: Gauge
+            category: network
+        network.outgoing.bytes_vgw_vgw_private_2_port:
+          properties:
+            unit: B
+            description: Number of outgoing bytes
+            type: Cumulative
+            category: network
+        network.outpoing.packets_vgw_vgw_private_1_port:
+          properties:
+            unit: packet
+            description: Number of outgoing packets
+            type: Cumulative
+            category: network
+        disk.device.read.bytes.rate_vgw:
+          properties:
+            unit: B/s
+            description: Average rate of reads
+            type: Gauge
+            category: disk
+        network.incoming.bytes_vgw_vgw_private_1_port:
+          properties:
+            unit: B
+            description: Number of incoming bytes
+            type: Cumulative
+            category: network
+        instance_vgw:
+          properties:
+            unit: instance
+            description: Existence of instance
+            type: Gauge
+            category: compute
+        network.outgoing.bytes.rate_vgw_vgw_private_0_port:
+          properties:
+            unit: B/s
+            description: Average rate of outgoing bytes
+            type: Gauge
+            category: network
+        disk.write.requests_vgw:
+          properties:
+            unit: request
+            description: Number of write requests
+            type: Cumulative
+            category: compute
+        network.incoming.packets.rate_vgw_vgw_private_2_port:
+          properties:
+            unit: packet/s
+            description: Average rate of incoming packets
+            type: Gauge
+            category: network
+        network.outgoing.bytes_vgw_vgw_private_0_port:
+          properties:
+            unit: B
+            description: Number of outgoing bytes
+            type: Cumulative
+            category: network
+        disk.device.iops_vgw:
+          properties:
+            unit: count/s
+            description: Average disk iops per device
+            type: Gauge
+            category: disk
+        network.outgoing.bytes.rate_vgw_vgw_private_2_port:
+          properties:
+            unit: B/s
+            description: Average rate of outgoing bytes
+            type: Gauge
+            category: network
+        disk.device.capacity_vgw:
+          properties:
+            unit: B
+            description: The amount of disk per device that the instance can see
+            type: Gauge
+            category: disk
+        port_mirroring_vgw_vgw_private_1_port:
+          properties:
+            connection_point:
+              network_role:
+                get_input: port_vgw_private_1_port_network_role
+              nfc_type: vgw
+        network.incoming.packets_vgw_vgw_private_0_port:
+          properties:
+            unit: packet
+            description: Number of incoming packets
+            type: Cumulative
+            category: network
+        disk.write.requests.rate_vgw:
+          properties:
+            unit: request/s
+            description: Average rate of write requests
+            type: Gauge
+            category: compute
+        disk.device.latency_vgw:
+          properties:
+            unit: ms
+            description: Average disk latency per device
+            type: Gauge
+            category: disk
+        network.outgoing.bytes.rate_vgw_vgw_private_1_port:
+          properties:
+            unit: B/s
+            description: Average rate of outgoing bytes
+            type: Gauge
+            category: network
+        disk.device.write.requests.rate_vgw:
+          properties:
+            unit: request/s
+            description: Average rate of write requests
+            type: Gauge
+            category: disk
+        network.outpoing.packets_vgw_vgw_private_0_port:
+          properties:
+            unit: packet
+            description: Number of outgoing packets
+            type: Cumulative
+            category: network
+        disk.ephemeral.size_vgw:
+          properties:
+            unit: GB
+            description: Size of ephemeral disk
+            type: Gauge
+            category: compute
+        disk.write.bytes.rate_vgw:
+          properties:
+            unit: B/s
+            description: Average rate of writes
+            type: Gauge
+            category: compute
+        cpu.delta_vgw:
+          properties:
+            unit: ns
+            description: CPU time used since previous datapoint
+            type: Delta
+            category: compute
+        port_mirroring_vgw_vgw_private_0_port:
+          properties:
+            connection_point:
+              network_role:
+                get_input: port_vgw_private_0_port_network_role
+              nfc_type: vgw
+        cpu_util_vgw:
+          properties:
+            unit: '%'
+            description: Average CPU utilization
+            type: Gauge
+            category: compute
+        memory.usage_vgw:
+          properties:
+            unit: MB
+            description: Volume of RAM used by the instance from the amount of its allocated memory
+            type: Gauge
+            category: compute
+        disk.write.bytes_vgw:
+          properties:
+            unit: B
+            description: Volume of writes
+            type: Cumulative
+            category: compute
+        disk.device.read.requests.rate_vgw:
+          properties:
+            unit: request/s
+            description: Average rate of read requests
+            type: Gauge
+            category: disk
+        network.incoming.bytes_vgw_vgw_private_2_port:
+          properties:
+            unit: B
+            description: Number of incoming bytes
+            type: Cumulative
+            category: network
+        port_mirroring_vgw_vgw_private_2_port:
+          properties:
+            connection_point:
+              network_role:
+                get_input: port_vgw_private_2_port_network_role
+              nfc_type: vgw
+        vcpus_vgw:
+          properties:
+            unit: vcpu
+            description: Number of virtual CPUs allocated to the instance
+            type: Gauge
+            category: compute
+        disk.read.requests_vgw:
+          properties:
+            unit: request
+            description: Number of read requests
+            type: Cumulative
+            category: compute
+        endpoint_vgw:
+          properties:
+            secure: true
+        disk.device.read.requests_vgw:
+          properties:
+            unit: request
+            description: Number of read requests
+            type: Cumulative
+            category: disk
+        network.incoming.packets_vgw_vgw_private_1_port:
+          properties:
+            unit: packet
+            description: Number of incoming packets
+            type: Cumulative
+            category: network
+        disk.latency_vgw:
+          properties:
+            unit: ms
+            description: Average disk latency
+            type: Gauge
+            category: disk
+        memory.resident_vgw:
+          properties:
+            unit: MB
+            description: Volume of RAM used by the instance on the physical machine
+            type: Gauge
+            category: compute
+        network.incoming.bytes.rate_vgw_vgw_private_1_port:
+          properties:
+            unit: B/s
+            description: Average rate of incoming bytes
+            type: Gauge
+            category: network
+        disk.read.bytes.rate_vgw:
+          properties:
+            unit: B/s
+            description: Average rate of reads
+            type: Gauge
+            category: compute
+        network.outpoing.packets_vgw_vgw_private_2_port:
+          properties:
+            unit: packet
+            description: Number of outgoing packets
+            type: Cumulative
+            category: network
+        disk.root.size_vgw:
+          properties:
+            unit: GB
+            description: Size of root disk
+            type: Gauge
+            category: compute
+        network.outgoing.bytes_vgw_vgw_private_1_port:
+          properties:
+            unit: B
+            description: Number of outgoing bytes
+            type: Cumulative
+            category: network
+        disk.device.write.requests_vgw:
+          properties:
+            unit: request
+            description: Number of write requests
+            type: Cumulative
+            category: disk
+        memory_vgw:
+          properties:
+            unit: MB
+            description: Volume of RAM allocated to the instance
+            type: Gauge
+            category: compute
+  groups:
+    base_vcpe_vgw_group:
+      type: org.openecomp.groups.heat.HeatStack
+      members:
+      - abstract_vgw
+      metadata:
+        invariantUUID: b3ae7a12-a222-4c05-9036-cc61f629491e
+        UUID: e8f48140-cd41-49ee-bbd9-47cb8c56f92f
+        version: '1'
+        name: base_vcpe_vgw_group
+    VcpevspVgw20180927a..base_vcpe_vgw..module-0:
+      type: org.openecomp.groups.VfModule
+      members:
+      - abstract_vgw
+      metadata:
+        vfModuleModelName: VcpevspVgw20180927a..base_vcpe_vgw..module-0
+        vfModuleModelInvariantUUID: b6af48f9-8a51-4277-b750-ff30f796fca3
+        vfModuleModelUUID: 819267ab-7b98-41bb-b8e7-a63cdfb1b8c5
+        vfModuleModelVersion: '1'
+      properties:
+        min_vf_module_instances: 1
+        vf_module_label: base_vcpe_vgw
+        max_vf_module_instances: 1
+        vfc_list:
+        vf_module_type: Base
+        vf_module_description:
+        initial_count: 1
+        volume_group: false
+        availability_zone_count:
+  substitution_mappings:
+    node_type: org.openecomp.resource.vf.VcpevspVgw20180927a
+    capabilities:
+      abstract_vgw.network.incoming.packets_vgw_vgw_private_0_port:
+      - abstract_vgw
+      - network.incoming.packets_vgw_vgw_private_0_port
+      abstract_vgw.disk.read.bytes_vgw:
+      - abstract_vgw
+      - disk.read.bytes_vgw
+      abstract_vgw.network.incoming.bytes.rate_vgw_vgw_private_0_port:
+      - abstract_vgw
+      - network.incoming.bytes.rate_vgw_vgw_private_0_port
+      abstract_vgw.disk.capacity_vgw:
+      - abstract_vgw
+      - disk.capacity_vgw
+      abstract_vgw.disk.write.bytes_vgw:
+      - abstract_vgw
+      - disk.write.bytes_vgw
+      abstract_vgw.disk.read.requests_vgw:
+      - abstract_vgw
+      - disk.read.requests_vgw
+      abstract_vgw.port_mirroring_vgw_vgw_private_2_port:
+      - abstract_vgw
+      - port_mirroring_vgw_vgw_private_2_port
+      abstract_vgw.network.incoming.bytes_vgw_vgw_private_1_port:
+      - abstract_vgw
+      - network.incoming.bytes_vgw_vgw_private_1_port
+      abstract_vgw.disk.write.requests_vgw:
+      - abstract_vgw
+      - disk.write.requests_vgw
+      abstract_vgw.port_mirroring_vgw_vgw_private_1_port:
+      - abstract_vgw
+      - port_mirroring_vgw_vgw_private_1_port
+      abstract_vgw.disk.device.read.requests.rate_vgw:
+      - abstract_vgw
+      - disk.device.read.requests.rate_vgw
+      abstract_vgw.network.outpoing.packets_vgw_vgw_private_0_port:
+      - abstract_vgw
+      - network.outpoing.packets_vgw_vgw_private_0_port
+      abstract_vgw.disk.allocation_vgw:
+      - abstract_vgw
+      - disk.allocation_vgw
+      abstract_vgw.memory.resident_vgw:
+      - abstract_vgw
+      - memory.resident_vgw
+      abstract_vgw.forwarder_vgw_vgw_private_2_port:
+      - abstract_vgw
+      - forwarder_vgw_vgw_private_2_port
+      abstract_vgw.attachment_vgw_vgw_private_2_port:
+      - abstract_vgw
+      - attachment_vgw_vgw_private_2_port
+      abstract_vgw.cpu_vgw:
+      - abstract_vgw
+      - cpu_vgw
+      abstract_vgw.network.incoming.bytes_vgw_vgw_private_0_port:
+      - abstract_vgw
+      - network.incoming.bytes_vgw_vgw_private_0_port
+      abstract_vgw.network.incoming.bytes_vgw_vgw_private_2_port:
+      - abstract_vgw
+      - network.incoming.bytes_vgw_vgw_private_2_port
+      abstract_vgw.feature_vgw:
+      - abstract_vgw
+      - feature_vgw
+      abstract_vgw.network.outpoing.packets_vgw_vgw_private_1_port:
+      - abstract_vgw
+      - network.outpoing.packets_vgw_vgw_private_1_port
+      abstract_vgw.disk.device.read.bytes_vgw:
+      - abstract_vgw
+      - disk.device.read.bytes_vgw
+      abstract_vgw.feature_vgw_vgw_private_0_port:
+      - abstract_vgw
+      - feature_vgw_vgw_private_0_port
+      abstract_vgw.network.incoming.bytes.rate_vgw_vgw_private_2_port:
+      - abstract_vgw
+      - network.incoming.bytes.rate_vgw_vgw_private_2_port
+      abstract_vgw.disk.device.write.bytes.rate_vgw:
+      - abstract_vgw
+      - disk.device.write.bytes.rate_vgw
+      abstract_vgw.network.incoming.packets.rate_vgw_vgw_private_0_port:
+      - abstract_vgw
+      - network.incoming.packets.rate_vgw_vgw_private_0_port
+      abstract_vgw.disk.latency_vgw:
+      - abstract_vgw
+      - disk.latency_vgw
+      abstract_vgw.disk.device.iops_vgw:
+      - abstract_vgw
+      - disk.device.iops_vgw
+      abstract_vgw.network.incoming.packets_vgw_vgw_private_2_port:
+      - abstract_vgw
+      - network.incoming.packets_vgw_vgw_private_2_port
+      abstract_vgw.attachment_vgw_vgw_private_1_port:
+      - abstract_vgw
+      - attachment_vgw_vgw_private_1_port
+      abstract_vgw.disk.device.allocation_vgw:
+      - abstract_vgw
+      - disk.device.allocation_vgw
+      abstract_vgw.forwarder_vgw_vgw_private_1_port:
+      - abstract_vgw
+      - forwarder_vgw_vgw_private_1_port
+      abstract_vgw.network.outgoing.bytes.rate_vgw_vgw_private_0_port:
+      - abstract_vgw
+      - network.outgoing.bytes.rate_vgw_vgw_private_0_port
+      abstract_vgw.instance_vgw:
+      - abstract_vgw
+      - instance_vgw
+      abstract_vgw.host_vgw:
+      - abstract_vgw
+      - host_vgw
+      abstract_vgw.memory_vgw:
+      - abstract_vgw
+      - memory_vgw
+      abstract_vgw.disk.device.write.requests_vgw:
+      - abstract_vgw
+      - disk.device.write.requests_vgw
+      abstract_vgw.binding_vgw_vgw_private_1_port:
+      - abstract_vgw
+      - binding_vgw_vgw_private_1_port
+      abstract_vgw.cpu.delta_vgw:
+      - abstract_vgw
+      - cpu.delta_vgw
+      abstract_vgw.disk.device.latency_vgw:
+      - abstract_vgw
+      - disk.device.latency_vgw
+      abstract_vgw.port_mirroring_vgw_vgw_private_0_port:
+      - abstract_vgw
+      - port_mirroring_vgw_vgw_private_0_port
+      abstract_vgw.os_vgw:
+      - abstract_vgw
+      - os_vgw
+      abstract_vgw.disk.iops_vgw:
+      - abstract_vgw
+      - disk.iops_vgw
+      abstract_vgw.cpu_util_vgw:
+      - abstract_vgw
+      - cpu_util_vgw
+      abstract_vgw.network.outgoing.bytes.rate_vgw_vgw_private_2_port:
+      - abstract_vgw
+      - network.outgoing.bytes.rate_vgw_vgw_private_2_port
+      abstract_vgw.feature_vgw_vgw_private_2_port:
+      - abstract_vgw
+      - feature_vgw_vgw_private_2_port
+      abstract_vgw.network.incoming.packets.rate_vgw_vgw_private_1_port:
+      - abstract_vgw
+      - network.incoming.packets.rate_vgw_vgw_private_1_port
+      abstract_vgw.disk.usage_vgw:
+      - abstract_vgw
+      - disk.usage_vgw
+      abstract_vgw.network.outgoing.packets.rate_vgw_vgw_private_1_port:
+      - abstract_vgw
+      - network.outgoing.packets.rate_vgw_vgw_private_1_port
+      abstract_vgw.network.outgoing.bytes_vgw_vgw_private_0_port:
+      - abstract_vgw
+      - network.outgoing.bytes_vgw_vgw_private_0_port
+      abstract_vgw.disk.write.requests.rate_vgw:
+      - abstract_vgw
+      - disk.write.requests.rate_vgw
+      abstract_vgw.binding_vgw_vgw_private_0_port:
+      - abstract_vgw
+      - binding_vgw_vgw_private_0_port
+      abstract_vgw.scalable_vgw:
+      - abstract_vgw
+      - scalable_vgw
+      abstract_vgw.network.outgoing.bytes_vgw_vgw_private_1_port:
+      - abstract_vgw
+      - network.outgoing.bytes_vgw_vgw_private_1_port
+      abstract_vgw.binding_vgw:
+      - abstract_vgw
+      - binding_vgw
+      abstract_vgw.disk.device.read.bytes.rate_vgw:
+      - abstract_vgw
+      - disk.device.read.bytes.rate_vgw
+      abstract_vgw.network.outgoing.packets.rate_vgw_vgw_private_0_port:
+      - abstract_vgw
+      - network.outgoing.packets.rate_vgw_vgw_private_0_port
+      abstract_vgw.disk.device.read.requests_vgw:
+      - abstract_vgw
+      - disk.device.read.requests_vgw
+      abstract_vgw.network.outgoing.bytes.rate_vgw_vgw_private_1_port:
+      - abstract_vgw
+      - network.outgoing.bytes.rate_vgw_vgw_private_1_port
+      abstract_vgw.disk.device.write.requests.rate_vgw:
+      - abstract_vgw
+      - disk.device.write.requests.rate_vgw
+      abstract_vgw.binding_vgw_vgw_private_2_port:
+      - abstract_vgw
+      - binding_vgw_vgw_private_2_port
+      abstract_vgw.disk.device.usage_vgw:
+      - abstract_vgw
+      - disk.device.usage_vgw
+      abstract_vgw.disk.write.bytes.rate_vgw:
+      - abstract_vgw
+      - disk.write.bytes.rate_vgw
+      abstract_vgw.disk.device.write.bytes_vgw:
+      - abstract_vgw
+      - disk.device.write.bytes_vgw
+      abstract_vgw.memory.usage_vgw:
+      - abstract_vgw
+      - memory.usage_vgw
+      abstract_vgw.network.outgoing.packets.rate_vgw_vgw_private_2_port:
+      - abstract_vgw
+      - network.outgoing.packets.rate_vgw_vgw_private_2_port
+      abstract_vgw.disk.ephemeral.size_vgw:
+      - abstract_vgw
+      - disk.ephemeral.size_vgw
+      abstract_vgw.disk.root.size_vgw:
+      - abstract_vgw
+      - disk.root.size_vgw
+      abstract_vgw.attachment_vgw_vgw_private_0_port:
+      - abstract_vgw
+      - attachment_vgw_vgw_private_0_port
+      abstract_vgw.disk.device.capacity_vgw:
+      - abstract_vgw
+      - disk.device.capacity_vgw
+      abstract_vgw.feature_vgw_vgw_private_1_port:
+      - abstract_vgw
+      - feature_vgw_vgw_private_1_port
+      abstract_vgw.disk.read.bytes.rate_vgw:
+      - abstract_vgw
+      - disk.read.bytes.rate_vgw
+      abstract_vgw.endpoint_vgw:
+      - abstract_vgw
+      - endpoint_vgw
+      abstract_vgw.forwarder_vgw_vgw_private_0_port:
+      - abstract_vgw
+      - forwarder_vgw_vgw_private_0_port
+      abstract_vgw.network.outpoing.packets_vgw_vgw_private_2_port:
+      - abstract_vgw
+      - network.outpoing.packets_vgw_vgw_private_2_port
+      abstract_vgw.vcpus_vgw:
+      - abstract_vgw
+      - vcpus_vgw
+      abstract_vgw.network.outgoing.bytes_vgw_vgw_private_2_port:
+      - abstract_vgw
+      - network.outgoing.bytes_vgw_vgw_private_2_port
+      abstract_vgw.network.incoming.packets.rate_vgw_vgw_private_2_port:
+      - abstract_vgw
+      - network.incoming.packets.rate_vgw_vgw_private_2_port
+      abstract_vgw.network.incoming.packets_vgw_vgw_private_1_port:
+      - abstract_vgw
+      - network.incoming.packets_vgw_vgw_private_1_port
+      abstract_vgw.network.incoming.bytes.rate_vgw_vgw_private_1_port:
+      - abstract_vgw
+      - network.incoming.bytes.rate_vgw_vgw_private_1_port
+    requirements:
+      abstract_vgw.link_vgw_vgw_private_1_port:
+      - abstract_vgw
+      - link_vgw_vgw_private_1_port
+      abstract_vgw.dependency_vgw:
+      - abstract_vgw
+      - dependency_vgw
+      abstract_vgw.link_vgw_vgw_private_0_port:
+      - abstract_vgw
+      - link_vgw_vgw_private_0_port
+      abstract_vgw.dependency_vgw_vgw_private_2_port:
+      - abstract_vgw
+      - dependency_vgw_vgw_private_2_port
+      abstract_vgw.dependency_vgw_vgw_private_1_port:
+      - abstract_vgw
+      - dependency_vgw_vgw_private_1_port
+      abstract_vgw.link_vgw_vgw_private_2_port:
+      - abstract_vgw
+      - link_vgw_vgw_private_2_port
+      abstract_vgw.dependency_vgw_vgw_private_0_port:
+      - abstract_vgw
+      - dependency_vgw_vgw_private_0_port
+      abstract_vgw.local_storage_vgw:
+      - abstract_vgw
+      - local_storage_vgw

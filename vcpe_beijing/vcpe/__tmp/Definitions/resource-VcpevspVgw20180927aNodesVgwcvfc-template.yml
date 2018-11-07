@@ -1,0 +1,1021 @@
+tosca_definitions_version: tosca_simple_yaml_1_1
+metadata:
+  invariantUUID: 15a56c2b-9379-43d3-8e84-629b1e475454
+  UUID: 00c78a36-7714-423e-834c-7e5ce06b817a
+  name: vcpevsp_vgw_20180927a-nodes.vgwCvfc
+  description: Complex node type that is used as nested type in VF
+  type: CVFC
+  category: Generic
+  subcategory: Abstract
+  resourceVendor: tutorial-license
+  resourceVendorRelease: '1.0'
+  resourceVendorModelNumber: ''
+imports:
+- nodes:
+    file: nodes.yml
+- datatypes:
+    file: data.yml
+- capabilities:
+    file: capabilities.yml
+- relationships:
+    file: relationships.yml
+- groups:
+    file: groups.yml
+- policies:
+    file: policies.yml
+- resource-vcpevsp_vgw_20180927a-nodes.vgwCvfc-interface:
+    file: resource-VcpevspVgw20180927aNodesVgwcvfc-template-interface.yml
+- resource-extNeutronCP:
+    file: resource-Extneutroncp-template.yml
+- resource-VcpevspVgw20180927a.compute.nodes.heat.vgw:
+    file: resource-Vcpevspvgw20180927aComputeNodesHeatVgw-template.yml
+topology_template:
+  inputs:
+    port_vgw_private_2_port_mac_requirements:
+      default:
+        mac_count_required:
+          is_required: false
+      type: org.openecomp.datatypes.network.MacRequirements
+    port_vgw_private_0_port_network:
+      type: list
+      entry_schema:
+        type: string
+    port_vgw_private_1_port_network:
+      type: list
+      entry_schema:
+        type: string
+    port_vgw_private_1_port_vlan_requirements:
+      type: list
+      entry_schema:
+        type: org.openecomp.datatypes.network.VlanRequirements
+    port_vgw_private_2_port_order:
+      type: integer
+    compute_vgw_metadata:
+      type: list
+      entry_schema:
+        type: json
+    port_vgw_private_2_port_ip_requirements:
+      type: list
+      entry_schema:
+        type: org.openecomp.datatypes.network.IpRequirements
+    compute_vgw_key_name:
+      type: list
+      entry_schema:
+        type: string
+    nfc_naming:
+      default:
+        ecomp_generated_naming: true
+      type: org.openecomp.datatypes.Naming
+      description: vfc naming
+    vm_flavor_name:
+      type: string
+    port_vgw_private_1_port_network_role_tag:
+      type: string
+    port_vgw_private_2_port_subnetpoolid:
+      type: string
+    port_vgw_private_0_port_network_role:
+      type: string
+    port_vgw_private_2_port_fixed_ips:
+      type: list
+      entry_schema:
+        type: org.openecomp.datatypes.heat.neutron.port.FixedIps
+    service_template_filter:
+      default:
+        index_value: 0
+        count: '1'
+        scaling_enabled: true
+        mandatory: true
+      type: org.openecomp.datatypes.heat.substitution.SubstitutionFiltering
+      description: Substitution Filter
+    port_vgw_private_1_port_order:
+      type: integer
+    vm_image_name:
+      type: string
+    compute_vgw_user_data_format:
+      type: list
+      entry_schema:
+        type: string
+    vm_type_tag:
+      type: string
+      description: vm type based on naming Convention
+    port_vgw_private_1_port_ip_requirements:
+      type: list
+      entry_schema:
+        type: org.openecomp.datatypes.network.IpRequirements
+    port_vgw_private_0_port_subnetpoolid:
+      type: string
+    high_availablity:
+      type: string
+      description: high_availablity
+    port_vgw_private_2_port_exCP_naming:
+      default:
+        ecomp_generated_naming: true
+      type: org.openecomp.datatypes.Naming
+    port_vgw_private_2_port_network:
+      type: list
+      entry_schema:
+        type: string
+    nfc_naming_code:
+      type: string
+      description: nfc code for instance naming
+    port_vgw_private_1_port_subnetpoolid:
+      type: string
+    nfc_function:
+      type: string
+    port_vgw_private_2_port_vlan_requirements:
+      type: list
+      entry_schema:
+        type: org.openecomp.datatypes.network.VlanRequirements
+    port_vgw_private_0_port_order:
+      type: integer
+    port_vgw_private_2_port_network_role:
+      type: string
+    compute_vgw_name:
+      type: list
+      entry_schema:
+        type: string
+    port_vgw_private_2_port_network_role_tag:
+      type: string
+    port_vgw_private_1_port_fixed_ips:
+      type: list
+      entry_schema:
+        type: org.openecomp.datatypes.heat.neutron.port.FixedIps
+    index_value:
+      default: 0
+      type: integer
+      description: Index value of this substitution service template runtime instance
+    port_vgw_private_0_port_mac_requirements:
+      default:
+        mac_count_required:
+          is_required: false
+      type: org.openecomp.datatypes.network.MacRequirements
+    port_vgw_private_1_port_exCP_naming:
+      default:
+        ecomp_generated_naming: true
+      type: org.openecomp.datatypes.Naming
+    max_instances:
+      type: integer
+      description: Maximum number of VFC Instances
+    port_vgw_private_1_port_mac_requirements:
+      default:
+        mac_count_required:
+          is_required: false
+      type: org.openecomp.datatypes.network.MacRequirements
+    port_vgw_private_1_port_network_role:
+      type: string
+    port_vgw_private_0_port_fixed_ips:
+      type: list
+      entry_schema:
+        type: org.openecomp.datatypes.heat.neutron.port.FixedIps
+    min_instances:
+      default: 0
+      type: integer
+      description: Minimum number of VFC Instances
+    port_vgw_private_0_port_ip_requirements:
+      type: list
+      entry_schema:
+        type: org.openecomp.datatypes.network.IpRequirements
+    port_vgw_private_0_port_vlan_requirements:
+      type: list
+      entry_schema:
+        type: org.openecomp.datatypes.network.VlanRequirements
+    port_vgw_private_0_port_exCP_naming:
+      default:
+        ecomp_generated_naming: true
+      type: org.openecomp.datatypes.Naming
+    port_vgw_private_0_port_network_role_tag:
+      type: string
+  node_templates:
+    vgw_vgw_private_2_port:
+      type: org.openecomp.resource.cp.v2.extNeutronCP
+      metadata:
+        invariantUUID: 7878123c-e89b-48f0-8d49-a3931603059a
+        UUID: 1cc61e2c-e414-4927-8bf7-6e87e1cc4ac3
+        customizationUUID: 78cb6b13-cfeb-4975-9120-d970073d123f
+        version: '1.0'
+        name: extNeutronCP
+        description: The AT&T Connection Point base type all other CP derive from
+        type: CP
+        category: Generic
+        subcategory: Network Elements
+        resourceVendor: ATT (Tosca)
+        resourceVendorRelease: 1.0.0.wd03
+        resourceVendorModelNumber: ''
+      properties:
+        subnetpoolid:
+          get_input: port_vgw_private_2_port_subnetpoolid
+        is_default: false
+        network:
+          get_input:
+          - port_vgw_private_2_port_network
+          - index_value
+        replacement_policy: AUTO
+        ip_requirements:
+          get_input: port_vgw_private_2_port_ip_requirements
+        network_role:
+          get_input: port_vgw_private_2_port_network_role
+        fixed_ips:
+          get_input:
+          - port_vgw_private_2_port_fixed_ips
+          - index_value
+        mac_requirements:
+          get_input: port_vgw_private_2_port_mac_requirements
+        admin_state_up: true
+        exCP_naming:
+          get_input: port_vgw_private_2_port_exCP_naming
+        vlan_requirements:
+          get_input: port_vgw_private_2_port_vlan_requirements
+        network_role_tag:
+          get_input: port_vgw_private_2_port_network_role_tag
+        order:
+          get_input: port_vgw_private_2_port_order
+      requirements:
+      - binding:
+          capability: binding
+          node: vgw
+      capabilities:
+        network.outgoing.bytes.rate_vgw_vgw_private_2_port:
+          properties:
+            unit: B/s
+            description: Average rate of outgoing bytes
+            type: Gauge
+            category: network
+        network.outpoing.packets_vgw_vgw_private_2_port:
+          properties:
+            unit: packet
+            description: Number of outgoing packets
+            type: Cumulative
+            category: network
+        network.outgoing.packets.rate_vgw_vgw_private_2_port:
+          properties:
+            unit: packet/s
+            description: Average rate of outgoing packets
+            type: Gauge
+            category: network
+        network.incoming.packets_vgw_vgw_private_2_port:
+          properties:
+            unit: packet
+            description: Number of incoming packets
+            type: Cumulative
+            category: network
+        network.incoming.bytes_vgw_vgw_private_2_port:
+          properties:
+            unit: B
+            description: Number of incoming bytes
+            type: Cumulative
+            category: network
+        port_mirroring_vgw_vgw_private_2_port:
+          properties:
+            connection_point:
+              network_role:
+                get_input: port_vgw_private_2_port_network_role
+              nfc_type: vgw
+        network.incoming.bytes.rate_vgw_vgw_private_2_port:
+          properties:
+            unit: B/s
+            description: Average rate of incoming bytes
+            type: Gauge
+            category: network
+        network.incoming.packets.rate_vgw_vgw_private_2_port:
+          properties:
+            unit: packet/s
+            description: Average rate of incoming packets
+            type: Gauge
+            category: network
+        network.outgoing.bytes_vgw_vgw_private_2_port:
+          properties:
+            unit: B
+            description: Number of outgoing bytes
+            type: Cumulative
+            category: network
+    vgw:
+      type: org.openecomp.resource.vfc.VcpevspVgw20180927a.abstract.compute.nodes.heat.vgw
+      metadata:
+        invariantUUID: f650a64c-bcbe-4edb-a99c-907decebc3bb
+        UUID: c046572f-28c3-4fa7-960e-d8e0a272224c
+        customizationUUID: 3ada2708-e73e-46d8-bf1a-a34b78407d1c
+        version: '1.0'
+        name: VcpevspVgw20180927a.compute.nodes.heat.vgw
+        description: Not reusable inner VFC
+        type: VFC
+        category: Generic
+        subcategory: Abstract
+        resourceVendor: tutorial-license
+        resourceVendorRelease: '1.0'
+        resourceVendorModelNumber: ''
+      properties:
+        flavor:
+          get_input: vm_flavor_name
+        key_name:
+          get_input:
+          - compute_vgw_key_name
+          - index_value
+        image:
+          get_input: vm_image_name
+        image_update_policy: REBUILD
+        metadata:
+          get_input:
+          - compute_vgw_metadata
+          - index_value
+        software_config_transport: POLL_SERVER_CFN
+        contrail_service_instance_ind: false
+        user_data_format:
+          get_input:
+          - compute_vgw_user_data_format
+          - index_value
+        user_data_update_policy: REPLACE
+        name:
+          get_input:
+          - compute_vgw_name
+          - index_value
+        flavor_update_policy: RESIZE
+      capabilities:
+        disk.device.iops_vgw:
+          properties:
+            unit: count/s
+            description: Average disk iops per device
+            type: Gauge
+            category: disk
+        disk.device.capacity_vgw:
+          properties:
+            unit: B
+            description: The amount of disk per device that the instance can see
+            type: Gauge
+            category: disk
+        cpu_vgw:
+          properties:
+            unit: ns
+            description: CPU time used
+            type: Cumulative
+            category: compute
+        disk.allocation_vgw:
+          properties:
+            unit: B
+            description: The amount of disk occupied by the instance on the host machine
+            type: Gauge
+            category: disk
+        disk.write.requests.rate_vgw:
+          properties:
+            unit: request/s
+            description: Average rate of write requests
+            type: Gauge
+            category: compute
+        scalable_vgw:
+          properties:
+            min_instances: 1
+            max_instances: 1
+        disk.iops_vgw:
+          properties:
+            unit: count/s
+            description: Average disk iops
+            type: Gauge
+            category: disk
+        disk.device.latency_vgw:
+          properties:
+            unit: ms
+            description: Average disk latency per device
+            type: Gauge
+            category: disk
+        disk.device.usage_vgw:
+          properties:
+            unit: B
+            description: The physical size in bytes of the image container on the host per device
+            type: Gauge
+            category: disk
+        disk.device.write.requests.rate_vgw:
+          properties:
+            unit: request/s
+            description: Average rate of write requests
+            type: Gauge
+            category: disk
+        disk.usage_vgw:
+          properties:
+            unit: B
+            description: The physical size in bytes of the image container on the host
+            type: Gauge
+            category: disk
+        disk.read.bytes_vgw:
+          properties:
+            unit: B
+            description: Volume of reads
+            type: Cumulative
+            category: compute
+        disk.ephemeral.size_vgw:
+          properties:
+            unit: GB
+            description: Size of ephemeral disk
+            type: Gauge
+            category: compute
+        disk.device.write.bytes_vgw:
+          properties:
+            unit: B
+            description: Volume of writes
+            type: Cumulative
+            category: disk
+        disk.write.bytes.rate_vgw:
+          properties:
+            unit: B/s
+            description: Average rate of writes
+            type: Gauge
+            category: compute
+        cpu.delta_vgw:
+          properties:
+            unit: ns
+            description: CPU time used since previous datapoint
+            type: Delta
+            category: compute
+        disk.device.write.bytes.rate_vgw:
+          properties:
+            unit: B/s
+            description: Average rate of writes
+            type: Gauge
+            category: disk
+        cpu_util_vgw:
+          properties:
+            unit: '%'
+            description: Average CPU utilization
+            type: Gauge
+            category: compute
+        memory.usage_vgw:
+          properties:
+            unit: MB
+            description: Volume of RAM used by the instance from the amount of its allocated memory
+            type: Gauge
+            category: compute
+        disk.write.bytes_vgw:
+          properties:
+            unit: B
+            description: Volume of writes
+            type: Cumulative
+            category: compute
+        disk.capacity_vgw:
+          properties:
+            unit: B
+            description: The amount of disk that the instance can see
+            type: Gauge
+            category: disk
+        disk.device.read.requests.rate_vgw:
+          properties:
+            unit: request/s
+            description: Average rate of read requests
+            type: Gauge
+            category: disk
+        disk.device.allocation_vgw:
+          properties:
+            unit: B
+            description: The amount of disk per device occupied by the instance on the host machine
+            type: Gauge
+            category: disk
+        vcpus_vgw:
+          properties:
+            unit: vcpu
+            description: Number of virtual CPUs allocated to the instance
+            type: Gauge
+            category: compute
+        disk.read.requests_vgw:
+          properties:
+            unit: request
+            description: Number of read requests
+            type: Cumulative
+            category: compute
+        disk.device.read.bytes_vgw:
+          properties:
+            unit: B
+            description: Volume of reads
+            type: Cumulative
+            category: disk
+        endpoint_vgw:
+          properties:
+            secure: true
+        disk.device.read.bytes.rate_vgw:
+          properties:
+            unit: B/s
+            description: Average rate of reads
+            type: Gauge
+            category: disk
+        disk.device.read.requests_vgw:
+          properties:
+            unit: request
+            description: Number of read requests
+            type: Cumulative
+            category: disk
+        disk.latency_vgw:
+          properties:
+            unit: ms
+            description: Average disk latency
+            type: Gauge
+            category: disk
+        instance_vgw:
+          properties:
+            unit: instance
+            description: Existence of instance
+            type: Gauge
+            category: compute
+        memory.resident_vgw:
+          properties:
+            unit: MB
+            description: Volume of RAM used by the instance on the physical machine
+            type: Gauge
+            category: compute
+        disk.read.bytes.rate_vgw:
+          properties:
+            unit: B/s
+            description: Average rate of reads
+            type: Gauge
+            category: compute
+        disk.root.size_vgw:
+          properties:
+            unit: GB
+            description: Size of root disk
+            type: Gauge
+            category: compute
+        disk.write.requests_vgw:
+          properties:
+            unit: request
+            description: Number of write requests
+            type: Cumulative
+            category: compute
+        disk.device.write.requests_vgw:
+          properties:
+            unit: request
+            description: Number of write requests
+            type: Cumulative
+            category: disk
+        memory_vgw:
+          properties:
+            unit: MB
+            description: Volume of RAM allocated to the instance
+            type: Gauge
+            category: compute
+    vgw_vgw_private_1_port:
+      type: org.openecomp.resource.cp.v2.extNeutronCP
+      metadata:
+        invariantUUID: 7878123c-e89b-48f0-8d49-a3931603059a
+        UUID: 1cc61e2c-e414-4927-8bf7-6e87e1cc4ac3
+        customizationUUID: dbcfdae9-60e6-4ca8-86a9-358fd61c9810
+        version: '1.0'
+        name: extNeutronCP
+        description: The AT&T Connection Point base type all other CP derive from
+        type: CP
+        category: Generic
+        subcategory: Network Elements
+        resourceVendor: ATT (Tosca)
+        resourceVendorRelease: 1.0.0.wd03
+        resourceVendorModelNumber: ''
+      properties:
+        subnetpoolid:
+          get_input: port_vgw_private_1_port_subnetpoolid
+        is_default: false
+        network:
+          get_input:
+          - port_vgw_private_1_port_network
+          - index_value
+        replacement_policy: AUTO
+        ip_requirements:
+          get_input: port_vgw_private_1_port_ip_requirements
+        network_role:
+          get_input: port_vgw_private_1_port_network_role
+        fixed_ips:
+          get_input:
+          - port_vgw_private_1_port_fixed_ips
+          - index_value
+        mac_requirements:
+          get_input: port_vgw_private_1_port_mac_requirements
+        admin_state_up: true
+        exCP_naming:
+          get_input: port_vgw_private_1_port_exCP_naming
+        vlan_requirements:
+          get_input: port_vgw_private_1_port_vlan_requirements
+        network_role_tag:
+          get_input: port_vgw_private_1_port_network_role_tag
+        order:
+          get_input: port_vgw_private_1_port_order
+      requirements:
+      - binding:
+          capability: binding
+          node: vgw
+      capabilities:
+        network.incoming.packets_vgw_vgw_private_1_port:
+          properties:
+            unit: packet
+            description: Number of incoming packets
+            type: Cumulative
+            category: network
+        network.incoming.bytes_vgw_vgw_private_1_port:
+          properties:
+            unit: B
+            description: Number of incoming bytes
+            type: Cumulative
+            category: network
+        network.incoming.bytes.rate_vgw_vgw_private_1_port:
+          properties:
+            unit: B/s
+            description: Average rate of incoming bytes
+            type: Gauge
+            category: network
+        network.incoming.packets.rate_vgw_vgw_private_1_port:
+          properties:
+            unit: packet/s
+            description: Average rate of incoming packets
+            type: Gauge
+            category: network
+        network.outgoing.bytes.rate_vgw_vgw_private_1_port:
+          properties:
+            unit: B/s
+            description: Average rate of outgoing bytes
+            type: Gauge
+            category: network
+        network.outgoing.packets.rate_vgw_vgw_private_1_port:
+          properties:
+            unit: packet/s
+            description: Average rate of outgoing packets
+            type: Gauge
+            category: network
+        network.outgoing.bytes_vgw_vgw_private_1_port:
+          properties:
+            unit: B
+            description: Number of outgoing bytes
+            type: Cumulative
+            category: network
+        port_mirroring_vgw_vgw_private_1_port:
+          properties:
+            connection_point:
+              network_role:
+                get_input: port_vgw_private_1_port_network_role
+              nfc_type: vgw
+        network.outpoing.packets_vgw_vgw_private_1_port:
+          properties:
+            unit: packet
+            description: Number of outgoing packets
+            type: Cumulative
+            category: network
+    vgw_vgw_private_0_port:
+      type: org.openecomp.resource.cp.v2.extNeutronCP
+      metadata:
+        invariantUUID: 7878123c-e89b-48f0-8d49-a3931603059a
+        UUID: 1cc61e2c-e414-4927-8bf7-6e87e1cc4ac3
+        customizationUUID: 5499736d-bd2f-472c-b613-cf71962c9065
+        version: '1.0'
+        name: extNeutronCP
+        description: The AT&T Connection Point base type all other CP derive from
+        type: CP
+        category: Generic
+        subcategory: Network Elements
+        resourceVendor: ATT (Tosca)
+        resourceVendorRelease: 1.0.0.wd03
+        resourceVendorModelNumber: ''
+      properties:
+        subnetpoolid:
+          get_input: port_vgw_private_0_port_subnetpoolid
+        is_default: false
+        network:
+          get_input:
+          - port_vgw_private_0_port_network
+          - index_value
+        replacement_policy: AUTO
+        ip_requirements:
+          get_input: port_vgw_private_0_port_ip_requirements
+        network_role:
+          get_input: port_vgw_private_0_port_network_role
+        fixed_ips:
+          get_input:
+          - port_vgw_private_0_port_fixed_ips
+          - index_value
+        mac_requirements:
+          get_input: port_vgw_private_0_port_mac_requirements
+        admin_state_up: true
+        exCP_naming:
+          get_input: port_vgw_private_0_port_exCP_naming
+        vlan_requirements:
+          get_input: port_vgw_private_0_port_vlan_requirements
+        network_role_tag:
+          get_input: port_vgw_private_0_port_network_role_tag
+        order:
+          get_input: port_vgw_private_0_port_order
+      requirements:
+      - binding:
+          capability: binding
+          node: vgw
+      capabilities:
+        network.outgoing.bytes_vgw_vgw_private_0_port:
+          properties:
+            unit: B
+            description: Number of outgoing bytes
+            type: Cumulative
+            category: network
+        network.incoming.packets.rate_vgw_vgw_private_0_port:
+          properties:
+            unit: packet/s
+            description: Average rate of incoming packets
+            type: Gauge
+            category: network
+        network.outgoing.packets.rate_vgw_vgw_private_0_port:
+          properties:
+            unit: packet/s
+            description: Average rate of outgoing packets
+            type: Gauge
+            category: network
+        network.incoming.bytes.rate_vgw_vgw_private_0_port:
+          properties:
+            unit: B/s
+            description: Average rate of incoming bytes
+            type: Gauge
+            category: network
+        network.outgoing.bytes.rate_vgw_vgw_private_0_port:
+          properties:
+            unit: B/s
+            description: Average rate of outgoing bytes
+            type: Gauge
+            category: network
+        network.outpoing.packets_vgw_vgw_private_0_port:
+          properties:
+            unit: packet
+            description: Number of outgoing packets
+            type: Cumulative
+            category: network
+        network.incoming.bytes_vgw_vgw_private_0_port:
+          properties:
+            unit: B
+            description: Number of incoming bytes
+            type: Cumulative
+            category: network
+        port_mirroring_vgw_vgw_private_0_port:
+          properties:
+            connection_point:
+              network_role:
+                get_input: port_vgw_private_0_port_network_role
+              nfc_type: vgw
+        network.incoming.packets_vgw_vgw_private_0_port:
+          properties:
+            unit: packet
+            description: Number of incoming packets
+            type: Cumulative
+            category: network
+  substitution_mappings:
+    node_type: org.openecomp.resource.vfc.VcpevspVgw20180927acvfc.abstract.nodes.vgw
+    capabilities:
+      binding_vgw_vgw_private_0_port:
+      - vgw_vgw_private_0_port
+      - binding
+      network.incoming.bytes.rate_vgw_vgw_private_0_port:
+      - vgw_vgw_private_0_port
+      - network.incoming.bytes.rate
+      feature_vgw_vgw_private_1_port:
+      - vgw_vgw_private_1_port
+      - feature
+      network.incoming.packets.rate_vgw_vgw_private_1_port:
+      - vgw_vgw_private_1_port
+      - network.incoming.packets.rate
+      network.outgoing.packets.rate_vgw_vgw_private_1_port:
+      - vgw_vgw_private_1_port
+      - network.outgoing.packets.rate
+      cpu_vgw:
+      - vgw
+      - cpu
+      disk.allocation_vgw:
+      - vgw
+      - disk.allocation
+      network.incoming.bytes_vgw_vgw_private_0_port:
+      - vgw_vgw_private_0_port
+      - network.incoming.bytes
+      feature_vgw:
+      - vgw
+      - feature
+      forwarder_vgw_vgw_private_0_port:
+      - vgw_vgw_private_0_port
+      - forwarder
+      network.incoming.packets.rate_vgw_vgw_private_0_port:
+      - vgw_vgw_private_0_port
+      - network.incoming.packets.rate
+      scalable_vgw:
+      - vgw
+      - scalable
+      network.outgoing.packets.rate_vgw_vgw_private_0_port:
+      - vgw_vgw_private_0_port
+      - network.outgoing.packets.rate
+      feature_vgw_vgw_private_2_port:
+      - vgw_vgw_private_2_port
+      - feature
+      disk.iops_vgw:
+      - vgw
+      - disk.iops
+      disk.device.usage_vgw:
+      - vgw
+      - disk.device.usage
+      disk.usage_vgw:
+      - vgw
+      - disk.usage
+      disk.read.bytes_vgw:
+      - vgw
+      - disk.read.bytes
+      disk.device.write.bytes_vgw:
+      - vgw
+      - disk.device.write.bytes
+      disk.device.write.bytes.rate_vgw:
+      - vgw
+      - disk.device.write.bytes.rate
+      attachment_vgw_vgw_private_1_port:
+      - vgw_vgw_private_1_port
+      - attachment
+      disk.capacity_vgw:
+      - vgw
+      - disk.capacity
+      network.outgoing.packets.rate_vgw_vgw_private_2_port:
+      - vgw_vgw_private_2_port
+      - network.outgoing.packets.rate
+      network.incoming.packets_vgw_vgw_private_2_port:
+      - vgw_vgw_private_2_port
+      - network.incoming.packets
+      disk.device.allocation_vgw:
+      - vgw
+      - disk.device.allocation
+      binding_vgw:
+      - vgw
+      - binding
+      disk.device.read.bytes_vgw:
+      - vgw
+      - disk.device.read.bytes
+      network.incoming.bytes.rate_vgw_vgw_private_2_port:
+      - vgw_vgw_private_2_port
+      - network.incoming.bytes.rate
+      network.outgoing.bytes_vgw_vgw_private_2_port:
+      - vgw_vgw_private_2_port
+      - network.outgoing.bytes
+      disk.device.read.bytes.rate_vgw:
+      - vgw
+      - disk.device.read.bytes.rate
+      network.outpoing.packets_vgw_vgw_private_1_port:
+      - vgw_vgw_private_1_port
+      - network.outpoing.packets
+      network.incoming.bytes_vgw_vgw_private_1_port:
+      - vgw_vgw_private_1_port
+      - network.incoming.bytes
+      instance_vgw:
+      - vgw
+      - instance
+      network.outgoing.bytes.rate_vgw_vgw_private_0_port:
+      - vgw_vgw_private_0_port
+      - network.outgoing.bytes.rate
+      disk.write.requests_vgw:
+      - vgw
+      - disk.write.requests
+      network.incoming.packets.rate_vgw_vgw_private_2_port:
+      - vgw_vgw_private_2_port
+      - network.incoming.packets.rate
+      network.outgoing.bytes_vgw_vgw_private_0_port:
+      - vgw_vgw_private_0_port
+      - network.outgoing.bytes
+      disk.device.iops_vgw:
+      - vgw
+      - disk.device.iops
+      network.outgoing.bytes.rate_vgw_vgw_private_2_port:
+      - vgw_vgw_private_2_port
+      - network.outgoing.bytes.rate
+      disk.device.capacity_vgw:
+      - vgw
+      - disk.device.capacity
+      forwarder_vgw_vgw_private_2_port:
+      - vgw_vgw_private_2_port
+      - forwarder
+      port_mirroring_vgw_vgw_private_1_port:
+      - vgw_vgw_private_1_port
+      - port_mirroring
+      disk.write.requests.rate_vgw:
+      - vgw
+      - disk.write.requests.rate
+      network.incoming.packets_vgw_vgw_private_0_port:
+      - vgw_vgw_private_0_port
+      - network.incoming.packets
+      binding_vgw_vgw_private_2_port:
+      - vgw_vgw_private_2_port
+      - binding
+      host_vgw:
+      - vgw
+      - host
+      disk.device.latency_vgw:
+      - vgw
+      - disk.device.latency
+      attachment_vgw_vgw_private_2_port:
+      - vgw_vgw_private_2_port
+      - attachment
+      disk.device.write.requests.rate_vgw:
+      - vgw
+      - disk.device.write.requests.rate
+      network.outgoing.bytes.rate_vgw_vgw_private_1_port:
+      - vgw_vgw_private_1_port
+      - network.outgoing.bytes.rate
+      network.outpoing.packets_vgw_vgw_private_0_port:
+      - vgw_vgw_private_0_port
+      - network.outpoing.packets
+      disk.ephemeral.size_vgw:
+      - vgw
+      - disk.ephemeral.size
+      disk.write.bytes.rate_vgw:
+      - vgw
+      - disk.write.bytes.rate
+      cpu.delta_vgw:
+      - vgw
+      - cpu.delta
+      port_mirroring_vgw_vgw_private_0_port:
+      - vgw_vgw_private_0_port
+      - port_mirroring
+      cpu_util_vgw:
+      - vgw
+      - cpu_util
+      disk.write.bytes_vgw:
+      - vgw
+      - disk.write.bytes
+      memory.usage_vgw:
+      - vgw
+      - memory.usage
+      os_vgw:
+      - vgw
+      - os
+      port_mirroring_vgw_vgw_private_2_port:
+      - vgw_vgw_private_2_port
+      - port_mirroring
+      network.incoming.bytes_vgw_vgw_private_2_port:
+      - vgw_vgw_private_2_port
+      - network.incoming.bytes
+      disk.device.read.requests.rate_vgw:
+      - vgw
+      - disk.device.read.requests.rate
+      disk.read.requests_vgw:
+      - vgw
+      - disk.read.requests
+      vcpus_vgw:
+      - vgw
+      - vcpus
+      feature_vgw_vgw_private_0_port:
+      - vgw_vgw_private_0_port
+      - feature
+      endpoint_vgw:
+      - vgw
+      - endpoint
+      disk.device.read.requests_vgw:
+      - vgw
+      - disk.device.read.requests
+      network.incoming.packets_vgw_vgw_private_1_port:
+      - vgw_vgw_private_1_port
+      - network.incoming.packets
+      disk.latency_vgw:
+      - vgw
+      - disk.latency
+      memory.resident_vgw:
+      - vgw
+      - memory.resident
+      disk.read.bytes.rate_vgw:
+      - vgw
+      - disk.read.bytes.rate
+      network.incoming.bytes.rate_vgw_vgw_private_1_port:
+      - vgw_vgw_private_1_port
+      - network.incoming.bytes.rate
+      network.outpoing.packets_vgw_vgw_private_2_port:
+      - vgw_vgw_private_2_port
+      - network.outpoing.packets
+      disk.root.size_vgw:
+      - vgw
+      - disk.root.size
+      forwarder_vgw_vgw_private_1_port:
+      - vgw_vgw_private_1_port
+      - forwarder
+      binding_vgw_vgw_private_1_port:
+      - vgw_vgw_private_1_port
+      - binding
+      network.outgoing.bytes_vgw_vgw_private_1_port:
+      - vgw_vgw_private_1_port
+      - network.outgoing.bytes
+      disk.device.write.requests_vgw:
+      - vgw
+      - disk.device.write.requests
+      attachment_vgw_vgw_private_0_port:
+      - vgw_vgw_private_0_port
+      - attachment
+      memory_vgw:
+      - vgw
+      - memory
+    requirements:
+      dependency_vgw_vgw_private_0_port:
+      - vgw_vgw_private_0_port
+      - dependency
+      link_vgw_vgw_private_2_port:
+      - vgw_vgw_private_2_port
+      - link
+      link_vgw_vgw_private_0_port:
+      - vgw_vgw_private_0_port
+      - link
+      dependency_vgw_vgw_private_1_port:
+      - vgw_vgw_private_1_port
+      - dependency
+      dependency_vgw:
+      - vgw
+      - dependency
+      dependency_vgw_vgw_private_2_port:
+      - vgw_vgw_private_2_port
+      - dependency
+      link_vgw_vgw_private_1_port:
+      - vgw_vgw_private_1_port
+      - link
+      local_storage_vgw:
+      - vgw
+      - local_storage

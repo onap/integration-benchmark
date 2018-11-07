@@ -1,0 +1,824 @@
+tosca_definitions_version: tosca_simple_yaml_1_1
+metadata:
+  invariantUUID: 082434c8-b752-4e9c-ad9c-e9aa47c6598d
+  UUID: 34e4ce3b-de78-442b-8d4c-e389f944b71d
+  name: vcpesvc_rescust_20180927a
+  description: vcpesvc_rescust_20180927a
+  type: Service
+  category: Network L1-3
+  serviceType: ''
+  serviceRole: ''
+  serviceEcompNaming: true
+  ecompGeneratedNaming: true
+  namingPolicy: ''
+  environmentContext: General_Revenue-Bearing
+imports:
+- nodes:
+    file: nodes.yml
+- datatypes:
+    file: data.yml
+- capabilities:
+    file: capabilities.yml
+- relationships:
+    file: relationships.yml
+- groups:
+    file: groups.yml
+- policies:
+    file: policies.yml
+- service-vcpesvc_rescust_20180927a-interface:
+    file: service-VcpesvcRescust20180927a-template-interface.yml
+- resource-vcpear_tunnelxconn_20180927a:
+    file: resource-VcpearTunnelxconn20180927a-template.yml
+- resource-vcpear_tunnelxconn_20180927a-interface:
+    file: resource-VcpearTunnelxconn20180927a-template-interface.yml
+- resource-vcpear_brg_20180927a:
+    file: resource-VcpearBrg20180927a-template.yml
+- resource-vcpear_brg_20180927a-interface:
+    file: resource-VcpearBrg20180927a-template-interface.yml
+- resource-vcpevsp_vgw_20180927a:
+    file: resource-VcpevspVgw20180927a-template.yml
+- resource-vcpevsp_vgw_20180927a-interface:
+    file: resource-VcpevspVgw20180927a-template-interface.yml
+topology_template:
+  node_templates:
+    vcpear_brg_20180927a 0:
+      type: org.openecomp.resource.vf.VcpearBrg20180927a
+      metadata:
+        invariantUUID: e47ad32f-9720-4200-8470-693fb717df36
+        UUID: dc38febc-04d0-4c17-90ee-2571ba220587
+        customizationUUID: 9f02bcf7-b140-484f-97bd-f5e754246d9a
+        version: '1.0'
+        name: vcpear_brg_20180927a
+        description: vcpear_brg_20180927a
+        type: VF
+        category: Allotted Resource
+        subcategory: Tunnel XConnect
+        resourceVendor: '111222'
+        resourceVendorRelease: '1.0'
+        resourceVendorModelNumber: ''
+      properties:
+        nf_naming:
+          ecomp_generated_naming: true
+        multi_stage_design: false
+        availability_zone_max_count: 1
+        nf_role: BRG
+        nf_type: BRG
+    vcpevsp_vgw_20180927a 0:
+      type: org.openecomp.resource.vf.VcpevspVgw20180927a
+      metadata:
+        invariantUUID: 0801524f-49f4-451b-ab2e-d67db13b4d0d
+        UUID: 5d723e2e-384b-48a5-8bdf-19b7b42fb956
+        customizationUUID: 87ed7158-6714-4254-a1a4-6c84e9bd8fb3
+        version: '1.0'
+        name: vcpevsp_vgw_20180927a
+        description: vcpevsp_vgw_20180927a
+        type: VF
+        category: Network L2-3
+        subcategory: Infrastructure
+        resourceVendor: tutorial-license
+        resourceVendorRelease: '1.0'
+        resourceVendorModelNumber: ''
+      properties:
+        vf_module_id: vCPE_Customer_GW
+        vcpe_image_name: vgw-base-ubuntu-16-04
+        repo_url_blob: https://nexus.onap.org/content/sites/raw
+        vgw_name_0: zdcpe1cpe01gw01
+        public_net_id: 971040b2-7059-49dc-b220-4fab50cb2ad4
+        onap_private_subnet_id: oam_onap_8zLM
+        onap_private_net_cidr: 10.0.0.0/16
+        cpe_public_net_id: zdfw1cpe01_public
+        mux_ip_addr: 10.5.0.20
+        mux_gw_private_net_id: zdfw1muxgw01_private
+        dcae_collector_ip: 10.0.4.102
+        vnf_id: vCPE_Infrastructure_GW_demo_app
+        cpe_public_net_cidr: 10.2.0.0/24
+        vpp_source_repo_branch: stable/1704
+        vg_vgmux_tunnel_vni: 100.0
+        dcae_collector_port: '8080'
+        mux_gw_private_net_cidr: 10.5.0.0/24
+        hc2vpp_source_repo_branch: stable/1704
+        mux_gw_private_subnet_id: zdfw1muxgw01_sub_private
+        nf_naming:
+          ecomp_generated_naming: true
+        multi_stage_design: false
+        onap_private_net_id: oam_onap_8zLM
+        availability_zone_max_count: 1
+        vpp_source_repo_url: https://gerrit.fd.io/r/vpp
+        demo_artifacts_version: 1.1.0
+        vgw_private_ip_0: 10.5.0.22
+        pub_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQXYJYYi3/OUZXUiCYWdtc7K0m5C0dJKVxPG0eI8EWZrEHYdfYe6WoTSDJCww+1qlBSpA5ac/Ba4Wn9vh+lR1vtUKkyIC/nrYb90ReUd385Glkgzrfh5HdR5y5S2cL/Frh86lAn9r6b3iWTJD8wBwXFyoe1S2nMTOIuG4RPNvfmyCTYVh8XTCCE8HPvh3xv2r4egawG1P4Q4UDwk+hDBXThY2KS8M5/8EMyxHV0ImpLbpYCTBA6KYDIRtqmgS6iKyy8v2D1aSY5mc9J0T5t9S2Gv+VZQNWQDDKNFnxqYaAo1uEoq/i1q63XC5AD3ckXb2VT6dp23BQMdDfbHyUWfJN
+        vgw_private_ip_1: 10.0.101.30
+        key_name: vgw_key
+        repo_url_artifacts: https://nexus.onap.org/content/groups/staging
+        vcpe_flavor_name: m1.medium
+        hc2vpp_source_repo_url: https://gerrit.fd.io/r/hc2vpp
+        install_script_version: 1.1.0-SNAPSHOT
+        cpe_public_subnet_id: zdfw1cpe01_sub_public
+        cloud_env: openstack
+      capabilities:
+        abstract_vgw.network.incoming.packets_vgw_vgw_private_0_port:
+          properties:
+            unit: packet
+            description: Number of incoming packets
+            type: Cumulative
+            category: network
+        abstract_vgw.disk.read.bytes_vgw:
+          properties:
+            unit: B
+            description: Volume of reads
+            type: Cumulative
+            category: compute
+        abstract_vgw.network.incoming.bytes.rate_vgw_vgw_private_0_port:
+          properties:
+            unit: B/s
+            description: Average rate of incoming bytes
+            type: Gauge
+            category: network
+        abstract_vgw.disk.read.requests_vgw:
+          properties:
+            unit: request
+            description: Number of read requests
+            type: Cumulative
+            category: compute
+        abstract_vgw.disk.write.bytes_vgw:
+          properties:
+            unit: B
+            description: Volume of writes
+            type: Cumulative
+            category: compute
+        abstract_vgw.disk.capacity_vgw:
+          properties:
+            unit: B
+            description: The amount of disk that the instance can see
+            type: Gauge
+            category: disk
+        abstract_vgw.network.incoming.bytes_vgw_vgw_private_1_port:
+          properties:
+            unit: B
+            description: Number of incoming bytes
+            type: Cumulative
+            category: network
+        abstract_vgw.port_mirroring_vgw_vgw_private_2_port:
+          properties:
+            connection_point:
+              network_role:
+                get_input: port_vgw_private_2_port_network_role
+              nfc_type: vgw
+        abstract_vgw.disk.write.requests_vgw:
+          properties:
+            unit: request
+            description: Number of write requests
+            type: Cumulative
+            category: compute
+        abstract_vgw.disk.device.read.requests.rate_vgw:
+          properties:
+            unit: request/s
+            description: Average rate of read requests
+            type: Gauge
+            category: disk
+        abstract_vgw.port_mirroring_vgw_vgw_private_1_port:
+          properties:
+            connection_point:
+              network_role:
+                get_input: port_vgw_private_1_port_network_role
+              nfc_type: vgw
+        abstract_vgw.network.outpoing.packets_vgw_vgw_private_0_port:
+          properties:
+            unit: packet
+            description: Number of outgoing packets
+            type: Cumulative
+            category: network
+        abstract_vgw.memory.resident_vgw:
+          properties:
+            unit: MB
+            description: Volume of RAM used by the instance on the physical machine
+            type: Gauge
+            category: compute
+        abstract_vgw.disk.allocation_vgw:
+          properties:
+            unit: B
+            description: The amount of disk occupied by the instance on the host machine
+            type: Gauge
+            category: disk
+        abstract_vgw.network.incoming.bytes_vgw_vgw_private_0_port:
+          properties:
+            unit: B
+            description: Number of incoming bytes
+            type: Cumulative
+            category: network
+        abstract_vgw.cpu_vgw:
+          properties:
+            unit: ns
+            description: CPU time used
+            type: Cumulative
+            category: compute
+        abstract_vgw.network.incoming.bytes_vgw_vgw_private_2_port:
+          properties:
+            unit: B
+            description: Number of incoming bytes
+            type: Cumulative
+            category: network
+        abstract_vgw.network.outpoing.packets_vgw_vgw_private_1_port:
+          properties:
+            unit: packet
+            description: Number of outgoing packets
+            type: Cumulative
+            category: network
+        abstract_vgw.disk.device.read.bytes_vgw:
+          properties:
+            unit: B
+            description: Volume of reads
+            type: Cumulative
+            category: disk
+        abstract_vgw.disk.device.write.bytes.rate_vgw:
+          properties:
+            unit: B/s
+            description: Average rate of writes
+            type: Gauge
+            category: disk
+        abstract_vgw.network.incoming.bytes.rate_vgw_vgw_private_2_port:
+          properties:
+            unit: B/s
+            description: Average rate of incoming bytes
+            type: Gauge
+            category: network
+        abstract_vgw.network.incoming.packets.rate_vgw_vgw_private_0_port:
+          properties:
+            unit: packet/s
+            description: Average rate of incoming packets
+            type: Gauge
+            category: network
+        abstract_vgw.disk.device.iops_vgw:
+          properties:
+            unit: count/s
+            description: Average disk iops per device
+            type: Gauge
+            category: disk
+        abstract_vgw.disk.latency_vgw:
+          properties:
+            unit: ms
+            description: Average disk latency
+            type: Gauge
+            category: disk
+        abstract_vgw.network.incoming.packets_vgw_vgw_private_2_port:
+          properties:
+            unit: packet
+            description: Number of incoming packets
+            type: Cumulative
+            category: network
+        abstract_vgw.disk.device.allocation_vgw:
+          properties:
+            unit: B
+            description: The amount of disk per device occupied by the instance on the host machine
+            type: Gauge
+            category: disk
+        abstract_vgw.network.outgoing.bytes.rate_vgw_vgw_private_0_port:
+          properties:
+            unit: B/s
+            description: Average rate of outgoing bytes
+            type: Gauge
+            category: network
+        abstract_vgw.instance_vgw:
+          properties:
+            unit: instance
+            description: Existence of instance
+            type: Gauge
+            category: compute
+        abstract_vgw.memory_vgw:
+          properties:
+            unit: MB
+            description: Volume of RAM allocated to the instance
+            type: Gauge
+            category: compute
+        abstract_vgw.disk.device.write.requests_vgw:
+          properties:
+            unit: request
+            description: Number of write requests
+            type: Cumulative
+            category: disk
+        abstract_vgw.cpu.delta_vgw:
+          properties:
+            unit: ns
+            description: CPU time used since previous datapoint
+            type: Delta
+            category: compute
+        abstract_vgw.disk.device.latency_vgw:
+          properties:
+            unit: ms
+            description: Average disk latency per device
+            type: Gauge
+            category: disk
+        abstract_vgw.port_mirroring_vgw_vgw_private_0_port:
+          properties:
+            connection_point:
+              network_role:
+                get_input: port_vgw_private_0_port_network_role
+              nfc_type: vgw
+        abstract_vgw.disk.iops_vgw:
+          properties:
+            unit: count/s
+            description: Average disk iops
+            type: Gauge
+            category: disk
+        abstract_vgw.cpu_util_vgw:
+          properties:
+            unit: '%'
+            description: Average CPU utilization
+            type: Gauge
+            category: compute
+        abstract_vgw.network.outgoing.bytes.rate_vgw_vgw_private_2_port:
+          properties:
+            unit: B/s
+            description: Average rate of outgoing bytes
+            type: Gauge
+            category: network
+        abstract_vgw.network.incoming.packets.rate_vgw_vgw_private_1_port:
+          properties:
+            unit: packet/s
+            description: Average rate of incoming packets
+            type: Gauge
+            category: network
+        abstract_vgw.network.outgoing.bytes_vgw_vgw_private_0_port:
+          properties:
+            unit: B
+            description: Number of outgoing bytes
+            type: Cumulative
+            category: network
+        abstract_vgw.network.outgoing.packets.rate_vgw_vgw_private_1_port:
+          properties:
+            unit: packet/s
+            description: Average rate of outgoing packets
+            type: Gauge
+            category: network
+        abstract_vgw.disk.usage_vgw:
+          properties:
+            unit: B
+            description: The physical size in bytes of the image container on the host
+            type: Gauge
+            category: disk
+        abstract_vgw.disk.write.requests.rate_vgw:
+          properties:
+            unit: request/s
+            description: Average rate of write requests
+            type: Gauge
+            category: compute
+        abstract_vgw.network.outgoing.bytes_vgw_vgw_private_1_port:
+          properties:
+            unit: B
+            description: Number of outgoing bytes
+            type: Cumulative
+            category: network
+        abstract_vgw.scalable_vgw:
+          properties:
+            min_instances: 1
+            max_instances: 1
+        abstract_vgw.disk.device.read.bytes.rate_vgw:
+          properties:
+            unit: B/s
+            description: Average rate of reads
+            type: Gauge
+            category: disk
+        abstract_vgw.network.outgoing.packets.rate_vgw_vgw_private_0_port:
+          properties:
+            unit: packet/s
+            description: Average rate of outgoing packets
+            type: Gauge
+            category: network
+        abstract_vgw.disk.device.read.requests_vgw:
+          properties:
+            unit: request
+            description: Number of read requests
+            type: Cumulative
+            category: disk
+        abstract_vgw.network.outgoing.bytes.rate_vgw_vgw_private_1_port:
+          properties:
+            unit: B/s
+            description: Average rate of outgoing bytes
+            type: Gauge
+            category: network
+        abstract_vgw.disk.device.write.requests.rate_vgw:
+          properties:
+            unit: request/s
+            description: Average rate of write requests
+            type: Gauge
+            category: disk
+        abstract_vgw.disk.device.usage_vgw:
+          properties:
+            unit: B
+            description: The physical size in bytes of the image container on the host per device
+            type: Gauge
+            category: disk
+        abstract_vgw.disk.write.bytes.rate_vgw:
+          properties:
+            unit: B/s
+            description: Average rate of writes
+            type: Gauge
+            category: compute
+        abstract_vgw.disk.device.write.bytes_vgw:
+          properties:
+            unit: B
+            description: Volume of writes
+            type: Cumulative
+            category: disk
+        abstract_vgw.memory.usage_vgw:
+          properties:
+            unit: MB
+            description: Volume of RAM used by the instance from the amount of its allocated memory
+            type: Gauge
+            category: compute
+        abstract_vgw.network.outgoing.packets.rate_vgw_vgw_private_2_port:
+          properties:
+            unit: packet/s
+            description: Average rate of outgoing packets
+            type: Gauge
+            category: network
+        abstract_vgw.disk.root.size_vgw:
+          properties:
+            unit: GB
+            description: Size of root disk
+            type: Gauge
+            category: compute
+        abstract_vgw.disk.ephemeral.size_vgw:
+          properties:
+            unit: GB
+            description: Size of ephemeral disk
+            type: Gauge
+            category: compute
+        abstract_vgw.disk.device.capacity_vgw:
+          properties:
+            unit: B
+            description: The amount of disk per device that the instance can see
+            type: Gauge
+            category: disk
+        abstract_vgw.disk.read.bytes.rate_vgw:
+          properties:
+            unit: B/s
+            description: Average rate of reads
+            type: Gauge
+            category: compute
+        abstract_vgw.endpoint_vgw:
+          properties:
+            secure: true
+        abstract_vgw.network.outpoing.packets_vgw_vgw_private_2_port:
+          properties:
+            unit: packet
+            description: Number of outgoing packets
+            type: Cumulative
+            category: network
+        abstract_vgw.vcpus_vgw:
+          properties:
+            unit: vcpu
+            description: Number of virtual CPUs allocated to the instance
+            type: Gauge
+            category: compute
+        abstract_vgw.network.outgoing.bytes_vgw_vgw_private_2_port:
+          properties:
+            unit: B
+            description: Number of outgoing bytes
+            type: Cumulative
+            category: network
+        abstract_vgw.network.incoming.packets_vgw_vgw_private_1_port:
+          properties:
+            unit: packet
+            description: Number of incoming packets
+            type: Cumulative
+            category: network
+        abstract_vgw.network.incoming.packets.rate_vgw_vgw_private_2_port:
+          properties:
+            unit: packet/s
+            description: Average rate of incoming packets
+            type: Gauge
+            category: network
+        abstract_vgw.network.incoming.bytes.rate_vgw_vgw_private_1_port:
+          properties:
+            unit: B/s
+            description: Average rate of incoming bytes
+            type: Gauge
+            category: network
+    vcpear_tunnelxconn_20180927a 0:
+      type: org.openecomp.resource.vf.VcpearTunnelxconn20180927a
+      metadata:
+        invariantUUID: be0955dc-a302-4d74-aa78-ff82cfe3a882
+        UUID: 3de68603-f200-4148-9c77-7864addf5b6a
+        customizationUUID: 3a6c1522-c982-409b-ae69-c4d395c3721d
+        version: '1.0'
+        name: vcpear_tunnelxconn_20180927a
+        description: vcpear_tunnelxconn_20180927a
+        type: VF
+        category: Allotted Resource
+        subcategory: Tunnel XConnect
+        resourceVendor: '111222'
+        resourceVendorRelease: '1.0'
+        resourceVendorModelNumber: ''
+      properties:
+        nf_naming:
+          ecomp_generated_naming: true
+        multi_stage_design: false
+        availability_zone_max_count: 1
+        nf_role: TunnelXConn
+        nf_type: TunnelXConn
+  groups:
+    vcpevsp_vgw_20180927a0..VcpevspVgw20180927a..base_vcpe_vgw..module-0:
+      type: org.openecomp.groups.VfModule
+      metadata:
+        vfModuleModelName: VcpevspVgw20180927a..base_vcpe_vgw..module-0
+        vfModuleModelInvariantUUID: b6af48f9-8a51-4277-b750-ff30f796fca3
+        vfModuleModelUUID: 819267ab-7b98-41bb-b8e7-a63cdfb1b8c5
+        vfModuleModelVersion: '1'
+        vfModuleModelCustomizationUUID: 1444c1d5-40eb-4924-be8c-c8c179410a0b
+      properties:
+        min_vf_module_instances: 1
+        vf_module_label: base_vcpe_vgw
+        max_vf_module_instances: 1
+        vfc_list:
+        vf_module_type: Base
+        vf_module_description:
+        initial_count: 1
+        volume_group: false
+        availability_zone_count:
+  substitution_mappings:
+    node_type: org.openecomp.service.VcpesvcRescust20180927a
+    capabilities:
+      vcpevsp_vgw_20180927a0.abstract_vgw.binding_vgw_vgw_private_2_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.binding_vgw_vgw_private_2_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.attachment_vgw_vgw_private_1_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.attachment_vgw_vgw_private_1_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.incoming.packets.rate_vgw_vgw_private_2_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.incoming.packets.rate_vgw_vgw_private_2_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.device.write.requests.rate_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.device.write.requests.rate_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.feature_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.feature_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.outpoing.packets_vgw_vgw_private_1_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.outpoing.packets_vgw_vgw_private_1_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.host_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.host_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.allocation_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.allocation_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.memory.resident_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.memory.resident_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.incoming.packets_vgw_vgw_private_1_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.incoming.packets_vgw_vgw_private_1_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.device.latency_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.device.latency_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.outgoing.packets.rate_vgw_vgw_private_2_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.outgoing.packets.rate_vgw_vgw_private_2_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.device.read.requests_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.device.read.requests_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.write.bytes.rate_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.write.bytes.rate_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.incoming.bytes_vgw_vgw_private_0_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.incoming.bytes_vgw_vgw_private_0_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.read.bytes.rate_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.read.bytes.rate_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.device.write.requests_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.device.write.requests_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.usage_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.usage_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.outgoing.packets.rate_vgw_vgw_private_1_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.outgoing.packets.rate_vgw_vgw_private_1_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.read.bytes_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.read.bytes_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.outgoing.bytes.rate_vgw_vgw_private_2_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.outgoing.bytes.rate_vgw_vgw_private_2_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.device.capacity_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.device.capacity_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.binding_vgw_vgw_private_1_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.binding_vgw_vgw_private_1_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.cpu.delta_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.cpu.delta_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.read.requests_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.read.requests_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.attachment_vgw_vgw_private_0_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.attachment_vgw_vgw_private_0_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.ephemeral.size_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.ephemeral.size_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.scalable_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.scalable_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.forwarder_vgw_vgw_private_0_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.forwarder_vgw_vgw_private_0_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.incoming.packets_vgw_vgw_private_0_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.incoming.packets_vgw_vgw_private_0_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.memory_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.memory_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.outpoing.packets_vgw_vgw_private_2_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.outpoing.packets_vgw_vgw_private_2_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.incoming.bytes.rate_vgw_vgw_private_0_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.incoming.bytes.rate_vgw_vgw_private_0_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.outgoing.bytes_vgw_vgw_private_2_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.outgoing.bytes_vgw_vgw_private_2_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.incoming.packets.rate_vgw_vgw_private_1_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.incoming.packets.rate_vgw_vgw_private_1_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.port_mirroring_vgw_vgw_private_0_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.port_mirroring_vgw_vgw_private_0_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.write.requests.rate_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.write.requests.rate_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.incoming.bytes_vgw_vgw_private_1_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.incoming.bytes_vgw_vgw_private_1_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.outgoing.bytes.rate_vgw_vgw_private_1_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.outgoing.bytes.rate_vgw_vgw_private_1_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.binding_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.binding_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.outgoing.bytes_vgw_vgw_private_0_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.outgoing.bytes_vgw_vgw_private_0_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.outgoing.bytes.rate_vgw_vgw_private_0_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.outgoing.bytes.rate_vgw_vgw_private_0_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.instance_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.instance_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.incoming.bytes.rate_vgw_vgw_private_1_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.incoming.bytes.rate_vgw_vgw_private_1_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.device.read.requests.rate_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.device.read.requests.rate_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.feature_vgw_vgw_private_0_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.feature_vgw_vgw_private_0_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.device.read.bytes.rate_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.device.read.bytes.rate_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.cpu_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.cpu_vgw
+      vcpear_brg_20180927a0.allottedresource0.feature:
+      - vcpear_brg_20180927a0
+      - allottedresource0.feature
+      vcpevsp_vgw_20180927a0.abstract_vgw.forwarder_vgw_vgw_private_1_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.forwarder_vgw_vgw_private_1_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.device.iops_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.device.iops_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.root.size_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.root.size_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.feature_vgw_vgw_private_1_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.feature_vgw_vgw_private_1_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.cpu_util_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.cpu_util_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.forwarder_vgw_vgw_private_2_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.forwarder_vgw_vgw_private_2_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.device.write.bytes_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.device.write.bytes_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.iops_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.iops_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.port_mirroring_vgw_vgw_private_1_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.port_mirroring_vgw_vgw_private_1_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.latency_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.latency_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.device.read.bytes_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.device.read.bytes_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.os_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.os_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.capacity_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.capacity_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.incoming.bytes_vgw_vgw_private_2_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.incoming.bytes_vgw_vgw_private_2_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.vcpus_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.vcpus_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.device.usage_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.device.usage_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.write.bytes_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.write.bytes_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.device.allocation_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.device.allocation_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.feature_vgw_vgw_private_2_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.feature_vgw_vgw_private_2_port
+      vcpear_tunnelxconn_20180927a0.allottedresource0.feature:
+      - vcpear_tunnelxconn_20180927a0
+      - allottedresource0.feature
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.outpoing.packets_vgw_vgw_private_0_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.outpoing.packets_vgw_vgw_private_0_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.device.write.bytes.rate_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.device.write.bytes.rate_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.binding_vgw_vgw_private_0_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.binding_vgw_vgw_private_0_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.incoming.packets.rate_vgw_vgw_private_0_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.incoming.packets.rate_vgw_vgw_private_0_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.port_mirroring_vgw_vgw_private_2_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.port_mirroring_vgw_vgw_private_2_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.attachment_vgw_vgw_private_2_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.attachment_vgw_vgw_private_2_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.outgoing.packets.rate_vgw_vgw_private_0_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.outgoing.packets.rate_vgw_vgw_private_0_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.incoming.bytes.rate_vgw_vgw_private_2_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.incoming.bytes.rate_vgw_vgw_private_2_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.outgoing.bytes_vgw_vgw_private_1_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.outgoing.bytes_vgw_vgw_private_1_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.memory.usage_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.memory.usage_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.disk.write.requests_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.disk.write.requests_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.network.incoming.packets_vgw_vgw_private_2_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.network.incoming.packets_vgw_vgw_private_2_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.endpoint_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.endpoint_vgw
+    requirements:
+      vcpevsp_vgw_20180927a0.abstract_vgw.dependency_vgw_vgw_private_0_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.dependency_vgw_vgw_private_0_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.local_storage_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.local_storage_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.dependency_vgw:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.dependency_vgw
+      vcpevsp_vgw_20180927a0.abstract_vgw.dependency_vgw_vgw_private_1_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.dependency_vgw_vgw_private_1_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.link_vgw_vgw_private_0_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.link_vgw_vgw_private_0_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.link_vgw_vgw_private_1_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.link_vgw_vgw_private_1_port
+      vcpevsp_vgw_20180927a0.abstract_vgw.dependency_vgw_vgw_private_2_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.dependency_vgw_vgw_private_2_port
+      vcpear_brg_20180927a0.allottedresource0.dependency:
+      - vcpear_brg_20180927a0
+      - allottedresource0.dependency
+      vcpear_brg_20180927a0.allottedresource0.service_dependency:
+      - vcpear_brg_20180927a0
+      - allottedresource0.service_dependency
+      vcpear_tunnelxconn_20180927a0.allottedresource0.dependency:
+      - vcpear_tunnelxconn_20180927a0
+      - allottedresource0.dependency
+      vcpear_tunnelxconn_20180927a0.allottedresource0.service_dependency:
+      - vcpear_tunnelxconn_20180927a0
+      - allottedresource0.service_dependency
+      vcpevsp_vgw_20180927a0.abstract_vgw.link_vgw_vgw_private_2_port:
+      - vcpevsp_vgw_20180927a0
+      - abstract_vgw.link_vgw_vgw_private_2_port

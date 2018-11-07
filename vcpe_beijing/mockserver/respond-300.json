@@ -1,0 +1,45 @@
+{
+    "versions": {
+        "values": [
+            {
+                "status": "stable",
+                "updated": "2016-10-06T00:00:00Z",
+                "media-types": [
+                    {
+                        "base": "application/json",
+                        "type": "application/vnd.openstack.identity-v3+json"
+                    }
+                ],
+                "id": "v3.7",
+                "links": [
+                    {
+                        "href": "http://172.30.3.10:5000/v3/",
+                        "rel": "self"
+                    }
+                ]
+            },
+            {
+                "status": "deprecated",
+                "updated": "2016-08-04T00:00:00Z",
+                "media-types": [
+                    {
+                        "base": "application/json",
+                        "type": "application/vnd.openstack.identity-v2.0+json"
+                    }
+                ],
+                "id": "v2.0",
+                "links": [
+                    {
+                        "href": "http://172.30.3.10:5000/v2.0/",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "http://docs.openstack.org/",
+                        "type": "text/html",
+                        "rel": "describedby"
+                    }
+                ]
+            }
+        ]
+    }
+}

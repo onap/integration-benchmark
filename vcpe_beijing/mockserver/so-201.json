@@ -1,0 +1,11 @@
+{
+    "stack": {
+        "id": "5325f4e6-f266-49d6-9bcb-0f085b83497d",
+        "links": [
+            {
+                "href": "http://172.30.3.10:8004/v1/b45461e4b03547db8f2869d2c9f9e29e/stacks/vcpe_vfmodule_vcpevspvbrg20180628a_201807200718/5325f4e6-f266-49d6-9bcb-0f085b83497d",
+                "rel": "self"
+            }
+        ]
+    }
+}

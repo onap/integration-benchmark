@@ -1,0 +1,10 @@
+{
+    "explanation": "The resource could not be found.",
+    "code": 404,
+    "error": {
+        "message": "The Stack (vcpe_vfmodule_vcpevspvbrg20180628a_201807200718) could not be found.",
+        "traceback": null,
+        "type": "EntityNotFound"
+    },
+    "title": "Not Found"
+}

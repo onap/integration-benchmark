@@ -1,0 +1,88 @@
+tosca_definitions_version: tosca_simple_yaml_1_1
+metadata:
+  invariantUUID: be0955dc-a302-4d74-aa78-ff82cfe3a882
+  UUID: 3de68603-f200-4148-9c77-7864addf5b6a
+  name: vcpear_tunnelxconn_20180927a
+  description: vcpear_tunnelxconn_20180927a
+  type: VF
+  category: Allotted Resource
+  subcategory: Tunnel XConnect
+  resourceVendor: '111222'
+  resourceVendorRelease: '1.0'
+  resourceVendorModelNumber: ''
+imports:
+- nodes:
+    file: nodes.yml
+- datatypes:
+    file: data.yml
+- capabilities:
+    file: capabilities.yml
+- relationships:
+    file: relationships.yml
+- groups:
+    file: groups.yml
+- policies:
+    file: policies.yml
+- resource-vcpear_tunnelxconn_20180927a-interface:
+    file: resource-VcpearTunnelxconn20180927a-template-interface.yml
+- resource-AllottedResource:
+    file: resource-Allottedresource-template.yml
+topology_template:
+  inputs:
+    nf_naming:
+      default:
+        ecomp_generated_naming: true
+      type: org.openecomp.datatypes.Naming
+    multi_stage_design:
+      default: false
+      type: boolean
+    nf_naming_code:
+      type: string
+    nf_function:
+      type: string
+    availability_zone_max_count:
+      default: 1
+      type: integer
+    nf_role:
+      type: string
+    max_instances:
+      type: integer
+    min_instances:
+      type: integer
+    nf_type:
+      type: string
+  node_templates:
+    AllottedResource 0:
+      type: org.openecomp.resource.vfc.AllottedResource
+      metadata:
+        invariantUUID: 300f1682-74ae-4ab2-81dd-03d0141cb594
+        UUID: 9333c1aa-4746-4c26-b547-d4cdd5012d8a
+        customizationUUID: c9d89fb5-1d47-4dc2-9e09-aaa9d180ba7d
+        version: '1.0'
+        name: AllottedResource
+        description: Allotted Resource base type all other allotted resources node types derive from
+        type: VFC
+        category: Allotted Resource
+        subcategory: Allotted Resource
+        resourceVendor: ATT (Tosca)
+        resourceVendorRelease: 1.0.0.wd03
+        resourceVendorModelNumber: ''
+      properties:
+        providing_service_invariant_uuid: 19b9eba0-b079-4ce4-82af-5d05d8a35cfa
+        providing_service_uuid: d5c2b651-5761-4a16-a78b-5e35d17ecae3
+        providing_service_name: org.openecomp.service.VcpesvcVgmux20180927a
+        min_instances: 1
+        max_instances: 1
+  substitution_mappings:
+    node_type: org.openecomp.resource.vf.VcpearTunnelxconn20180927a
+    capabilities:
+      allottedresource0.feature:
+      - allottedresource0
+      - feature
+    requirements:
+      allottedresource0.dependency:
+      - allottedresource0
+      - dependency
+      allottedresource0.service_dependency:
+      - allottedresource0
+      - service_dependency

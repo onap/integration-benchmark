@@ -1,0 +1,1761 @@
+tosca_definitions_version: tosca_simple_yaml_1_1
+imports:
+- nodes:
+    file: nodes.yml
+- datatypes:
+    file: data.yml
+- capabilities:
+    file: capabilities.yml
+- relationships:
+    file: relationships.yml
+- groups:
+    file: groups.yml
+- policies:
+    file: policies.yml
+node_types:
+  org.openecomp.service.VcpesvcVbrg20180927a:
+    derived_from: org.openecomp.resource.abstract.nodes.service
+    capabilities:
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.binding_vbrgemu:
+        type: tosca.capabilities.network.Bindable
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.os_vbrgemu:
+        type: tosca.capabilities.OperatingSystem
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          distribution:
+            type: string
+            required: false
+          type:
+            type: string
+            required: false
+          version:
+            type: version
+            required: false
+          architecture:
+            type: string
+            required: false
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.capacity_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: B
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: The amount of disk that the instance can see
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: disk
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.vcpus_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: vcpu
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Number of virtual CPUs allocated to the instance
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: compute
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.usage_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: B
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: The physical size in bytes of the image container on the host
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: disk
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      ? vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu_vbrgemu_private_0_port.network.outpoing.packets_vbrgemu_vbrgemu_private_0_port
+      : type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: packet
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Number of outgoing packets
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Cumulative
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: network
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.host_vbrgemu:
+        type: tosca.capabilities.Container
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types:
+        - tosca.nodes.SoftwareComponent
+        properties:
+          num_cpus:
+            type: integer
+            required: false
+          disk_size:
+            type: scalar-unit.size
+            required: false
+          cpu_frequency:
+            type: scalar-unit.frequency
+            required: false
+          mem_size:
+            type: scalar-unit.size
+            required: false
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.cpu_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: ns
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: CPU time used
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Cumulative
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: compute
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu_vbrgemu_private_0_port.port_mirroring_vbrgemu_vbrgemu_private_0_port:
+        type: org.openecomp.capabilities.PortMirroring
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          connection_point:
+            type: org.openecomp.datatypes.PortMirroringConnectionPointDescription
+            required: false
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.device.latency_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: ms
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Average disk latency per device
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: disk
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.device.capacity_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: B
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: The amount of disk per device that the instance can see
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: disk
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.device.read.requests_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: request
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Number of read requests
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Cumulative
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: disk
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu_vbrgemu_private_0_port.attachment_vbrgemu_vbrgemu_private_0_port:
+        type: tosca.capabilities.Attachment
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.scalable_vbrgemu:
+        type: tosca.capabilities.Scalable
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          min_instances:
+            default: 1
+            type: integer
+            required: false
+          max_instances:
+            default: 1
+            type: integer
+            required: false
+          default_instances:
+            type: integer
+            required: false
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.memory.resident_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: MB
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Volume of RAM used by the instance on the physical machine
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: compute
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      ? vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu_vbrgemu_private_0_port.network.incoming.packets.rate_vbrgemu_vbrgemu_private_0_port
+      : type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: packet/s
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Average rate of incoming packets
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: network
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.iops_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: count/s
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Average disk iops
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: disk
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.cpu_util_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: '%'
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Average CPU utilization
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: compute
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.write.requests_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: request
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Number of write requests
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Cumulative
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: compute
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.write.bytes.rate_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: B/s
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Average rate of writes
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: compute
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.memory.usage_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: MB
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Volume of RAM used by the instance from the amount of its allocated memory
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: compute
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.read.bytes.rate_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: B/s
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Average rate of reads
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: compute
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      ? vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu_vbrgemu_private_0_port.network.incoming.bytes.rate_vbrgemu_vbrgemu_private_0_port
+      : type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: B/s
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Average rate of incoming bytes
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: network
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.device.allocation_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: B
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: The amount of disk per device occupied by the instance on the host machine
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: disk
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.write.requests.rate_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: request/s
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Average rate of write requests
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: compute
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      ? vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu_vbrgemu_private_0_port.network.outgoing.bytes.rate_vbrgemu_vbrgemu_private_0_port
+      : type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: B/s
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Average rate of outgoing bytes
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: network
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.endpoint_vbrgemu:
+        type: tosca.capabilities.Endpoint.Admin
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          secure:
+            default: true
+            type: boolean
+            required: false
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.device.read.requests.rate_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: request/s
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Average rate of read requests
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: disk
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      ? vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu_vbrgemu_private_0_port.network.outgoing.bytes_vbrgemu_vbrgemu_private_0_port
+      : type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: B
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Number of outgoing bytes
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Cumulative
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: network
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.latency_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: ms
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Average disk latency
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: disk
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu_vbrgemu_private_0_port.feature_vbrgemu_vbrgemu_private_0_port:
+        type: tosca.capabilities.Node
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu_vbrgemu_private_0_port.forwarder_vbrgemu_vbrgemu_private_0_port:
+        type: org.openecomp.capabilities.Forwarder
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.device.write.bytes_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: B
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Volume of writes
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Cumulative
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: disk
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.device.read.bytes_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: B
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Volume of reads
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Cumulative
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: disk
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      ? vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu_vbrgemu_private_0_port.network.incoming.packets_vbrgemu_vbrgemu_private_0_port
+      : type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: packet
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Number of incoming packets
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Cumulative
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: network
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.device.write.bytes.rate_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: B/s
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Average rate of writes
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: disk
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.device.iops_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: count/s
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Average disk iops per device
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: disk
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu_vbrgemu_private_0_port.binding_vbrgemu_vbrgemu_private_0_port:
+        type: tosca.capabilities.network.Bindable
+        occurrences:
+        - 0
+        - UNBOUNDED
+        valid_source_types:
+        - org.openecomp.resource.cp.nodes.heat.network.contrailV2.VLANSubInterface
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.read.requests_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: request
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Number of read requests
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Cumulative
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: compute
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.allocation_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: B
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: The amount of disk occupied by the instance on the host machine
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: disk
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.read.bytes_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: B
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Volume of reads
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Cumulative
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: compute
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.device.write.requests.rate_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: request/s
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Average rate of write requests
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: disk
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.write.bytes_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: B
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Volume of writes
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Cumulative
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: compute
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.feature_vbrgemu:
+        type: tosca.capabilities.Node
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.memory_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: MB
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Volume of RAM allocated to the instance
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: compute
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.cpu.delta_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: ns
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: CPU time used since previous datapoint
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Delta
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: compute
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.device.usage_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: B
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: The physical size in bytes of the image container on the host per device
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: disk
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.device.read.bytes.rate_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: B/s
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Average rate of reads
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: disk
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.ephemeral.size_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: GB
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Size of ephemeral disk
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: compute
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      ? vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu_vbrgemu_private_0_port.network.outgoing.packets.rate_vbrgemu_vbrgemu_private_0_port
+      : type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: packet/s
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Average rate of outgoing packets
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: network
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      ? vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu_vbrgemu_private_0_port.network.incoming.bytes_vbrgemu_vbrgemu_private_0_port
+      : type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: B
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Number of incoming bytes
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Cumulative
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: network
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.instance_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: instance
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Existence of instance
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: compute
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.root.size_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: GB
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Size of root disk
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Gauge
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: compute
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+      vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.disk.device.write.requests_vbrgemu:
+        type: org.openecomp.capabilities.metric.Ceilometer
+        description: A node type that includes the Metric capability indicates that it can be monitored using ceilometer.
+        occurrences:
+        - 1
+        - UNBOUNDED
+        valid_source_types: [
+          ]
+        properties:
+          unit:
+            default: request
+            type: string
+            description: Unit of the metric value
+            required: true
+            status: SUPPORTED
+          name:
+            type: string
+            description: Ceilometer metric type name to monitor. (The name ceilometer is using)
+            required: true
+          description:
+            default: Number of write requests
+            type: string
+            description: Description of the metric
+            required: false
+            status: SUPPORTED
+          type:
+            default: Cumulative
+            type: string
+            description: Type of the metric value, for an example, Cumulative, Delta, Gauge and etc.
+            required: true
+            status: SUPPORTED
+          category:
+            default: disk
+            type: string
+            description: Category of the metric, for an example, compute, disk, network, storage and etc.
+            required: false
+            status: SUPPORTED
+    requirements:
+    - vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.dependency_vbrgemu:
+        occurrences:
+        - 0
+        - UNBOUNDED
+        capability: tosca.capabilities.Node
+        node: tosca.nodes.Root
+        relationship: tosca.relationships.DependsOn
+    - vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu_vbrgemu_private_0_port.dependency_vbrgemu_vbrgemu_private_0_port:
+        occurrences:
+        - 0
+        - UNBOUNDED
+        capability: tosca.capabilities.Node
+        node: tosca.nodes.Root
+        relationship: tosca.relationships.DependsOn
+    - vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu_vbrgemu_private_0_port.link_vbrgemu_vbrgemu_private_0_port:
+        occurrences:
+        - 1
+        - UNBOUNDED
+        capability: tosca.capabilities.network.Linkable
+        relationship: tosca.relationships.network.LinksTo
+    - vcpevsp_vbrg_20180927a0.abstract_vbrgemu.vbrgemu.local_storage_vbrgemu:
+        occurrences:
+        - 0
+        - UNBOUNDED
+        capability: tosca.capabilities.Attachment
+        node: tosca.nodes.BlockStorage
+        relationship: tosca.relationships.AttachesTo

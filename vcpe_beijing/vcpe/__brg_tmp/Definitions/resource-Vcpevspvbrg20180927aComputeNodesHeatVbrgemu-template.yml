@@ -1,0 +1,29 @@
+tosca_definitions_version: tosca_simple_yaml_1_1
+metadata:
+  invariantUUID: e5aedb58-0f98-48f1-b51d-6a24790c33b0
+  UUID: 3c8c5610-8f21-4c05-8f4c-a8f1ab353c83
+  name: VcpevspVbrg20180927a.compute.nodes.heat.vbrgemu
+  description: Not reusable inner VFC
+  type: VFC
+  category: Generic
+  subcategory: Abstract
+  resourceVendor: tutorial-license
+  resourceVendorRelease: '1.0'
+  resourceVendorModelNumber: ''
+imports:
+- nodes:
+    file: nodes.yml
+- datatypes:
+    file: data.yml
+- capabilities:
+    file: capabilities.yml
+- relationships:
+    file: relationships.yml
+- groups:
+    file: groups.yml
+- policies:
+    file: policies.yml
+node_types:
+  org.openecomp.resource.vfc.VcpevspVbrg20180927a.abstract.compute.nodes.heat.vbrgemu:
+    derived_from: org.openecomp.resource.vfc.nodes.heat.nova.Server
+    description: Not reusable inner VFC

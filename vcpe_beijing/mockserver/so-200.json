@@ -1,0 +1,57 @@
+{
+    "stack": {
+        "parent": null,
+        "disable_rollback": true,
+        "description": "Heat template to deploy vCPE vBRG Emulator (vBRGEMU)",
+        "parameters": {
+            "repo_url_artifacts": "https://nexus.onap.org/content/groups/staging",
+            "OS::project_id": "b45461e4b03547db8f2869d2c9f9e29e",
+            "install_script_version": "1.1.1",
+            "vpp_source_repo_branch": "stable/1704",
+            "vf_module_id": "ee67e4ca-617a-48b6-bfa4-bdddda89c741",
+            "hc2vpp_source_repo_url": "https://gerrit.fd.io/r/hc2vpp",
+            "repo_url_blob": "https://nexus.onap.org/content/sites/raw",
+            "vbrgemu_bng_private_subnet_id": "vcpe_net_brg_bng_subnet_201807160624",
+            "compile_state": "done",
+            "cloud_env": "openstack",
+            "vbrgemu_bng_private_net_cidr": "10.3.0.0/24",
+            "vcpe_flavor_name": "m1.medium",
+            "vnf_id": "aff5bdd4-4ee9-4d92-aeff-7492c13f3ffe",
+            "OS::stack_name": "vcpe_vfmodule_vcpevspvbrg20180628a_201807200718",
+            "key_name": "vbrgemu_key",
+            "vpp_patch_url": "https://git.onap.org/demo/plain/vnfs/vCPE/vpp-option-82-for-vbrg/src/patches/VPP-Add-Option82-Nat-Filter-For-vBRG.patch",
+            "vcpe_image_name": "vbrg-base-ubuntu-16-04",
+            "demo_artifacts_version": "1.1.1",
+            "vpp_source_repo_url": "https://gerrit.fd.io/r/vpp",
+            "vbrgemu_bng_private_net_id": "vcpe_net_brg_bng_201807160624",
+            "sdnc_ip": "10.0.7.1",
+            "OS::stack_id": "5325f4e6-f266-49d6-9bcb-0f085b83497d",
+            "public_net_id": "234f8767-7013-4256-9471-ca34294c4c5c",
+            "vbrgemu_name_0": "zdcpe1cpe01brgemu01_201807200718",
+            "hc2vpp_source_repo_branch": "stable/1704",
+            "vbrgemu_private_ip_0": "10.3.0.37",
+            "pub_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDKXDgoo3+WOqcUG8/5uUbk81+yczgwC4Y8ywTmuQqbNxlY1oQ0YxdMUqUnhitSXs5S/yRuAVOYHwGg2mCs20oAINrP+mxBI544AMIb9itPjCtgqtE2EWo6MmnFGbHB4Sx3XioE7F4VPsh7japsIwzOjbrQe+Mua1TGQ5d4nfEOQaaglXLLPFfuc7WbhbJbK6Q7rHqZfRcOwAMXgDoBqlyqKeiKwnumddo2RyNT8ljYmvB6buz7KnMinzo7qB0uktVT05FH9Rg0CTWH5norlG5qXgP2aukL0gk1ph8iAt7uYLf1ktp+LJI2gaF6L0/qli9EmVCSLr1uJ38Q8CBflhkh"
+        },
+        "deletion_time": null,
+        "stack_name": "vcpe_vfmodule_vcpevspvbrg20180628a_201807200718",
+        "stack_user_project_id": "244d5c9f288847c69318a9926fd42a1e",
+        "stack_status_reason": "Stack CREATE started",
+        "creation_time": "2018-07-20T07:19:18Z",
+        "links": [
+            {
+                "href": "http://172.30.3.10:8004/v1/b45461e4b03547db8f2869d2c9f9e29e/stacks/vcpe_vfmodule_vcpevspvbrg20180628a_201807200718/5325f4e6-f266-49d6-9bcb-0f085b83497d",
+                "rel": "self"
+            }
+        ],
+        "capabilities": [],
+        "notification_topics": [],
+        "tags": null,
+        "timeout_mins": 120,
+        "stack_status": "CREATE_IN_PROGRESS",
+        "stack_owner": "demo",
+        "updated_time": "2018-07-20T07:19:18Z",
+        "id": "5325f4e6-f266-49d6-9bcb-0f085b83497d",
+        "outputs": [],
+        "template_description": "Heat template to deploy vCPE vBRG Emulator (vBRGEMU)"
+    }
+}

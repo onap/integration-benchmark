@@ -1,0 +1,661 @@
+tosca_definitions_version: tosca_simple_yaml_1_1
+metadata:
+  invariantUUID: 69a09851-2037-4267-b8bc-1298ea3da9c6
+  UUID: 743ee5cc-c58a-4c70-bdaa-67fce95af090
+  name: vcpevsp_vbrg_20180927a-nodes.vbrgemuCvfc
+  description: Complex node type that is used as nested type in VF
+  type: CVFC
+  category: Generic
+  subcategory: Abstract
+  resourceVendor: tutorial-license
+  resourceVendorRelease: '1.0'
+  resourceVendorModelNumber: ''
+imports:
+- nodes:
+    file: nodes.yml
+- datatypes:
+    file: data.yml
+- capabilities:
+    file: capabilities.yml
+- relationships:
+    file: relationships.yml
+- groups:
+    file: groups.yml
+- policies:
+    file: policies.yml
+- resource-vcpevsp_vbrg_20180927a-nodes.vbrgemuCvfc-interface:
+    file: resource-VcpevspVbrg20180927aNodesVbrgemucvfc-template-interface.yml
+- resource-VcpevspVbrg20180927a.compute.nodes.heat.vbrgemu:
+    file: resource-Vcpevspvbrg20180927aComputeNodesHeatVbrgemu-template.yml
+- resource-extNeutronCP:
+    file: resource-Extneutroncp-template.yml
+topology_template:
+  inputs:
+    compute_vbrgemu_metadata:
+      type: list
+      entry_schema:
+        type: json
+    port_vbrgemu_private_0_port_fixed_ips:
+      type: list
+      entry_schema:
+        type: org.openecomp.datatypes.heat.neutron.port.FixedIps
+    port_vbrgemu_private_0_port_network_role:
+      type: string
+    nfc_naming:
+      default:
+        ecomp_generated_naming: true
+      type: org.openecomp.datatypes.Naming
+      description: vfc naming
+    vm_flavor_name:
+      type: string
+    port_vbrgemu_private_0_port_ip_requirements:
+      type: list
+      entry_schema:
+        type: org.openecomp.datatypes.network.IpRequirements
+    port_vbrgemu_private_0_port_network_role_tag:
+      type: string
+    service_template_filter:
+      default:
+        index_value: 0
+        count: '1'
+        scaling_enabled: true
+        mandatory: true
+      type: org.openecomp.datatypes.heat.substitution.SubstitutionFiltering
+      description: Substitution Filter
+    vm_image_name:
+      type: string
+    vm_type_tag:
+      type: string
+      description: vm type based on naming Convention
+    high_availablity:
+      type: string
+      description: high_availablity
+    port_vbrgemu_private_0_port_network:
+      type: list
+      entry_schema:
+        type: string
+    compute_vbrgemu_name:
+      type: list
+      entry_schema:
+        type: string
+    nfc_naming_code:
+      type: string
+      description: nfc code for instance naming
+    port_vbrgemu_private_0_port_exCP_naming:
+      default:
+        ecomp_generated_naming: true
+      type: org.openecomp.datatypes.Naming
+    port_vbrgemu_private_0_port_subnetpoolid:
+      type: string
+    port_vbrgemu_private_0_port_mac_requirements:
+      default:
+        mac_count_required:
+          is_required: false
+      type: org.openecomp.datatypes.network.MacRequirements
+    nfc_function:
+      type: string
+    index_value:
+      default: 0
+      type: integer
+      description: Index value of this substitution service template runtime instance
+    compute_vbrgemu_user_data_format:
+      type: list
+      entry_schema:
+        type: string
+    max_instances:
+      type: integer
+      description: Maximum number of VFC Instances
+    port_vbrgemu_private_0_port_vlan_requirements:
+      type: list
+      entry_schema:
+        type: org.openecomp.datatypes.network.VlanRequirements
+    min_instances:
+      default: 0
+      type: integer
+      description: Minimum number of VFC Instances
+    port_vbrgemu_private_0_port_order:
+      type: integer
+    compute_vbrgemu_key_name:
+      type: list
+      entry_schema:
+        type: string
+  node_templates:
+    vbrgemu_vbrgemu_private_0_port:
+      type: org.openecomp.resource.cp.v2.extNeutronCP
+      metadata:
+        invariantUUID: 7878123c-e89b-48f0-8d49-a3931603059a
+        UUID: 1cc61e2c-e414-4927-8bf7-6e87e1cc4ac3
+        customizationUUID: 4e0c163b-3921-49fa-b6aa-0cb8eb093e57
+        version: '1.0'
+        name: extNeutronCP
+        description: The AT&T Connection Point base type all other CP derive from
+        type: CP
+        category: Generic
+        subcategory: Network Elements
+        resourceVendor: ATT (Tosca)
+        resourceVendorRelease: 1.0.0.wd03
+        resourceVendorModelNumber: ''
+      properties:
+        subnetpoolid:
+          get_input: port_vbrgemu_private_0_port_subnetpoolid
+        is_default: false
+        network:
+          get_input:
+          - port_vbrgemu_private_0_port_network
+          - index_value
+        replacement_policy: AUTO
+        ip_requirements:
+          get_input: port_vbrgemu_private_0_port_ip_requirements
+        network_role:
+          get_input: port_vbrgemu_private_0_port_network_role
+        fixed_ips:
+          get_input:
+          - port_vbrgemu_private_0_port_fixed_ips
+          - index_value
+        mac_requirements:
+          get_input: port_vbrgemu_private_0_port_mac_requirements
+        admin_state_up: true
+        exCP_naming:
+          get_input: port_vbrgemu_private_0_port_exCP_naming
+        vlan_requirements:
+          get_input: port_vbrgemu_private_0_port_vlan_requirements
+        network_role_tag:
+          get_input: port_vbrgemu_private_0_port_network_role_tag
+        order:
+          get_input: port_vbrgemu_private_0_port_order
+      requirements:
+      - binding:
+          capability: binding
+          node: vbrgemu
+      capabilities:
+        network.incoming.bytes.rate_vbrgemu_vbrgemu_private_0_port:
+          properties:
+            unit: B/s
+            description: Average rate of incoming bytes
+            type: Gauge
+            category: network
+        network.incoming.bytes_vbrgemu_vbrgemu_private_0_port:
+          properties:
+            unit: B
+            description: Number of incoming bytes
+            type: Cumulative
+            category: network
+        port_mirroring_vbrgemu_vbrgemu_private_0_port:
+          properties:
+            connection_point:
+              network_role:
+                get_input: port_vbrgemu_private_0_port_network_role
+              nfc_type: vbrgemu
+        network.incoming.packets_vbrgemu_vbrgemu_private_0_port:
+          properties:
+            unit: packet
+            description: Number of incoming packets
+            type: Cumulative
+            category: network
+        network.outgoing.bytes.rate_vbrgemu_vbrgemu_private_0_port:
+          properties:
+            unit: B/s
+            description: Average rate of outgoing bytes
+            type: Gauge
+            category: network
+        network.outpoing.packets_vbrgemu_vbrgemu_private_0_port:
+          properties:
+            unit: packet
+            description: Number of outgoing packets
+            type: Cumulative
+            category: network
+        network.outgoing.packets.rate_vbrgemu_vbrgemu_private_0_port:
+          properties:
+            unit: packet/s
+            description: Average rate of outgoing packets
+            type: Gauge
+            category: network
+        network.outgoing.bytes_vbrgemu_vbrgemu_private_0_port:
+          properties:
+            unit: B
+            description: Number of outgoing bytes
+            type: Cumulative
+            category: network
+        network.incoming.packets.rate_vbrgemu_vbrgemu_private_0_port:
+          properties:
+            unit: packet/s
+            description: Average rate of incoming packets
+            type: Gauge
+            category: network
+    vbrgemu:
+      type: org.openecomp.resource.vfc.VcpevspVbrg20180927a.abstract.compute.nodes.heat.vbrgemu
+      metadata:
+        invariantUUID: e5aedb58-0f98-48f1-b51d-6a24790c33b0
+        UUID: 3c8c5610-8f21-4c05-8f4c-a8f1ab353c83
+        customizationUUID: 4622b5fe-7828-4960-ba0c-eb84258f3d96
+        version: '1.0'
+        name: VcpevspVbrg20180927a.compute.nodes.heat.vbrgemu
+        description: Not reusable inner VFC
+        type: VFC
+        category: Generic
+        subcategory: Abstract
+        resourceVendor: tutorial-license
+        resourceVendorRelease: '1.0'
+        resourceVendorModelNumber: ''
+      properties:
+        flavor:
+          get_input: vm_flavor_name
+        key_name:
+          get_input:
+          - compute_vbrgemu_key_name
+          - index_value
+        image:
+          get_input: vm_image_name
+        image_update_policy: REBUILD
+        metadata:
+          get_input:
+          - compute_vbrgemu_metadata
+          - index_value
+        software_config_transport: POLL_SERVER_CFN
+        contrail_service_instance_ind: false
+        user_data_format:
+          get_input:
+          - compute_vbrgemu_user_data_format
+          - index_value
+        user_data_update_policy: REPLACE
+        name:
+          get_input:
+          - compute_vbrgemu_name
+          - index_value
+        flavor_update_policy: RESIZE
+      capabilities:
+        disk.write.bytes.rate_vbrgemu:
+          properties:
+            unit: B/s
+            description: Average rate of writes
+            type: Gauge
+            category: compute
+        cpu.delta_vbrgemu:
+          properties:
+            unit: ns
+            description: CPU time used since previous datapoint
+            type: Delta
+            category: compute
+        disk.device.read.requests_vbrgemu:
+          properties:
+            unit: request
+            description: Number of read requests
+            type: Cumulative
+            category: disk
+        disk.read.bytes_vbrgemu:
+          properties:
+            unit: B
+            description: Volume of reads
+            type: Cumulative
+            category: compute
+        scalable_vbrgemu:
+          properties:
+            min_instances: 1
+            max_instances: 1
+        disk.device.iops_vbrgemu:
+          properties:
+            unit: count/s
+            description: Average disk iops per device
+            type: Gauge
+            category: disk
+        cpu_vbrgemu:
+          properties:
+            unit: ns
+            description: CPU time used
+            type: Cumulative
+            category: compute
+        disk.read.bytes.rate_vbrgemu:
+          properties:
+            unit: B/s
+            description: Average rate of reads
+            type: Gauge
+            category: compute
+        cpu_util_vbrgemu:
+          properties:
+            unit: '%'
+            description: Average CPU utilization
+            type: Gauge
+            category: compute
+        memory_vbrgemu:
+          properties:
+            unit: MB
+            description: Volume of RAM allocated to the instance
+            type: Gauge
+            category: compute
+        disk.device.read.bytes.rate_vbrgemu:
+          properties:
+            unit: B/s
+            description: Average rate of reads
+            type: Gauge
+            category: disk
+        instance_vbrgemu:
+          properties:
+            unit: instance
+            description: Existence of instance
+            type: Gauge
+            category: compute
+        memory.resident_vbrgemu:
+          properties:
+            unit: MB
+            description: Volume of RAM used by the instance on the physical machine
+            type: Gauge
+            category: compute
+        disk.device.usage_vbrgemu:
+          properties:
+            unit: B
+            description: The physical size in bytes of the image container on the host per device
+            type: Gauge
+            category: disk
+        vcpus_vbrgemu:
+          properties:
+            unit: vcpu
+            description: Number of virtual CPUs allocated to the instance
+            type: Gauge
+            category: compute
+        disk.capacity_vbrgemu:
+          properties:
+            unit: B
+            description: The amount of disk that the instance can see
+            type: Gauge
+            category: disk
+        disk.device.latency_vbrgemu:
+          properties:
+            unit: ms
+            description: Average disk latency per device
+            type: Gauge
+            category: disk
+        disk.usage_vbrgemu:
+          properties:
+            unit: B
+            description: The physical size in bytes of the image container on the host
+            type: Gauge
+            category: disk
+        disk.read.requests_vbrgemu:
+          properties:
+            unit: request
+            description: Number of read requests
+            type: Cumulative
+            category: compute
+        disk.device.read.bytes_vbrgemu:
+          properties:
+            unit: B
+            description: Volume of reads
+            type: Cumulative
+            category: disk
+        disk.device.read.requests.rate_vbrgemu:
+          properties:
+            unit: request/s
+            description: Average rate of read requests
+            type: Gauge
+            category: disk
+        disk.iops_vbrgemu:
+          properties:
+            unit: count/s
+            description: Average disk iops
+            type: Gauge
+            category: disk
+        disk.device.allocation_vbrgemu:
+          properties:
+            unit: B
+            description: The amount of disk per device occupied by the instance on the host machine
+            type: Gauge
+            category: disk
+        disk.write.bytes_vbrgemu:
+          properties:
+            unit: B
+            description: Volume of writes
+            type: Cumulative
+            category: compute
+        disk.write.requests.rate_vbrgemu:
+          properties:
+            unit: request/s
+            description: Average rate of write requests
+            type: Gauge
+            category: compute
+        memory.usage_vbrgemu:
+          properties:
+            unit: MB
+            description: Volume of RAM used by the instance from the amount of its allocated memory
+            type: Gauge
+            category: compute
+        disk.device.write.bytes.rate_vbrgemu:
+          properties:
+            unit: B/s
+            description: Average rate of writes
+            type: Gauge
+            category: disk
+        endpoint_vbrgemu:
+          properties:
+            secure: true
+        disk.root.size_vbrgemu:
+          properties:
+            unit: GB
+            description: Size of root disk
+            type: Gauge
+            category: compute
+        disk.device.write.bytes_vbrgemu:
+          properties:
+            unit: B
+            description: Volume of writes
+            type: Cumulative
+            category: disk
+        disk.latency_vbrgemu:
+          properties:
+            unit: ms
+            description: Average disk latency
+            type: Gauge
+            category: disk
+        disk.write.requests_vbrgemu:
+          properties:
+            unit: request
+            description: Number of write requests
+            type: Cumulative
+            category: compute
+        disk.ephemeral.size_vbrgemu:
+          properties:
+            unit: GB
+            description: Size of ephemeral disk
+            type: Gauge
+            category: compute
+        disk.allocation_vbrgemu:
+          properties:
+            unit: B
+            description: The amount of disk occupied by the instance on the host machine
+            type: Gauge
+            category: disk
+        disk.device.write.requests.rate_vbrgemu:
+          properties:
+            unit: request/s
+            description: Average rate of write requests
+            type: Gauge
+            category: disk
+        disk.device.write.requests_vbrgemu:
+          properties:
+            unit: request
+            description: Number of write requests
+            type: Cumulative
+            category: disk
+        disk.device.capacity_vbrgemu:
+          properties:
+            unit: B
+            description: The amount of disk per device that the instance can see
+            type: Gauge
+            category: disk
+  substitution_mappings:
+    node_type: org.openecomp.resource.vfc.VcpevspVbrg20180927acvfc.abstract.nodes.vbrgemu
+    capabilities:
+      host_vbrgemu:
+      - vbrgemu
+      - host
+      disk.write.bytes.rate_vbrgemu:
+      - vbrgemu
+      - disk.write.bytes.rate
+      network.incoming.bytes_vbrgemu_vbrgemu_private_0_port:
+      - vbrgemu_vbrgemu_private_0_port
+      - network.incoming.bytes
+      cpu.delta_vbrgemu:
+      - vbrgemu
+      - cpu.delta
+      os_vbrgemu:
+      - vbrgemu
+      - os
+      forwarder_vbrgemu_vbrgemu_private_0_port:
+      - vbrgemu_vbrgemu_private_0_port
+      - forwarder
+      scalable_vbrgemu:
+      - vbrgemu
+      - scalable
+      binding_vbrgemu_vbrgemu_private_0_port:
+      - vbrgemu_vbrgemu_private_0_port
+      - binding
+      cpu_vbrgemu:
+      - vbrgemu
+      - cpu
+      disk.device.iops_vbrgemu:
+      - vbrgemu
+      - disk.device.iops
+      disk.read.bytes.rate_vbrgemu:
+      - vbrgemu
+      - disk.read.bytes.rate
+      network.incoming.bytes.rate_vbrgemu_vbrgemu_private_0_port:
+      - vbrgemu_vbrgemu_private_0_port
+      - network.incoming.bytes.rate
+      port_mirroring_vbrgemu_vbrgemu_private_0_port:
+      - vbrgemu_vbrgemu_private_0_port
+      - port_mirroring
+      vcpus_vbrgemu:
+      - vbrgemu
+      - vcpus
+      disk.capacity_vbrgemu:
+      - vbrgemu
+      - disk.capacity
+      disk.usage_vbrgemu:
+      - vbrgemu
+      - disk.usage
+      disk.read.requests_vbrgemu:
+      - vbrgemu
+      - disk.read.requests
+      disk.device.read.bytes_vbrgemu:
+      - vbrgemu
+      - disk.device.read.bytes
+      disk.iops_vbrgemu:
+      - vbrgemu
+      - disk.iops
+      disk.device.allocation_vbrgemu:
+      - vbrgemu
+      - disk.device.allocation
+      attachment_vbrgemu_vbrgemu_private_0_port:
+      - vbrgemu_vbrgemu_private_0_port
+      - attachment
+      feature_vbrgemu:
+      - vbrgemu
+      - feature
+      network.outgoing.bytes.rate_vbrgemu_vbrgemu_private_0_port:
+      - vbrgemu_vbrgemu_private_0_port
+      - network.outgoing.bytes.rate
+      disk.device.write.bytes.rate_vbrgemu:
+      - vbrgemu
+      - disk.device.write.bytes.rate
+      memory.usage_vbrgemu:
+      - vbrgemu
+      - memory.usage
+      endpoint_vbrgemu:
+      - vbrgemu
+      - endpoint
+      disk.root.size_vbrgemu:
+      - vbrgemu
+      - disk.root.size
+      disk.ephemeral.size_vbrgemu:
+      - vbrgemu
+      - disk.ephemeral.size
+      disk.device.write.requests_vbrgemu:
+      - vbrgemu
+      - disk.device.write.requests
+      disk.device.capacity_vbrgemu:
+      - vbrgemu
+      - disk.device.capacity
+      network.incoming.packets.rate_vbrgemu_vbrgemu_private_0_port:
+      - vbrgemu_vbrgemu_private_0_port
+      - network.incoming.packets.rate
+      disk.device.read.requests_vbrgemu:
+      - vbrgemu
+      - disk.device.read.requests
+      disk.read.bytes_vbrgemu:
+      - vbrgemu
+      - disk.read.bytes
+      cpu_util_vbrgemu:
+      - vbrgemu
+      - cpu_util
+      memory_vbrgemu:
+      - vbrgemu
+      - memory
+      instance_vbrgemu:
+      - vbrgemu
+      - instance
+      disk.device.read.bytes.rate_vbrgemu:
+      - vbrgemu
+      - disk.device.read.bytes.rate
+      memory.resident_vbrgemu:
+      - vbrgemu
+      - memory.resident
+      disk.device.usage_vbrgemu:
+      - vbrgemu
+      - disk.device.usage
+      disk.device.latency_vbrgemu:
+      - vbrgemu
+      - disk.device.latency
+      disk.device.read.requests.rate_vbrgemu:
+      - vbrgemu
+      - disk.device.read.requests.rate
+      disk.write.bytes_vbrgemu:
+      - vbrgemu
+      - disk.write.bytes
+      disk.write.requests.rate_vbrgemu:
+      - vbrgemu
+      - disk.write.requests.rate
+      network.incoming.packets_vbrgemu_vbrgemu_private_0_port:
+      - vbrgemu_vbrgemu_private_0_port
+      - network.incoming.packets
+      network.outgoing.packets.rate_vbrgemu_vbrgemu_private_0_port:
+      - vbrgemu_vbrgemu_private_0_port
+      - network.outgoing.packets.rate
+      disk.device.write.bytes_vbrgemu:
+      - vbrgemu
+      - disk.device.write.bytes
+      disk.latency_vbrgemu:
+      - vbrgemu
+      - disk.latency
+      disk.write.requests_vbrgemu:
+      - vbrgemu
+      - disk.write.requests
+      disk.allocation_vbrgemu:
+      - vbrgemu
+      - disk.allocation
+      network.outpoing.packets_vbrgemu_vbrgemu_private_0_port:
+      - vbrgemu_vbrgemu_private_0_port
+      - network.outpoing.packets
+      disk.device.write.requests.rate_vbrgemu:
+      - vbrgemu
+      - disk.device.write.requests.rate
+      feature_vbrgemu_vbrgemu_private_0_port:
+      - vbrgemu_vbrgemu_private_0_port
+      - feature
+      network.outgoing.bytes_vbrgemu_vbrgemu_private_0_port:
+      - vbrgemu_vbrgemu_private_0_port
+      - network.outgoing.bytes
+      binding_vbrgemu:
+      - vbrgemu
+      - binding
+    requirements:
+      dependency_vbrgemu:
+      - vbrgemu
+      - dependency
+      dependency_vbrgemu_vbrgemu_private_0_port:
+      - vbrgemu_vbrgemu_private_0_port
+      - dependency
+      link_vbrgemu_vbrgemu_private_0_port:
+      - vbrgemu_vbrgemu_private_0_port
+      - link
+      local_storage_vbrgemu:
+      - vbrgemu
+      - local_storage
