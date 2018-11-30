@@ -10,7 +10,7 @@ Benchmark Release Notes
 The main work of this stage of the Benchmark project is based on vCPE Use Case for S3P testing at ONAP Beijing Release.
 
 Benchmark Repo
-================
+~~~~~~~~~~~~~~
 
 Version: 3.0.0
 --------------
